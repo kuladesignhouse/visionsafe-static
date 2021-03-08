@@ -1,0 +1,76 @@
+{% macro active(activePage='home') %}
+    <header class="row" id="header-row">
+      <div class="columns small-12 nav">
+        <div class="container responsive-menu">
+          <div class="container title-bar">
+            <div class="container title-bar-title" id="mobmenu" onclick="toggleMenu()"><a class="glyph menu-link" href="javascript:void(0)" data-hide-for="large" data-responsive-toggle="nav-menu" data-toggle=""><i class="coffeecup-icons-menu7"></i></a>
+              <a class="link-text menu-link" href="javascript:void(0)" data-hide-for="large" data-responsive-toggle="nav-menu" data-toggle="">Menu</a>
+            </div><a href="/" class="responsive-picture logo-sml"><picture><img alt="Vision Safe - Emergency Vision Assurance System" srcset="./images/vision-safe-logo.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a>
+          </div>
+          <div class="container top-bar" id="realeutatemenu">
+            <div class="subgrid subgrid-1">
+              <div class="row navflex">
+                <div class="columns small-2 subgrid-column-1 medium-2"><a href="/" class="responsive-picture logo"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="./images/vision-safe-logo.png" media="(min-width: 40em)"><source media="screen" srcset="img/picture.svg"><!--[if IE 9]></video><![endif]--><img alt="Vision Safe - Emergency Vision Assurance System" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a>
+                </div>
+                <div class="topnav">
+                  <div class="container nav-container">
+                    <ul class="link-list ul-link-2">
+                      <li class="list-item-link minor-nav-link"><a href="product.html#cert">Certifications</a></li>
+                      <li class="list-item-link minor-nav-link"><a href="product.html#service">Service</a></li>
+                      <li class="list-item-link minor-nav-link"><a href="about.html#events">Events</a></li>
+                      <li class="list-item-link minor-nav-link"><a href="/warranty/">Warranty Form</a></li>
+                      <li class="list-item-link minor-nav-link vidmed-link"><a href="media.html">Videos</a></li>
+                    </ul>
+                    <div class="buyEVASwrap">
+                      <button id="buyEVASnow">
+                        <div>Buy EVAS Now</div>
+                      </button>
+                    </div>
+                    <a href="tel:+1-800-441-9230" class="link-button-glyph mobile-phone-btn"><span class="glyph-for-button phone-icon"><i class="coffeecup-icons-phone2"></i></span><span class="link-button-text phone-num-text">+1(800) 441-9230</span></a>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="container nav-container">
+                    <ul class="link-list ul-link-1 dropdown" data-dropdown-menu >
+                      <li class="list-item-link pagelink {% if activePage == 'home' %}current{% endif %}"><a href="/">Home</a></li>
+
+                      <li class="list-item-link pagelink {% if activePage == 'product' %}current{% endif %}">
+                          <a href="#evasmenu">Product</a>
+                        <ul class="menu about-dropdown evas-menu" data-alignment="left">
+                          <li class="about-dropdown-li"><a href="passenger.html">EVAS for Commercial</a></li>
+                          <li class="about-dropdown-li"><a href="cargo.html">EVAS for Cargo</a></li>
+                          <li class="about-dropdown-li"><a href="corporate.html">EVAS for Corporate</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="list-item-link pagelink {% if activePage == 'faq' %}current{% endif %}"><a href="faqs.html">FAQ</a></li>
+    
+                      <li class="list-item-link pagelink {% if activePage == 'incidents' %}current{% endif %}">
+                        <a href="#">Incidents</a>
+                        <ul class="menu about-dropdown evas-menu2" data-alignment="left">
+                          <li class="about-dropdown-li"><a href="recent-smoke-in-the-cockpit-events/">Smoke Incidents</a></li>
+                          <li class="about-dropdown-li"><a href="faa-lithium-batteries.html">FAA Lithium Battery Report</a></li>
+                        </ul>
+                      </li>
+  
+                      <li class="list-item-link pagelink {% if activePage == 'about' %}current{% endif %}">
+                        <a href="#aboutmenu">About</a>
+                        <ul class="menu about-dropdown" data-alignment="left">
+                          <li class="about-dropdown-li"><a href="about-us.html">The Team</a></li>
+                          <li class="about-dropdown-li"><a href="about.html">The Company</a></li>
+                        </ul>
+                      </li>
+                      
+                      <li class="list-item-link pagelink {% if activePage == 'training' %}current{% endif %}"><a href="training.html">Training</a></li>
+                      <li class="list-item-link pagelink {% if activePage == 'contact' %}current{% endif %}"><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <a class="link-button button client-portal-btn" href="client-portal/">Client Portal</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endmacro %}
