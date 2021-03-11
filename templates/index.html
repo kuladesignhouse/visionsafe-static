@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="wp-content/themes/foundations2WP/css/additions.css">
   <link rel="stylesheet" type="text/css" href="css/checkout.css">
   <link rel="stylesheet" href="https://use.typekit.net/hsf5yko.css">
-  <link rel="stylesheet" href="https://www.visionsafe.com/wp-content/themes/foundations2WP/css/newnav.css">
+  <link rel="stylesheet" href="https://www.visionsafe.com/wp-content/themes/foundations2WP/css/newnav.css?v=1">
 
   <!-- Responsive Slider -->
   <link href="home-slider/css/slideshow.css" rel="stylesheet">
@@ -59,9 +59,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="home-slider/js/picturefill.js" class="picturefill" async="async"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,900,b">
   <link rel="stylesheet" href="home-slider/css/main.css">
-  <script src="home-slider/js/jquery-1.8.2.min.js"></script>
-  <script src="home-slider/js/revolver.min.js"></script>
-  <script src="home-slider/js/slideshow.js"></script>
   <!-- End Responsive Slider-->
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -1848,7 +1845,11 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
 </div>
 {% endblock %}
 
-{% block javascript %} 
+{% block javascript %}
+  <script src="home-slider/js/jquery-1.8.2.min.js"></script>
+  <script src="home-slider/js/revolver.min.js"></script>
+  <script src="home-slider/js/slideshow.js"></script>
+
 <script src="js/webflow.js" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/outofview.js"></script>
@@ -1856,7 +1857,6 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
 <script src="js/foundation.min.js"></script>
 <script src="js/stickyactive.js"></script>
 <script>$(document).foundation();</script>
-<script src="js/nav.js"></script>
 <script src="js/checkout.js"></script>
 
 <!-- LinkedIn Insight Tag -->
