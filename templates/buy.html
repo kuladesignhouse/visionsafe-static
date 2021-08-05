@@ -6,48 +6,10 @@
 
 {% block title %}Commercial Airlines | VisionSafe | EVAS{% endblock %}
 
-{% block head %} 
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0dd5556c-45da-432d-88be-726b6905f924" data-blockingmode="auto" type="text/javascript"></script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NP63652');</script>
-<!-- End Google Tag Manager -->
-  <!-- Global site tag (gtag.js) - Google Ads: 667333334 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-667333334"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-667333334');
-</script>
-
-  <script>document.createElement( "picture" );</script>
-  <script src="js/picturefill.min.js" class="picturefill" async="async"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,800,900,b%7CMerriweather:300i,b,i">
-  <link rel="stylesheet" href="wp-content/themes/foundations2WP/css/foundation.min2.css">
-  <link rel="stylesheet" href="wp-content/themes/foundations2WP/css/wireframe-theme.min.css">
-  <link rel="stylesheet" href="wp-content/themes/foundations2WP/css/main.css">
-  <link rel="stylesheet" href="wp-content/themes/foundations2WP/css/additions.css">
-  <link rel="stylesheet" href="scss/ccc.css">
-  <link rel="stylesheet" type="text/css" href="css/checkout.css">
-  <link rel="stylesheet" href="https://use.typekit.net/hsf5yko.css">
-  <link rel="stylesheet" href="https://www.visionsafe.com/wp-content/themes/foundations2WP/css/newnav.css?v=1">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-
-
+{% block head %}
+  {% include "partials/head.njk" %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
 <script src="extras/sub-current.js"></script>
-<style>.CookieDeclaration {display: none !important;}</style>
 {% endblock %}
 
 {% block content %} 
