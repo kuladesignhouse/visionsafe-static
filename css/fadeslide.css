@@ -30,25 +30,15 @@ body {
    -moz-background-size:cover;
    -o-background-size:cover;
    background-size:cover;
-  object-fit:fill;
+  object-fit:cover;
   width: 100%;
-  height: auto;
+  height: 224px;
 }
-/*
-.slider_slide:nth-child(2) video {
-  background-image:url("https://www.visionsafe.com/videos/evas-bg-video-poster-00001.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit:fill;
-  width: 100%;
-  height: 100%;
-}
-*/
 .slider_nav {
   z-index: 3;
   position: absolute;
   height: 100%;
-  width: 120px;
+  width: 64px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -73,13 +63,14 @@ body {
 #morevids {
   display: none;
   font-family: 'Lato', sans-serif;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: underline;
   color: #fff;
+  margin-right: 10px;
+  height: 40px;
 }
 #nextslide.show {
-  margin-top: 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,6 +81,7 @@ body {
   text-align: center;  
   margin-top: 25px;
   pointer-events: all;
+  margin-bottom: -52px;
 }
 #prevslide, #nextslide {
   cursor: pointer;
@@ -187,19 +179,36 @@ div#preload {
     font-size: 42px;
     max-width: 399px;
   }
+  .slider_slide:first-child video {
+    height: 340px;
+  }
+}
+@media (min-width: 40rem) {
+  .slider_nav {
+    width: 120px;
+  }
 }
 @media (min-width: 45rem) {
   .slider_nav {
     width: 193px;
+  }
+  #morevids {
+    font-size: 18px;
   }
 }
 @media (min-width: 64rem) {
   .fadeslider {
     height: 640px;
   }
+  .slider_slide:first-child video {
+    height: 640px;
+  }
 }
 @media (min-width: 76.75rem) {
   .fadeslider {
+    height: 700px;
+  }
+  .slider_slide:first-child video {
     height: 700px;
   }
 }
