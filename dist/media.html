@@ -116,6 +116,75 @@ c.parentNode.insertBefore(t,c)}();
   font-size: 18px;
   margin-bottom: 10px;
 }
+.topics-covered > div {
+  display: flex;
+}
+.podcast-title {
+  width: 100%;
+  border-bottom-width: .125rem;
+  border-bottom-style: solid;
+}
+h3.podcast-heading {
+  font-size: 22px;
+  line-height: 30.8px;
+  font-family:'lato';
+  font-weight: bold;
+}
+#podcast {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  bottom: -340px;
+}
+#podcast-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+#podcast-links a:not(:last-child) {
+  margin: 0 0 20px;
+}
+@media screen and (min-width: 23.4rem ) {
+  #podcast {
+    bottom: -390px;
+  } 
+}
+@media screen and (min-width: 25.875rem ) {
+  #podcast {
+    bottom: -440px;
+  } 
+}
+@media screen and (min-width: 30rem ) {
+  #podcast {
+    bottom: -520px;
+  } 
+}
+@media screen and (min-width: 31.2rem ) {
+  #podcast {
+    bottom: -620px;
+  } 
+}
+@media screen and (min-width: 40rem ) {
+  h3.podcast-heading {
+    font-size: 30px;
+    line-height: 44px;
+  }
+  #podcast-links {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  #podcast-links a:not(:last-child) {
+    margin: 0 10px 0 0;
+  }
+}
+@media screen and (min-width: 46rem ) {
+  #podcast {
+    bottom: -285px;
+  } 
+}
 </style>
 
   <script src="/js/_nav.js?v=1" async></script>
@@ -337,40 +406,40 @@ fires due to lithium batteries</h3>
           <div class="columns small-12 medium-6">
             <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336250903" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
           </div>
-          
-          <h2 style="width: 100%; border-bottom-width: .125rem; border-bottom-style: solid;" id="podcast">Podcast</h2>
+          <div id="podcast"></div>
+          <h2 class="podcast-title">Podcast</h2>
           <div style="padding: 6px 12px;">
-            <h3 style="font-size: 30px; line-height: 44px; font-family:'lato'; font-weight: bold;">Chris Skurat, VisionSafe’s Director, Business Aviation sector, discusses the Emergency Vision Assurance in every detail on the Asset Insight podcast.</h3>
+            <h3 class="podcast-heading">Chris Skurat, VisionSafe’s Director, Business Aviation sector, discusses the Emergency Vision Assurance in every detail on the Asset Insight podcast.</h3>
             <iframe loading="lazy" style="border: 1px solid #000; margin: 15px 0;" title="Libsyn Player" src="//html5-player.libsyn.com/embed/episode/id/21146207/height/90/theme/custom/thumbnail/yes/direction/backward/render-playlist/no/custom-color/53aedc/menu/no/" width="100%" height="90" scrolling="no" allowfullscreen="allowfullscreen" data-dashlane-frameid="440"></iframe>
-            <div style="display: flex; justify-content: space-between; flex-wrap: nowrap;">
-              <a href="https://podcasts.apple.com/us/podcast/understanding-the-emergency-vision-assurance-system-evas/id1517868306?i=1000541637755" style="margin-right: 10px" target="_blank"><img src="images/Podcast-on-Apple-iTunes.png"></a>
-              <a href="https://open.spotify.com/episode/5j2DcPoHqW8A9bDMQQCLgN?si=d358ee47cfd94fa8" target="_blank" style="margin-right: 10px"><img src="images/Podcast-on-Spotify.png"></a>
-              <a href="https://listen.stitcher.com/yvap/?af_dp=stitcher://episode/88255612&af_web_dp=https://www.stitcher.com/episode/88255612" style="margin-right: 10px" target="_blank"><img src="images/Podcast-on-Stitcher.png"></a>
+            <div id="podcast-links">
+              <a href="https://podcasts.apple.com/us/podcast/understanding-the-emergency-vision-assurance-system-evas/id1517868306?i=1000541637755" target="_blank"><img src="images/Podcast-on-Apple-iTunes.png"></a>
+              <a href="https://open.spotify.com/episode/5j2DcPoHqW8A9bDMQQCLgN?si=d358ee47cfd94fa8" target="_blank"><img src="images/Podcast-on-Spotify.png"></a>
+              <a href="https://listen.stitcher.com/yvap/?af_dp=stitcher://episode/88255612&af_web_dp=https://www.stitcher.com/episode/88255612" target="_blank"><img src="images/Podcast-on-Stitcher.png"></a>
               <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hc3NldGluc2lnaHQubGlic3luLmNvbS9yc3M/episode/ZjgyMDc1YzEtYzkzYi00OWZhLWFlZTMtYTkwOTc1ZGRiYzk0?sa=X&ved=0CAUQkfYCahcKEwigyebx4L70AhUAAAAAHQAAAAAQAQ" target="_blank"><img src="images/Podcast-on-Google-Podcast.png"></a>
             </div>
             <h3 style="margin-top: 20px; font-family: 'Lato'; font-weight: 500; font-size: 30px;">Topics Covered</h3>
             <div class="topics-covered">
-              <div style="display: flex;">
+              <div>
                 <img src="images/checkmark-gold.png" width="16px" height="16px"/>
                 <p>Understanding EVAS and why it should it be considered a critical safety initiative.</p>
               </div>
-              <div style="display: flex;">
+              <div>
                 <img src="images/checkmark-gold.png" width="16px" height="16px"/>
                 <p>Why a smoke hood or Heads Up Display does not provide the safety capabilities offered by EVAS.</p>
               </div>
-              <div style="display: flex;">
+              <div>
                 <img src="images/checkmark-gold.png" width="16px" height="16px"/>
                 <p>Some of the more common situations that could cause blinding smoke to enter the cockpit.</p>
               </div>
-              <div style="display: flex;">
+              <div>
                 <img src="images/checkmark-gold.png" width="16px" height="16px"/>
                 <p>What type of aircraft operator should consider acquiring EVAS for their operation?</p>
               </div>
-              <div style="display: flex;">
+              <div>
                 <img src="images/checkmark-gold.png" width="16px" height="16px"/>
                 <p>Installing EVAS on your aircraft and the FAA’s position on the system.</p>
               </div>
-              <div style="display: flex;">
+              <div>
                 <img src="images/checkmark-gold.png" width="16px" height="16px"/>
                 <p>How does EVAS impact an aircraft’s financial value?</p>
               </div>
