@@ -1,0 +1,1751 @@
+{% extends "layout.njk" %}
+
+{% block meta %}
+  <meta name="description" content="Emergency Vision Assurance System (EVAS) provides a clear space of air through which a pilot can see flight instruments and out the front windshield for landing the plane in the event of in cockpit smoke.">
+  <meta name="facebook-domain-verification" content="nfa0kedfc3mznwq9ht00suik5kr4c6" />
+{% endblock %}
+
+{% block title %}Emergency Vision Assurance System | VisionSafe | EVAS{% endblock %}
+
+{% block head %}
+<script data-cookieconsent="ignore">	
+window.dataLayer = window.dataLayer || [];	
+function gtag() {	
+    dataLayer.push(arguments);	
+}	
+gtag("consent", "default", {	
+    ad_storage: "denied",	
+    analytics_storage: "denied",	
+    wait_for_update: 500	
+});	
+gtag("set", "ads_data_redaction", true);	
+</script>
+  {% include "partials/head.njk" %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,900,b">	
+  <link rel="stylesheet" href="css/fadeslide.css">
+{% endblock %}
+
+{% block content %} 
+  <div class="row slideshow-row2">
+    <div class="columns small-12">
+      <div class="fadeslider">
+        <div class="slider_slides-cont">
+          <div class="slider_slide" style="opacity: 1; visibility: visible; transition: all 0.5s linear 0.5s;">
+            <video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" id="slide1vid">
+              <source src="https://www.visionsafe.com/videos/evas-bg-video-transcode.mp4" data-wf-ignore="true">
+            </video>
+          </div>
+          <div class="slider_slide" id="slide2" style="opacity: 0; visibility: hidden; transition: all 0.5s linear 0s;">
+            <div class="vidwrap">
+              <svg xmlns="http://www.w3.org/2000/svg" id="vid2play" viewBox="0 0 80 81"><ellipse cx="40" cy="40.5" rx="40" ry="40.5" opacity=".84" fill="#fff"/><ellipse cx="40" cy="40.5" rx="39" ry="39.5" fill="none" stroke="#1a1a1a" stroke-width="2"/><g><path d="M30.827 56.669v-32.3l27.9 16.2-27.9 16.1z"/><path d="M57.727 40.569l-26.4-15.4v30.6l26.4-15.2m2 0l-29.4 17.1v-34.2l29.4 17.1z" fill="#222"/></g></svg>
+              <div class="vidtitle">How EVAS Works</div>
+            </div>
+            <iframe id="vimeo1" src="https://player.vimeo.com/video/569038810" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media, autoplay" allowfullscreen></iframe>
+          </div>
+          <div class="slider_slide" id="slide3" style="opacity: 0; visibility: hidden; transition: all 0.5s linear 0s;">
+            <div class="vidwrap">
+              <svg xmlns="http://www.w3.org/2000/svg" id="vid3play" viewBox="0 0 80 81"><ellipse cx="40" cy="40.5" rx="40" ry="40.5" opacity=".84" fill="#fff"/><ellipse cx="40" cy="40.5" rx="39" ry="39.5" fill="none" stroke="#1a1a1a" stroke-width="2"/><g><path d="M30.827 56.669v-32.3l27.9 16.2-27.9 16.1z"/><path d="M57.727 40.569l-26.4-15.4v30.6l26.4-15.2m2 0l-29.4 17.1v-34.2l29.4 17.1z" fill="#222"/></g></svg>
+              <div class="vidtitle">EVAS Overview</div>
+            </div>
+            <iframe id="vimeo2" src="https://player.vimeo.com/video/336250903" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="fullscreen; picture-in-picture; encrypted-media; autoplay" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="slider_nav slider_nav--left">
+          <a id="prevslide">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.4 74.7">
+              <path d="M34.2 1L2 39.7l32.2 34" fill="none" stroke="#fff" stroke-width="3"/>
+            </svg>
+      		</a>
+        </div>
+        <div class="slider_nav slider_nav--right">
+          <a id="nextslide">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.4 74.7">
+              <path d="M1.2 73.7L33.4 35 1.2 1" fill="none" stroke="#fff" stroke-width="3"/>
+            </svg>
+      		</a>
+      		<a href="/#vid" id="morevids">See More Videos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--
+  <div class="row headerimg-row">
+    <div class="columns small-12 hide-for-medium">
+      <div class="responsive-picture headerimg">
+        <div data-poster-url="images/snapshot.jpg" data-video-urls="videos/evas-mobile.mp4?v=1" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="background-video w-background-video w-background-video-atom">
+          <video class="slide-vid" autoplay="" loop="" style="background-image:url(&quot;videos/evas-bg-video-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true"><source src="videos/evas-mobile.mp4?v=1" data-wf-ignore="true"></video>
+        </div>
+      </div>
+      <div class="vid-info hide-for-medium">
+        <h1>Emergency Vision Assurance System</h1>
+        <p>EVAS<sup>®</sup> allows pilots to see the flight path and vital instruments in the event of a smoke in the cockpit emergency.</p>
+      </div>
+    </div>
+  </div>
+-->
+  <div class="row second-nav" data-sticky-container>
+    <div class="columns small-12 col-second-nav sticky" data-sticky data-top-anchor="second-nav-sticky" data-btm-anchor="12000" data-options="marginTop:0;" id="second-nav-sticky" data-sticky-on="small">
+      <nav class="container container-second-nav">
+        <ul class="link-list ul-second-nav">
+          <li class="list-item-link li-second-nav"><a href="#about">EVAS</a></li>
+          <li class="list-item-link li-second-nav"><a href="#why">Why EVAS</a></li>
+          <li class="list-item-link li-second-nav"><a href="#warranty">Warranty</a></li>
+          <li class="list-item-link li-second-nav"><a href="#vid">Videos</a></li>
+          <li class="list-item-link li-second-nav"><a href="#cert"><span>Installation/Certifications</span><span>Install/Certs</span></a></li>
+          <li class="list-item-link li-second-nav"><a href="#service">Service</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="columns small-12">
+
+      <div class="row" id="about" data-magellan-target="about">
+        <div class="small-12 medium-4">
+          <h3 class="show-for-medium">Normal View</h3>
+          <img src="images/view1.png" alt="">
+          <p class="show-for-medium">Thousands of Emergency Vision Assurance Systems (EVAS<sup>®</sup>) are in service now, protecting aircraft around the world.</p>
+          <div class="hide-for-medium">
+            <h3>Normal View</h3>
+            <p>Thousands of Emergency Vision Assurance Systems (EVAS<sup>®</sup>) are in service now, protecting aircraft around the world.</p>              
+          </div>
+
+        </div>
+        <div class="small-12 medium-4">
+          <h3 class="show-for-medium">Smoke View</h3>
+          <img src="images/view2.png" alt="">
+          <p class="show-for-medium">In the U.S. alone, more than 1,000 in-flight smoke events are reported each year.</p>
+          <div class="hide-for-medium">
+            <h3>Smoke View</h3>
+            <p>In the U.S. alone, more than 1,000 in-flight smoke events are reported each year.</p>              
+          </div>
+        </div>
+        <div class="small-12 medium-4">
+          <h3>EVAS<sup>®</sup>&nbsp;View</h3>
+          <img src="images/view3.png" alt="">
+          <p>EVAS<sup>®</sup>&nbsp;protected aircraft can be flown no matter how much smoke gets in the cockpit.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="ovrly">
+      <div class="ovrly-img">
+        <img alt="EVAS product undeployed in case" srcset="./images/evas-shadow.png">
+      </div>
+      <div class="ovrly-content">
+        <div class="ovrly-content-wrap">
+          <p class="ovrly-txt">Emergency Vision Assurance System (EVAS) provides a clear space of air through which a pilot can see flight instruments and out the front windshield for landing the plane in the event of in cockpit smoke.</p>
+          <p class="evac2 show-for-medium">When smoke evacuation procedures are not sufficient, EVAS<sup>®</sup>&nbsp;provides emergency backup allowing the pilot to see and fly the aircraft to a safe landing. Statistics from FAA Service Difficulty Reports clearly show that in-flight fires, smoke or fumes are some of the most significant causes of unscheduled or emergency landings and account for on average one precautionary landing per day.<br></p>  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row hide-for-medium">
+    <p class="evac">When smoke evacuation procedures are not sufficient, EVAS<sup>®</sup>&nbsp;provides emergency backup allowing the pilot to see and fly the aircraft to a safe landing. Statistics from FAA Service Difficulty Reports clearly show that in-flight fires, smoke or fumes are some of the most significant causes of unscheduled or emergency landings and account for on average one precautionary landing per day.<br></p>  
+  </div>
+  <div class="row icon-row">
+    <div class="columns small-12 medium-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-4 medium-4 sg-icon-view" data-outofview="true">
+            <div class="responsive-picture light-weight-icon">
+              <picture><img alt="Light weight and compact icon" srcset="./images/light-weight-icon.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+              </picture>
+            </div>
+          </div>
+          <div class="columns small-4 medium-4 sg-icon-view" data-outofview="true">
+            <div class="responsive-picture power-icon">
+              <picture><img alt="Self contained power supply icon" srcset="./images/power-icon.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+              </picture>
+            </div>
+          </div>
+          <div class="columns small-4 medium-4 sg-icon-view" data-outofview="true">
+            <div class="responsive-picture warranty-icon">
+              <picture><img alt="Warranty icon" srcset="./images/warranty-icon.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+              </picture>
+            </div>
+          </div>
+          <div class="columns small-4 medium-4">
+            <h3 class="icon-heading">Light Weight and Compact</h3>
+            <p class="paragraph icon-par">EVAS<sup>®</sup>&nbsp;measures 3 x 8.5 x 10 inches when stowed, the approximate space of a Jeppessen navigation manual and weighs less than 6lbs (2.7kg)</p>
+          </div>
+          <div class="columns small-4 medium-4">
+            <h3 class="icon-heading">Self Contained Power Supply</h3>
+            <p class="paragraph icon-par">The device is independent of aircraft power, relying on a self-contained alkaline battery-power supply, pump and filters in each storage case.</p>
+          </div>
+          <div class="columns small-4 medium-4">
+            <h3 class="icon-heading">10 Year Warranty</h3>
+            <p class="paragraph icon-par">EVAS is covered by a comprehensive renewable/transferable 10 Year Warranty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="companies">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12">
+            <h1 class="major-h">Trusted by the best</h1>
+          </div>
+          <div class="columns small-12 sg-line-fade-top"></div>
+          <div class="columns small-12 show-for-medium"><a href="about.html#clients" class="responsive-picture company-logos"><picture><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="./images/client-cloud-home.png" media="(min-width: 40em)"><source media="screen" srcset="./images/client-cloud-home.png"><!--[if IE 9]></video><![endif]--><img alt="Names of some companies that use EVAS, Gulfstream, FedEx, US Air Force, Bombardier, and Jet Blue" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a>
+          </div>
+
+          <div class="columns small-12 hide-for-medium">
+            <a href="about.html#clients" class="company-logos-mob">
+              <img alt="Names of some companies that use EVAS, Gulfstream, FedEx, US Air Force, Bombardier, and Jet Blue" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" srcset="./images/vertical-cloud.png">
+            </a>
+          </div>
+
+          <div class="columns small-12 sg-line-fade-btm"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <article class="row gray-row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 medium-4">
+            <h4 class="red-h">The system requires virtually no installation.</h4>
+            <p class="paragraph main-par">EVAS only takes the space of one Jepp Manual case. When needed, the pilot removes the IVU (Inflatable Vision Unit) from the EVAS<sup>®</sup>&nbsp;case and pulls a tab to activate the system. The IVU inflates with one lobe above and one below the glareshield. The whole process about 30 seconds.</p>
+          </div>
+          <div class="columns small-12 medium-4">
+            <h4 class="red-h">Recommended by the FAA and other aviation authorities.</h4>
+            <p class="paragraph main-par">Statistics from FAA Service Difficulty Reports clearly show that in-flight fires, smoke or fumes are one of the most significant causes of unscheduled or emergency landings.</p>
+          </div>
+          <div class="columns small-12 medium-4">
+            <h4 class="red-h">EVAS can save your life.</h4>
+            <p class="paragraph main-par">When smoke evacuation procedures are not sufficient, EVAS<sup>®</sup>&nbsp;provides emergency backup allowing the pilot to see and fly the aircraft to a safe landing. After it is activated, EVAS<sup>®</sup>&nbsp;is continually pressurized with filtered cockpit air to maintain volume and preserve a clear view.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <div class="row protect">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 sg-protect">
+            <h1 class="white-h">Protect your passengers and crew in the event of in flight smoke with EVAS<sup>®</sup></h1>
+            <h1 class="white-h-call">Call</h1>
+            <a href="tel:+1-800-441-9230" class="link-container link-container-2"><span class="text-element phonenumber">+1 (800) 441-9230</span></a>
+            <p class="paragraph hero-par">Talk with our specialist about purchasing EVAS<sup>®</sup>&nbsp;for your plane or fleet.<br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row about-row">
+    <div class="columns small-12 about-col">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12">
+            <h2 class="undrlnd">EVAS<sup>®</sup>&nbsp;in detail</h2>
+          </div>
+            
+          <div class="columns small-6 left-par">
+            <p class="paragraph sml-par">A pilot encountering smoke in the cockpit so thick that the instruments cannot be seen can utilize a relatively simple device, which provides a clear view. Emergency Vision Assurance System (EVAS<sup>®</sup>) provides a clear space of air through which a pilot can see flight instruments and out the front windshield for landing. The pilot still relies on the oxygen mask for breathing, smoke goggles for eye protection and employs approved procedures for clearing smoke from the aircraft.</p>
+            <p class="paragraph sml-par">EVAS measures 3 x 8.5 x 10 inches when stowed, the approximate space of a Jeppessen navigation manual. When needed, the pilot removes the IVU (Inflatable Vision Unit) from the EVAS<sup>®</sup>&nbsp;case and pulls a tab to activate the system. The IVU inflates with one lobe above and one below the glareshield. According to VisionSafe Corporation, the distributor of EVAS<sup>®</sup>, the whole process takes 15-20 seconds. The pilot leans forward, placing his smoke goggles in contact with the EVAS<sup>®</sup>&nbsp;clear window, giving him an unimpaired view of both vital instruments and the outside world.</p>
+          </div>
+          <div class="columns small-6">
+            <p class="paragraph sml-par">The device is independent of aircraft power, relying on a self-contained battery-power supply, pump and filters in each storage case. EVAS<sup>®</sup>&nbsp;systems are designed to run for at least two hours, and filter down to .01 microns. The system requires virtually no installation. While the FAA regulations require smoke detectors, fire extinguishers, smoke goggles and oxygen masks, pilots point out that these safeguards and all other systems and equipment for flight safety are useless if the pilots cannot see to control and land the aircraft.</p>
+            <p class="paragraph sml-par">VisionSafe Corporation uses a fleet of mobile cockpit demonstration units to show potential customers the benefits of the system. EVAS<sup>®</sup>&nbsp;demonstrations use a fog generator to reduce cockpit vision so the pilot cannot see his hand in front of his face. Smoke goggles offer no vision improvement, though they do protect the eyes. After EVAS<sup>®</sup>&nbsp;is deployed, the pilot can clearly see both the vital instruments and out through the windshield. It is truly an amazing experience.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row spec-row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 medium-5 sg-col-specs">
+            <div class="container specs">
+              <h3 class="product-h">Product Specs</h3>
+              <p class="paragraph specs-p">Compact: 3" x 8.5" x 10"<br>(75mm x 215mm x 255mm)</p>
+              <p class="paragraph specs-p">Light weight: ~ 5.5Lbs (2.5KG)<br>
+              </p>
+              <p class="paragraph specs-p">15-20 second deployment time</p>
+              <p class="paragraph specs-p">Self-contained power supply</p>
+              <p class="paragraph specs-p">Easy to install</p>
+              <p class="paragraph specs-p">10 Year Warranty</p>
+            </div>
+          </div>
+          <div class="columns small-12 medium-7 check-col">
+            <ul class="unorder-list checklist">
+              <li class="list-item check">Displaces all smoke in the vision path regardless of density</li>
+              <li class="list-item check">Provides clear vision of basic instruments and flight path</li>
+              <li class="list-item check">Allows for use of emergency checklists, navigation charts, etc</li>
+              <li class="list-item check">Recommended by the FAA and other aviation authorities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row" id="why" data-magellan-target="why">
+          <div class="columns small-12 sg-section-heading"><h1 class="section-heading">Why Evas</h1></div>
+        </div>
+        <div class="row info-stats">
+          <div class="small-12 medium-4">
+            <img src="images/info-5.png" alt="">
+            <p>Due to smoke or fumes on the aircraft in the US alone.</p>
+          </div>
+          <div class="small-12 medium-4">
+            <img src="images/info-7.png" alt="">
+            <p>An average of 560+ lithium batteries per flight.</p>
+          </div>
+          <div class="small-12 medium-4">
+            <img src="images/info-8.png" alt="">
+            <p>EVAS<sup>®</sup>&nbsp;is certified on over 120 aircraft types.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row product-hero">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 sg-product-hero">
+            <h4 class="product-hero-h">The EVAS<sup>®</sup> has one defining purpose:</h4>
+            <p class="paragraph product-here-p">Protect the pilot's vision to ensure a safe landing during a smoke in the cockpit emergency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 tstmnl" id="capt-brian-experience">
+            <h1></h1>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row show-for-medium">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12">
+            <h1 class="product-h-sml">Smoke from oil leaking into hot-air ducts</h1>
+            <p>“Oil from the APU (Auxiliary Power Unit) was leaking into the air conditioning hot-air ducts, which resulted in a great deal of smoke in the cockpit. The smoke began coming in through the air vents and filling the cabin and cockpit to the point where I couldn’t see anything, including the flight instruments. At nighttime with an overhead light turned on, it created a beam of light which did nothing more than illuminate the smoke in the cockpit. This is like turning your high beams on and driving in fog. You can’t see anything, except  what’s close to you. We donned our smoke goggles which protected our eyes against the smoke, but we still were unable to see anything. I had to lean so far forward in an attempt to see the flight instruments that I was pushing on the yoke. I was leaning in such a very awkward position simply to see the flight instruments..”</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns small-12 medium-6">
+            <h1 class="product-h-sml">Burning air conditioning recirculation fan</h1>
+            <p>“Another emergency  I had was a burning air conditioning recirculation fan. It was burning up and shorting out, and the fumes were so noxious they were burning our eyes, and our throats.  We needed to shut down all our electric equipment to try to figure out what was causing this, so we shut everything off, including our weather radar, which we were using to circumnavigate thunderstorms. That was a bit hair raising.”</p>
+            <h1 class="product-h-sml">Cockpit suddenly fills with blinding smoke</h1>
+            <p>“The cockpit filled with smoke, it wasn’t insidious, it happened all of a sudden, real quickly, and we didn’t know what caused that one, but we had the same issue--I couldn’t see my flight instruments. I had to put on my mask and goggles, and the oxygen mask hose caught on something. I couldn’t lean forward, and couldn’t figure out what it was caught on.  I couldn’t see anything anyway, so here I am trying to get closer to my flight instruments, and I couldn’t. I couldn’t see the panel, so I’m feeling around the cockpit by hand where the auto pilot controls are, Until we get this smoke issue resolved,  we can’t see anything in the cockpit or what to do.”</p>            
+          </div>
+          <div class="columns small-12 medium-6 tstmnlq">
+            <img src="./images/captbrians.png" alt="Testimonial of Captain Brian S." />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row hide-for-medium">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12" id="quotewrap">
+            <img src="./images/captbriansmob.png" alt="Testimonial of Captain Brian S." />
+            <h1 class="quotetxtsml">Cockpit suddenly fills with blinding smoke</h1>
+            <p>“The cockpit filled with smoke, it wasn’t insidious, it happened all of a sudden, real quickly, and we didn’t know what caused that one, but we had the same issue--I couldn’t see my flight instruments. I had to put on my mask and goggles, and the oxygen mask hose caught on something. I couldn’t lean forward, and couldn’t figure out what it was caught on.  I couldn’t see anything anyway, so here I am trying to get closer to my flight instruments, and I couldn’t. I couldn’t see the panel, so I’m feeling around the cockpit by hand where the auto pilot controls are, Until we get this smoke issue resolved,  we can’t see anything in the cockpit or what to do.”</p>
+            <div id="morewrap">
+              <h1 class="quotetxtsml">Smoke from oil leaking into hot-air ducts</h1>
+              <p>“Oil from the APU (Auxiliary Power Unit) was leaking into the air conditioning hot-air ducts, which resulted in a great deal of smoke in the cockpit. The smoke began coming in through the air vents and filling the cabin and cockpit to the point where I couldn’t see anything, including the flight instruments. At nighttime with an overhead light turned on, it created a beam of light which did nothing more than illuminate the smoke in the cockpit. This is like turning your high beams on and driving in fog. You can’t see anything, except  what’s close to you. We donned our smoke goggles which protected our eyes against the smoke, but we still were unable to see anything. I had to lean so far forward in an attempt to see the flight instruments that I was pushing on the yoke. I was leaning in such a very awkward position simply to see the flight instruments..”</p>
+              <h1 class="quotetxtsml">Burning air conditioning recirculation fan</h1>
+              <p>“Another emergency  I had was a burning air conditioning recirculation fan. It was burning up and shorting out, and the fumes were so noxious they were burning our eyes, and our throats.  We needed to shut down all our electric equipment to try to figure out what was causing this, so we shut everything off, including our weather radar, which we were using to circumnavigate thunderstorms. That was a bit hair raising.”</p>
+            </div>
+            <div id="moreFaded"></div>
+            <a onclick="showMore()" id="readmoreless">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row sg-row-product">
+          <div class="columns small-12 sg-par-col medium-7 show-for-medium">
+            <h1 class="product-h-sml">Emergency Vision Assurance System</h1>
+            <p class="paragraph com-par">EVAS<sup>®</sup>&nbsp;is fully FAA tested and certified to ensure pilot vision in the presence of dense continuous smoke. With EVAS<sup>®</sup>, pilots are able to see the flight path and vital instruments as well as read approach plates and emergency procedures. The ability to perform these functions in an environment of continuous smoke will make a critical difference to safety. <br>
+            </p>
+            <p class="paragraph com-par">In scores of simulator tests with EVAS<sup>®</sup>, pilots have landed safely with smoke in the cockpit so thick they could not see their hand in front of their face. Current aircraft design and certification criteria rely on smoke evacuation methods.<br>
+            </p>
+            <p class="paragraph com-par">The test procedures for these methods measure the smoke clearing capacity against a "standard condition." That standard condition as defined in FAA Advisory Circular 25-9A states "to clear the cockpit of smoke after the pilot's view is obscured, without any further smoke being generated." What if the source of the smoke has not been isolated? Further, what if the evacuation system can't keep up with the smoke being generated?<br>
+            </p>
+            <p class="paragraph com-par">The answer to these questions is EVAS<sup>®</sup>. It is the best way to ensure that the flight crew can maintain vision and safely control and land the aircraft when dense smoke in the cockpit cannot be stopped.<br>
+            </p>
+          </div>
+          <div class="columns small-12 sg-hero-call medium-5">
+            <div class="container product-cont">
+              <p class="paragraph hero-par-product">Talk with an EVAS specialist about getting EVAS for your plane or fleet.<br>
+              </p><a href="tel:+1-800-441-9230" class="link-container phonenum-link-cont"><span class="text-element phonenum-training">+1 (800) 441-9230</span></a>
+              <p class="paragraph hero-par">or fill out our <a title="" href="contact.html" class="p-link-white">contact form</a><br>
+              </p>
+            </div>
+          </div>
+          <div class="columns small-12 sg-par-col hide-for-medium">
+            <h1 class="product-h-sml">Emergency Vision Assurance System</h1>
+            <p class="paragraph com-par">EVAS<sup>®</sup>&nbsp;is fully FAA tested and certified to ensure pilot vision in the presence of dense continuous smoke. With EVAS<sup>®</sup>, pilots are able to see the flight path and vital instruments as well as read approach plates and emergency procedures. The ability to perform these functions in an environment of continuous smoke will make a critical difference to safety. <br>
+            </p>
+            <p class="paragraph com-par">In scores of simulator tests with EVAS<sup>®</sup>, pilots have landed safely with smoke in the cockpit so thick they could not see their hand in front of their face. Current aircraft design and certification criteria rely on smoke evacuation methods.<br>
+            </p>
+            <p class="paragraph com-par">The test procedures for these methods measure the smoke clearing capacity against a "standard condition." That standard condition as defined in FAA Advisory Circular 25-9A states "to clear the cockpit of smoke after the pilot's view is obscured, without any further smoke being generated." What if the source of the smoke has not been isolated? Further, what if the evacuation system can't keep up with the smoke being generated?<br>
+            </p>
+            <p class="paragraph com-par">The answer to these questions is EVAS<sup>®</sup>. It is the best way to ensure that the flight crew can maintain vision and safely control and land the aircraft when dense smoke in the cockpit cannot be stopped.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row buy-hero" >
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row row-buy-evas">
+          <div class="columns small-12 sg-col-buy-evas medium-6">
+            <h4 class="buy-evas-h-text show-for-medium">Add a crucial layer of<br>safety to your aircraft.<br>
+            </h4>
+          </div>
+          <div class="columns small-12 sg-buy-evas-btn-container medium-6">
+            <div class="container buy-btn" id="buyEVAS">
+              <span class="text-element buy-btn-text" id="spanEVAS">Buy EVAS Now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row" id="warranty" data-magellan-target="warranty">
+          <div class="columns small-12 sg-section-heading"><h1 class="section-heading">Warranty</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns small-3">
+            <div class="responsive-picture warranty-icon">
+              <picture><img alt="EVAS comes with a 10 year warranty" srcset="./images/warranty-icon.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+              </picture>
+            </div>
+            <h3 class="icon-heading">10 Year Warranty</h3>
+
+          </div>
+          <div class="columns small-9">
+            <h5 class="warranty-h">EVAS<sup>®</sup>&nbsp;is covered by a comprehensive renewable/transferable 10 Year Warranty.</h5>
+            <a class="link-text warranty-pdf-link" href="docs/warranty/EVASWARRANTY8018_Rev_F.pdf" target="_blank">Download a PDF of the EVAS Warranty</a>
+
+			  <a name="videos"></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row" id="vid" data-magellan-target="vid">
+          <div class="columns small-12 sg-section-heading">
+            <h1 class="section-heading">Videos</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns medium-12">
+            <h2 class="vid-section-heading">Pilot Hugh V. Tillman talks about his blinding smoke in the cockpit incident.</h2>
+            <div style="padding:56.25% 0 0 0;position:relative; margin-bottom:50px;"><iframe src="https://player.vimeo.com/video/568724375?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Former Marine Pilot Hugh V. Tillman talks about his blinding smoke in the cockpit incident."></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <h2 class="vid-section-heading">About EVAS</h2>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/569038810" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336250903" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+          </div>
+          <h2 class="vid-section-heading">360 Videos</h2>
+          <div class="columns small-12 medium-6 ">
+            <div style="padding:42.86% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/321574821?color=efc900" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+
+          <div class="columns small-12 medium-6 show-for-medium">
+            <a name="see-how-m"></a>
+            <div class="video responsive-video youtube" data-original-url="https://www.youtube.com/watch?v=0yX7ULFphFc">
+              <iframe src='https://www.youtube.com/embed/0yX7ULFphFc' data-original-url='https://www.youtube.com/watch?v=0yX7ULFphFc' frameborder='0' allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <h2 class="vid-section-heading">Testimonials</h2>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336714107?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336713473?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336714982?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336710598?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336709398?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336712722?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+          <div class="columns small-12 medium-6">
+            <div class="prod-vimeo-vid"><iframe src="https://player.vimeo.com/video/336711684?color=ffd971&title=0&byline=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+
+          <a name="see-how"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row" id="cert" data-magellan-target="cert">
+          <div class="columns small-12 sg-section-heading"><h1 class="section-heading">Install/cert.<br></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns small-12 medium-7">
+            <h1 class="main-h">Partial Installation Drawings</h1>
+            <p class="paragraph service-h">Visit <a style="color: #0a0a0a; text-decoration: underline;" class="cli-por" href="/client-portal/">Client Portal</a> for Complete Drawings<br>
+            </p>
+            <div class="container install-cont">
+              <h2 class="install-h">Aerospatiale</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/aerospatiale/ATR_42%20&amp;%2072_Install.pdf" target="_blank">ATR 42 and 72</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Airbus</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/airbus/Airbus_A318_A319_A320_A321_Location.pdf" target="_blank">A318, A319, A320, A321</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/airbus/6206A_Installation.pdf" target="_blank">A300-600 and A310</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/airbus/Airbus_A330_Install.pdf" target="_blank">A330</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Boeing</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/boeing/Boeing_737_600_700_700C_800_900_Install.pdf" target="_blank">737-600, -700, -700C, -800, -900</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/Install_6279_O_3&amp;4.pdf" target="_blank">747-8 and -8F</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/Instl_6308_747Legacy.pdf" target="_blank">747-100, -100B, -100B SUD, -200B, -200C, -200F, -300 Series, 747SP Series and 747SR</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/Install_6279_O.pdf" target="_blank">747-400, -400D, -400F</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/Boeing_757_200_Install.pdf" target="_blank">757-200</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/6307_757-200_Series.pdf" target="_blank">757-200, -200CB, -200PF</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/Boeing_767_200_300_Install.pdf" target="_blank">767-200, -300</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/6078_767-200_300.pdf" target="_blank">767-200, -300 Alt. Install</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/6305_767-300F.pdf" target="_blank">767-300F</a>
+                </li>
+                <li class="list-item-link install-item"><a href="wp-content/uploads/2021/11/6244H_Sheet-3-4.pdf" target="_blank">777-200 Series, 777-200LR Series, 777-300 Series, 777-300ER Series and 777F Series </a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/6116_MD-11_MD-11F.pdf" target="_blank">MD-11 and MD-11F Rev. C</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/boeing/MD-11%20and%20MD-11F%20Alternate%20Installation%20Drawing.pdf" target="_blank">MD-11 and MD-11F</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Bombardier</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="wp-content/uploads/2019/01/6230.pdf" target="_blank">BD-700 -1A10, -1A111</a></li>
+                <li class="list-item-link install-item"><a href="docs/install/bombardier/BD_100_1A10_Install.pdf" target="_blank">BD-100 -1A10</a></li>
+                <li class="list-item-link install-item"><a href="docs/install/bombardier/Install_6148_E.pdf" target="_blank">CL-600 Series</a></li>
+                <li class="list-item-link install-item">
+                  <a>Global 7500 EVAS STC<br>(105STC-281 & 105STC-282):</a>
+                  <p style="font-size: 12px;font-weight:500;margin-top:6px;">This STC is owned by Bombardier Aerospace.  Please contact Bombardier directly to purchase this STC for new production aircraft or as an aftermarket retrofit.</p>
+                </li>
+              </ul>
+              <h2 class="install-h">Cessna</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/cessna/Cessna_550_560_Install.pdf" target="_blank">550, 560</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/cessna/Cessna_650_Install.pdf" target="_blank">650</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/cessna/Cessna_680_Install.pdf" target="_blank">680</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/cessna/Cessna_750_Install.pdf" target="_blank">750</a>
+                </li>
+              </ul>
+            </div>
+            <div class="container install-cont2">
+              <h2 class="install-h">Dornier</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/dornier/6220000C%20INSTALL.PDF" target="_blank">AvCraft 328 - 100-300 (328 Support Services Dornier 328-100 &amp; 328-300)</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Convair</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/convair/Convair_440_Install.pdf" target="_blank">400</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Dassault</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/dassault/DFalcon_50_Install.pdf" target="_blank">Falcon 50</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/dassault/DFalcon_900_900EX_2000_2000EX_Install.pdf" target="_blank">Falcon 900, 900EX, 2000, 2000EX</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/dassault/6044_Falcon_900-2000.pdf" target="_blank">Falcon 900, 900EX, 2000, 2000EX Alt. Install</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/dassault/DFalcon_7X_Install.pdf" target="_blank">Falcon 7X</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Embraer</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/embraer/EMB_135LR_145LR_Install.pdf" target="_blank">EMB-135, -145</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/embraer/6295000C.pdf" target="_blank">ERJ 190-100 STD/LR/IGW/ECJ
+
+and ERJ 190-200 STD/LR/IGW</a>
+                </li>
+                <li class="list-item-link install-item"><a href="wp-content/uploads/2021/05/EMB545_550.pdf" target="_blank">EMB-545, -550</a></li>
+              </ul>
+              <h2 class="install-h">Gulfstream</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/gulfstream/G_1159A_G_IV_GIV_X_GV_GV_SP_Install.pdf" target="_blank">G-1159A, G-IV, GIV-X, GV, GV-SP</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/gulfstream/Gulfstream_200_Galaxy_Install%5B1%5D.pdf" target="_blank">200, Galaxy</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/gulfstream/G280%20Install.pdf" target="_blank">G280</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Hawker Beechcraft</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/hawker/BAe.%20125%20800A,%20800B,%201000A,%201000B.pdf" target="_blank">BAe. 125 800A, 800B, 1000A, 1000B and Hawker 750, 800, 800XP, 850XP, 900XP, 1000</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/hawker/Hawker%20Beechcraft_Beech_400A_Install.pdf" target="_blank">Beech 400A</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/hawker/6126_KingAir.pdf" target="_blank">King Air 200 Series, 300 Series, 1900 Series</a>
+                </li>
+              </ul>
+              <h2 class="install-h">Learjet</h2>
+              <ul class="link-list intall-ul">
+                <li class="list-item-link install-item"><a href="docs/install/learjet/Learjet_45_Install.pdf" target="_blank">45</a>
+                </li>
+                <li class="list-item-link install-item"><a href="docs/install/learjet/Learjet_60_Install.pdf" target="_blank">60</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="columns small-12 medium-5">
+            <h1 class="main-h">Certifications</h1>
+            <h2 class="install-h">Repair Station Certificates</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="docs/certifications/repair/FAA_Repair_Station_Certificate.pdf" target="_blank">FAA Repair</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/repair/VSC-EASA-Certificate-2021.pdf" target="_blank">EASA Part 145</a>
+              </li>
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2020/09/F00100830-20221231.pdf" target="_blank">CAAC Certificate</a>
+              </li>
+            </ul>
+            <h2 class="install-h">ISO 9001/AS 9100/AS 9110</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2018/06/VSC-AS9100-Rev-D.pdf" target="_blank">AS9100</a>
+              </li>
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2018/06/VSC-AS9110-Rev-C.pdf" target="_blank">AS9110</a>
+              </li>
+            </ul>
+            <h2 class="install-h">FAA STCs</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="docs/certifications//faa/SA01050WI.pdf" target="_blank">SA01050WI</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/faa/2d.pdf" target="_blank">ST00731LA</a>
+              </li>
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2018/03/AML-ST00892LA_07112019.pdf" target="_blank">ST00892LA with Approved Model List</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/faa/ST01012WI.pdf" target="_blank">ST01012WI</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/faa/ST01057WI.pdf" target="_blank">ST01057WI</a>
+              </li>
+            </ul>
+            <h2 class="install-h">CAAC STCs</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="docs/certifications/caac/VSTC0379%20(CL605%20%20850).pdf" target="_blank">VSTC0379</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/caac/VSTC0260%20(ATR%20A320%20B737%20Gulfstream).pdf" target="_blank">VSTC0260</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/caac/VSTC0621%20(BD700).pdf" target="_blank">VSTC0621</a>
+              </li>
+            </ul>
+            <h2 class="install-h">EASA STCs</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2021/10/10015333_CERT_REV_14.pdf" target="_blank">10015333</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/easa/10016155_CERT_REV_1_20150929.pdf" target="_blank">10016155</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/easa/2e.PDF" target="_blank">10030483</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/easa/EASA%20STC%2010016007_REV_1_BD700.pdf" target="_blank">10016007</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/easa/01774.pdf" target="_blank">EASA.IM.A.S.01774</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/easa/02216.pdf" target="_blank">EASA.IM.A.S.02216</a>
+              </li>
+            </ul>
+            <h2 class="install-h">ANAC STCs</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="docs/certifications/anac/CTS%201002.01(A).PDF" target="_blank">CTS 1002.01 (A) (Argentina)</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/anac/CHST%202009S06-10%20Rev%201.pdf" target="_blank">2009S06-10 (Brazil)</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/anac/2015S02-06.pdf" target="_blank">2015S02-06 (Brazil)</a>
+              </li>
+            </ul>
+            <h2 class="install-h">HKCAD STCs</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="/wp-content/uploads/2017/04/STC-2014-04-Rev-4.pdf" target="_blank">STC-2014-04</a>
+              </li>
+            </ul>
+            <h2 class="install-h">Transport Canada STC Approvals</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="docs/certifications/canada/ST00892LA.pdf" target="_blank">TCCA Approval of STC No. ST00892LA</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/canada/ST01012WI.pdf" target="_blank">Approval of STC No. ST01012WI</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/canada/ST01050WI.pdf" target="_blank">Approval of STC No. ST01050WI</a>
+              </li>
+              <li class="list-item-link install-item"><a href="docs/certifications/canada/TCCA%20STC%20SA03-108%20072106%20BD-700-1A10%20-1A11.pdf" target="_blank">Transport Canada STC No. SA03-108</a>
+              </li>
+            </ul>
+            <h2 class="install-h">GCAA Design Organization Approval</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="docs/certifications/gcaa/Visionsafe%20%20Initial%20DOA%20Cert%202016.pdf" target="_blank">Approval No. DOA/158</a>
+              </li>
+            </ul>
+            <h2 class="install-h">Instructions for Continued Airworthiness</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2021/01/8017-ICA-REV-16.pdf" target="_blank">107STC-XXX ICA Manual</a>
+              </li>
+            </ul>
+            <h2 class="install-h">Eligibility Lists for STC EVAS<sup>®</sup>&nbsp;Models</h2>
+            <ul class="link-list intall-ul">
+              <li class="list-item-link install-item"><a href="wp-content/uploads/2021/05/VS20QC-Form2033_ACTIVE.pdf" target="_blank">EVAS<sup>®</sup>&nbsp;Model Eligibility List for Model 107STC-xxx</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row" id="service" data-magellan-target="service">
+          <div class="columns small-12 sg-section-heading"><h1 class="section-heading">Service<br></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row gray-row margin-btm">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12">
+            <p class="paragraph p-bold">It is important to maintain your EVAS<sup>®</sup>&nbsp;unit. Maintenance information can be found in Chapter 2 of the manual received with your unit. For STC models (107STC), the manual is VSC Document 8017, Instructions for Continued Airworthiness. Links to manuals can be found below in PDF format.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 medium-7">
+            <h1 class="main-h">Required Service &amp; Maintenance</h1>
+            <p class="paragraph service-p">The EVAS<sup>®</sup>&nbsp;warranty is void if systems are not serviced in accordance with required service periods.<br>
+            </p>
+            <a class="link-text service-link" href="docs/service/809%20EVAS%20Service%20Policy%20and%20Price%20Sheet.pdf" target="_blank">- EVAS Service Policy &amp; Price Sheet (PDF)</a>
+            <p class="paragraph service-p">EVAS<sup>®</sup>&nbsp;systems require regular service every 24 months. The service due date is clearly marked on each EVAS<sup>®</sup>&nbsp;unit.<br>
+            </p>
+            <a class="link-text service-link" href="wp-content/uploads/2018/11/24-Month-Service-Form.pdf" target="_blank">- 24 Month Service Form (PDF)</a>
+            <p class="paragraph service-p">120 months from the original manufacture date, the EVAS<sup>®</sup>&nbsp;system is rebuilt to the current configuration. This serves to renew the warranty period for an additional 10 years, and includes replacement of key system components.<br>
+            </p>
+            <a class="link-text service-link" href="wp-content/uploads/2018/11/120-Month-Service-Form.pdf" target="_blank">- 120 Month Service Form (PDF)</a>
+            <h1 class="main-h-sml">Special Inspection</h1>
+            <p class="paragraph service-p">A special inspection is required immediately after:<br>- The integrity of the EVAS<sup>®</sup>&nbsp;container has been compromised;<br>- Any test in which the "Battery Condition" status indicates "Inop" (red test light&nbsp;or no light);<br>- Any use or deployment of EVAS<sup>®</sup>;<br>- 13 or more months have passed from the Base Service Date on the EVAS<sup>®</sup><br> container<br>
+            </p>
+            <h1 class="main-h-sml">Maintenance Manuals</h1>
+            <a class="link-text service-link" href="wp-content/uploads/2021/01/8017-ICA-REV-16.pdf" target="_blank">- 107STC-XXX ICA Manual (PDF)</a>
+            <a class="link-text service-link" href="/wp-content/uploads/2019/03/8024.pdf" target="_blank">- 107P Maintenance and User Instruction Manual (PDF)</a>
+          </div>
+          <div class="columns small-12 medium-5">
+            <h1 class="main-h">Customer Checks<br>
+            </h1>
+            <p class="paragraph service-p">EVAS<sup>®</sup>&nbsp;operators are required to perform regular inspections, to assure their units are in proper working order.<br>
+            </p>
+            <h2 class="service-h">Position and Location Check</h2>
+            <p class="paragraph service-p">The owner, operator or designee shall visually check EVAS<sup>®</sup>&nbsp;for general condition, security, and position in the cockpit.<br>
+            </p>
+            <h2 class="service-h">Blower and Battery Check</h2>
+            <p class="paragraph service-p">The EVAS<sup>®</sup>&nbsp;system must be given a blower and battery check to ensure proper battery voltage and blower motor operation. The span between checks should not exceed 90 days.<br>
+            </p>
+            <h1 class="main-h-sml">If Used</h1>
+            <p class="paragraph service-p">If EVAS<sup>®</sup>&nbsp;is deployed in an emergency, please contact VSC Quality Assurance Department as soon as practical at 1-800-441-9230. Complete the Pilot Smoke Event Report.<br>
+            </p>
+            <a class="link-text service-link" href="docs/service/Pilot_Smoke_Event_Report.pdf" id="btmnav" target="_blank">- Pilot Smoke Event Report (PDF)</a>
+          </div>
+          <div class="columns small-12 medium-12 shipping">
+            <h1 class="main-h">International Shipping Documents and Instructions<br>
+            </h1>
+            <p class="paragraph service-p">Special documents are required when shipping EVAS internationally.<br>
+            </p>
+            <h1 class="main-h-sml">Instructions</h1>
+            <a class="link-text service-link" href="docs/service/shipping/international-shipments-to-usa-instructions.pdf" target="_blank">- International Shipments to the USA Instuctions (PDF)</a>
+            <a class="link-text service-link" href="docs/service/shipping/CBP-form-3311-instructions.pdf" target="_blank">- CBP Form 3311 Instructions (PDF)</a>
+            <a class="link-text service-link" href="docs/service/shipping/FedEx-Foreign-Shippers-Declaration-Instructions.pdf" target="_blank">- FedEx Foreign Shippers Declaration Instructions&nbsp;(PDF)</a>
+            <h1 class="main-h-sml">Forms</h1>
+            <a class="link-text service-link" href="docs/service/shipping/Foreign-Shippers-Declaration-of-US-Goods-Returned-10-3.pdf" target="_blank">- Foreign Shippers Declaration of US Goods Returned (PDF)</a>
+            <a class="link-text service-link" href="docs/service/shipping/CBP-form-3311.pdf" target="_blank">- CBP Form 3311 (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<footer class="row footer-row">
+  <div class="columns small-12">
+    <div class="subgrid subgrid-960">
+      <div class="row">
+        <div class="columns small-12 sg-col-footer medium-6 large-5">
+          <h6>Join our newsletter</h6>
+          <div class="html-element"><script type="text/javascript">document.write(unescape("%3Ciframe id=\"fb_iframe\" src=\"email-signup-validemail.php" + window.location.search + "\" width=\"100%\" height=\"65\"allowtransparency=\"true\" scrolling=\"no\" frameborder=\"0\"%3E&lt;a href=\"email-signup-validemail.php\" title=\"email-signup-validemail\"&gt;Check out my CoffeeCup Form&lt;/a&gt;%3C/iframe%3E"));</script>
+<noscript>
+<iframe class="emailsignup" height="65" style="border:none; background:transparent; overflow:hidden; width:100%; max-height: 65px;"
+id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
+  <a href="email-signup-validemail.php" title="email-signup-validemail">Check out my CoffeeCup Form</a>
+</iframe>
+</noscript></div>
+          <p class="paragraph newsletter-des">Stay up to date with important product news about the EVAS system and the latest and greatest from VisionSafe.</p>
+        </div>
+        <div class="columns small-6 contactus-col large-push-0 large-2 medium-push-1 medium-5 medium-offset-0">
+          <h6>Contact us</h6>
+          <a class="link-text contact-foot-link" href="tel:+1-800-441-9230">1-800-441-9230</a>
+          <a class="link-text contact-foot-link" href="mailto:info@visionsafe.com">info@visionsafe.com</a>
+          <p class="paragraph address">46-217 Kahuhipa St. Kaneohe, HI 96744<br>
+          </p>
+        </div>
+        <div class="columns small-6 medium-4 large-2 connect-col">
+          <h6>Connect with us</h6><a href="https://www.facebook.com/VisionSafeCorporation?fref=ts" class="responsive-picture fb-icon" target="_blank"><picture><img alt="VisionSafe Facebook icon" srcset="./socialicons/webicon-facebook.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a><a href="https://twitter.com/VisionSafeCorp" class="responsive-picture twitter-icon" target="_blank"><picture><img alt="VisionSafe Twitter icon" srcset="./socialicons/webicon-twitter.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a><a href="https://www.youtube.com/user/VisionSafeCorp" class="responsive-picture youtube-icon" target="_blank"><picture><img alt="VisionSafe Youtube icon" srcset="./socialicons/webicon-youtube.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></picture></a>
+        </div>
+        <div class="columns small-12 medium-8 large-3 about-col">
+          <h6>About</h6>
+          <ul class="link-list ul-about-links">
+            <li class="list-item-link about-links"><a href="passenger.html">EVAS for Commercial</a></li>
+            <li class="list-item-link about-links"><a href="cargo.html">EVAS for Cargo</a></li>
+            <li class="list-item-link about-links"><a href="corporate.html">EVAS for Corporate</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<footer class="row footer-row-btm">
+  <div class="columns small-12">
+    <div class="subgrid subgrid-960">
+      <div class="row">
+        <div class="columns small-12 sg-col-footer-btm">
+          <ul class="unorder-list ul-footer-btm"><li class="list-item footer-list-btm">© 2020 VisionSafe</li>
+      <li class="list-item footer-list-btm"><a href="terms.html" class="lgd-link">Terms and Conditions</a></li>
+      <li class="list-item footer-list-btm"><a href="wp-content/uploads/2018/10/VSC-Vendor-Supplier-Code-of-Business-Conduct-Ethics.pdf" class="lgd-link" target="_blank">Business Conduct and Ethics</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="reveal" id="checkoutModal" >
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div id="airload"></div>
+  <h1 id="checkoutheader">Great! We'll guide you through the steps to getting your plane or fleet protected with EVAS.</h1>
+  <form id="checkout" name="checkout">
+    <label>Contact Information</label>
+    <div class="form-input">
+      <input id="fullname" name="fullname" placeholder="Full Name" required="required" type="text">
+      <label for="fullname">Full Name</label>
+    </div>
+    <div class="form-input">
+      <input id="company" name="company" placeholder="Company" required="required" type="text">
+      <label for="company">Company</label>
+    </div>
+    <div class="form-input">
+      <input id="phone" name="phone" placeholder="Phone" required="required" type="tel">
+      <label for="phone">Phone</label>
+    </div>
+    <div class="form-input">
+      <input id="email" name="email" placeholder="Email" required="required" type="email">
+      <label for="email">Email</label>
+    </div>
+    
+    <label class="slct">Where is your plane or fleet registered?</label>
+    <div class="form-input">
+      <select name="location">
+        <option selected="selected" value="0">Select country</option>
+        <option value="US">United States</option>
+        <option value="EU">European Union</option>
+        <option value="OTHER">Other</option>
+      </select>
+    </div>
+    <label class="notshown" id="countrylabel">What country is your plane or fleet registered in?</label>
+    <div id="countrywrap" class="form-input notshown">
+      <select name="country">
+        <option selected="selected" value="0">
+          Select country
+        </option>
+        <option value="AF">
+          Afghanistan
+        </option>
+        <option value="AX">
+          Åland Islands
+        </option>
+        <option value="AL">
+          Albania
+        </option>
+        <option value="DZ">
+          Algeria
+        </option>
+        <option value="AS">
+          American Samoa
+        </option>
+        <option value="AD">
+          Andorra
+        </option>
+        <option value="AO">
+          Angola
+        </option>
+        <option value="AI">
+          Anguilla
+        </option>
+        <option value="AQ">
+          Antarctica
+        </option>
+        <option value="AG">
+          Antigua and Barbuda
+        </option>
+        <option value="AR">
+          Argentina
+        </option>
+        <option value="AM">
+          Armenia
+        </option>
+        <option value="AW">
+          Aruba
+        </option>
+        <option value="AU">
+          Australia
+        </option>
+        <option value="AT">
+          Austria
+        </option>
+        <option value="AZ">
+          Azerbaijan
+        </option>
+        <option value="BS">
+          Bahamas
+        </option>
+        <option value="BH">
+          Bahrain
+        </option>
+        <option value="BD">
+          Bangladesh
+        </option>
+        <option value="BB">
+          Barbados
+        </option>
+        <option value="BY">
+          Belarus
+        </option>
+        <option value="BE">
+          Belgium
+        </option>
+        <option value="BZ">
+          Belize
+        </option>
+        <option value="BJ">
+          Benin
+        </option>
+        <option value="BM">
+          Bermuda
+        </option>
+        <option value="BT">
+          Bhutan
+        </option>
+        <option value="BO">
+          Bolivia, Plurinational State of
+        </option>
+        <option value="BQ">
+          Bonaire, Sint Eustatius and Saba
+        </option>
+        <option value="BA">
+          Bosnia and Herzegovina
+        </option>
+        <option value="BW">
+          Botswana
+        </option>
+        <option value="BV">
+          Bouvet Island
+        </option>
+        <option value="BR">
+          Brazil
+        </option>
+        <option value="IO">
+          British Indian Ocean Territory
+        </option>
+        <option value="BN">
+          Brunei Darussalam
+        </option>
+        <option value="BG">
+          Bulgaria
+        </option>
+        <option value="BF">
+          Burkina Faso
+        </option>
+        <option value="BI">
+          Burundi
+        </option>
+        <option value="KH">
+          Cambodia
+        </option>
+        <option value="CM">
+          Cameroon
+        </option>
+        <option value="CA">
+          Canada
+        </option>
+        <option value="CV">
+          Cape Verde
+        </option>
+        <option value="KY">
+          Cayman Islands
+        </option>
+        <option value="CF">
+          Central African Republic
+        </option>
+        <option value="TD">
+          Chad
+        </option>
+        <option value="CL">
+          Chile
+        </option>
+        <option value="CN">
+          China
+        </option>
+        <option value="CX">
+          Christmas Island
+        </option>
+        <option value="CC">
+          Cocos (Keeling) Islands
+        </option>
+        <option value="CO">
+          Colombia
+        </option>
+        <option value="KM">
+          Comoros
+        </option>
+        <option value="CG">
+          Congo
+        </option>
+        <option value="CD">
+          Congo, the Democratic Republic of the
+        </option>
+        <option value="CK">
+          Cook Islands
+        </option>
+        <option value="CR">
+          Costa Rica
+        </option>
+        <option value="CI">
+          Côte d'Ivoire
+        </option>
+        <option value="HR">
+          Croatia
+        </option>
+        <option value="CU">
+          Cuba
+        </option>
+        <option value="CW">
+          Curaçao
+        </option>
+        <option value="CY">
+          Cyprus
+        </option>
+        <option value="CZ">
+          Czech Republic
+        </option>
+        <option value="DK">
+          Denmark
+        </option>
+        <option value="DJ">
+          Djibouti
+        </option>
+        <option value="DM">
+          Dominica
+        </option>
+        <option value="DO">
+          Dominican Republic
+        </option>
+        <option value="EC">
+          Ecuador
+        </option>
+        <option value="EG">
+          Egypt
+        </option>
+        <option value="SV">
+          El Salvador
+        </option>
+        <option value="GQ">
+          Equatorial Guinea
+        </option>
+        <option value="ER">
+          Eritrea
+        </option>
+        <option value="EE">
+          Estonia
+        </option>
+        <option value="ET">
+          Ethiopia
+        </option>
+        <option value="FK">
+          Falkland Islands (Malvinas)
+        </option>
+        <option value="FO">
+          Faroe Islands
+        </option>
+        <option value="FJ">
+          Fiji
+        </option>
+        <option value="FI">
+          Finland
+        </option>
+        <option value="FR">
+          France
+        </option>
+        <option value="GF">
+          French Guiana
+        </option>
+        <option value="PF">
+          French Polynesia
+        </option>
+        <option value="TF">
+          French Southern Territories
+        </option>
+        <option value="GA">
+          Gabon
+        </option>
+        <option value="GM">
+          Gambia
+        </option>
+        <option value="GE">
+          Georgia
+        </option>
+        <option value="DE">
+          Germany
+        </option>
+        <option value="GH">
+          Ghana
+        </option>
+        <option value="GI">
+          Gibraltar
+        </option>
+        <option value="GR">
+          Greece
+        </option>
+        <option value="GL">
+          Greenland
+        </option>
+        <option value="GD">
+          Grenada
+        </option>
+        <option value="GP">
+          Guadeloupe
+        </option>
+        <option value="GU">
+          Guam
+        </option>
+        <option value="GT">
+          Guatemala
+        </option>
+        <option value="GG">
+          Guernsey
+        </option>
+        <option value="GN">
+          Guinea
+        </option>
+        <option value="GW">
+          Guinea-Bissau
+        </option>
+        <option value="GY">
+          Guyana
+        </option>
+        <option value="HT">
+          Haiti
+        </option>
+        <option value="HM">
+          Heard Island and McDonald Islands
+        </option>
+        <option value="VA">
+          Holy See (Vatican City State)
+        </option>
+        <option value="HN">
+          Honduras
+        </option>
+        <option value="HK">
+          Hong Kong
+        </option>
+        <option value="HU">
+          Hungary
+        </option>
+        <option value="IS">
+          Iceland
+        </option>
+        <option value="IN">
+          India
+        </option>
+        <option value="ID">
+          Indonesia
+        </option>
+        <option value="IR">
+          Iran, Islamic Republic of
+        </option>
+        <option value="IQ">
+          Iraq
+        </option>
+        <option value="IE">
+          Ireland
+        </option>
+        <option value="IM">
+          Isle of Man
+        </option>
+        <option value="IL">
+          Israel
+        </option>
+        <option value="IT">
+          Italy
+        </option>
+        <option value="JM">
+          Jamaica
+        </option>
+        <option value="JP">
+          Japan
+        </option>
+        <option value="JE">
+          Jersey
+        </option>
+        <option value="JO">
+          Jordan
+        </option>
+        <option value="KZ">
+          Kazakhstan
+        </option>
+        <option value="KE">
+          Kenya
+        </option>
+        <option value="KI">
+          Kiribati
+        </option>
+        <option value="KP">
+          Korea, Democratic People's Republic of
+        </option>
+        <option value="KR">
+          Korea, Republic of
+        </option>
+        <option value="KW">
+          Kuwait
+        </option>
+        <option value="KG">
+          Kyrgyzstan
+        </option>
+        <option value="LA">
+          Lao People's Democratic Republic
+        </option>
+        <option value="LV">
+          Latvia
+        </option>
+        <option value="LB">
+          Lebanon
+        </option>
+        <option value="LS">
+          Lesotho
+        </option>
+        <option value="LR">
+          Liberia
+        </option>
+        <option value="LY">
+          Libya
+        </option>
+        <option value="LI">
+          Liechtenstein
+        </option>
+        <option value="LT">
+          Lithuania
+        </option>
+        <option value="LU">
+          Luxembourg
+        </option>
+        <option value="MO">
+          Macao
+        </option>
+        <option value="MK">
+          Macedonia, the former Yugoslav Republic of
+        </option>
+        <option value="MG">
+          Madagascar
+        </option>
+        <option value="MW">
+          Malawi
+        </option>
+        <option value="MY">
+          Malaysia
+        </option>
+        <option value="MV">
+          Maldives
+        </option>
+        <option value="ML">
+          Mali
+        </option>
+        <option value="MT">
+          Malta
+        </option>
+        <option value="MH">
+          Marshall Islands
+        </option>
+        <option value="MQ">
+          Martinique
+        </option>
+        <option value="MR">
+          Mauritania
+        </option>
+        <option value="MU">
+          Mauritius
+        </option>
+        <option value="YT">
+          Mayotte
+        </option>
+        <option value="MX">
+          Mexico
+        </option>
+        <option value="FM">
+          Micronesia, Federated States of
+        </option>
+        <option value="MD">
+          Moldova, Republic of
+        </option>
+        <option value="MC">
+          Monaco
+        </option>
+        <option value="MN">
+          Mongolia
+        </option>
+        <option value="ME">
+          Montenegro
+        </option>
+        <option value="MS">
+          Montserrat
+        </option>
+        <option value="MA">
+          Morocco
+        </option>
+        <option value="MZ">
+          Mozambique
+        </option>
+        <option value="MM">
+          Myanmar
+        </option>
+        <option value="NA">
+          Namibia
+        </option>
+        <option value="NR">
+          Nauru
+        </option>
+        <option value="NP">
+          Nepal
+        </option>
+        <option value="NL">
+          Netherlands
+        </option>
+        <option value="NC">
+          New Caledonia
+        </option>
+        <option value="NZ">
+          New Zealand
+        </option>
+        <option value="NI">
+          Nicaragua
+        </option>
+        <option value="NE">
+          Niger
+        </option>
+        <option value="NG">
+          Nigeria
+        </option>
+        <option value="NU">
+          Niue
+        </option>
+        <option value="NF">
+          Norfolk Island
+        </option>
+        <option value="MP">
+          Northern Mariana Islands
+        </option>
+        <option value="NO">
+          Norway
+        </option>
+        <option value="OM">
+          Oman
+        </option>
+        <option value="PK">
+          Pakistan
+        </option>
+        <option value="PW">
+          Palau
+        </option>
+        <option value="PS">
+          Palestinian Territory, Occupied
+        </option>
+        <option value="PA">
+          Panama
+        </option>
+        <option value="PG">
+          Papua New Guinea
+        </option>
+        <option value="PY">
+          Paraguay
+        </option>
+        <option value="PE">
+          Peru
+        </option>
+        <option value="PH">
+          Philippines
+        </option>
+        <option value="PN">
+          Pitcairn
+        </option>
+        <option value="PL">
+          Poland
+        </option>
+        <option value="PT">
+          Portugal
+        </option>
+        <option value="PR">
+          Puerto Rico
+        </option>
+        <option value="QA">
+          Qatar
+        </option>
+        <option value="RE">
+          Réunion
+        </option>
+        <option value="RO">
+          Romania
+        </option>
+        <option value="RU">
+          Russian Federation
+        </option>
+        <option value="RW">
+          Rwanda
+        </option>
+        <option value="BL">
+          Saint Barthélemy
+        </option>
+        <option value="SH">
+          Saint Helena, Ascension and Tristan da Cunha
+        </option>
+        <option value="KN">
+          Saint Kitts and Nevis
+        </option>
+        <option value="LC">
+          Saint Lucia
+        </option>
+        <option value="MF">
+          Saint Martin (French part)
+        </option>
+        <option value="PM">
+          Saint Pierre and Miquelon
+        </option>
+        <option value="VC">
+          Saint Vincent and the Grenadines
+        </option>
+        <option value="WS">
+          Samoa
+        </option>
+        <option value="SM">
+          San Marino
+        </option>
+        <option value="ST">
+          Sao Tome and Principe
+        </option>
+        <option value="SA">
+          Saudi Arabia
+        </option>
+        <option value="SN">
+          Senegal
+        </option>
+        <option value="RS">
+          Serbia
+        </option>
+        <option value="SC">
+          Seychelles
+        </option>
+        <option value="SL">
+          Sierra Leone
+        </option>
+        <option value="SG">
+          Singapore
+        </option>
+        <option value="SX">
+          Sint Maarten (Dutch part)
+        </option>
+        <option value="SK">
+          Slovakia
+        </option>
+        <option value="SI">
+          Slovenia
+        </option>
+        <option value="SB">
+          Solomon Islands
+        </option>
+        <option value="SO">
+          Somalia
+        </option>
+        <option value="ZA">
+          South Africa
+        </option>
+        <option value="GS">
+          South Georgia and the South Sandwich Islands
+        </option>
+        <option value="SS">
+          South Sudan
+        </option>
+        <option value="ES">
+          Spain
+        </option>
+        <option value="LK">
+          Sri Lanka
+        </option>
+        <option value="SD">
+          Sudan
+        </option>
+        <option value="SR">
+          Suriname
+        </option>
+        <option value="SJ">
+          Svalbard and Jan Mayen
+        </option>
+        <option value="SZ">
+          Swaziland
+        </option>
+        <option value="SE">
+          Sweden
+        </option>
+        <option value="CH">
+          Switzerland
+        </option>
+        <option value="SY">
+          Syrian Arab Republic
+        </option>
+        <option value="TW">
+          Taiwan, Province of China
+        </option>
+        <option value="TJ">
+          Tajikistan
+        </option>
+        <option value="TZ">
+          Tanzania, United Republic of
+        </option>
+        <option value="TH">
+          Thailand
+        </option>
+        <option value="TL">
+          Timor-Leste
+        </option>
+        <option value="TG">
+          Togo
+        </option>
+        <option value="TK">
+          Tokelau
+        </option>
+        <option value="TO">
+          Tonga
+        </option>
+        <option value="TT">
+          Trinidad and Tobago
+        </option>
+        <option value="TN">
+          Tunisia
+        </option>
+        <option value="TR">
+          Turkey
+        </option>
+        <option value="TM">
+          Turkmenistan
+        </option>
+        <option value="TC">
+          Turks and Caicos Islands
+        </option>
+        <option value="TV">
+          Tuvalu
+        </option>
+        <option value="UG">
+          Uganda
+        </option>
+        <option value="UA">
+          Ukraine
+        </option>
+        <option value="AE">
+          United Arab Emirates
+        </option>
+        <option value="GB">
+          United Kingdom
+        </option>
+        <option value="UM">
+          United States Minor Outlying Islands
+        </option>
+        <option value="UY">
+          Uruguay
+        </option>
+        <option value="UZ">
+          Uzbekistan
+        </option>
+        <option value="VU">
+          Vanuatu
+        </option>
+        <option value="VE">
+          Venezuela, Bolivarian Republic of
+        </option>
+        <option value="VN">
+          Viet Nam
+        </option>
+        <option value="VG">
+          Virgin Islands, British
+        </option>
+        <option value="VI">
+          Virgin Islands, U.S.
+        </option>
+        <option value="WF">
+          Wallis and Futuna
+        </option>
+        <option value="EH">
+          Western Sahara
+        </option>
+        <option value="YE">
+          Yemen
+        </option>
+        <option value="ZM">
+          Zambia
+        </option>
+        <option value="ZW">
+          Zimbabwe
+        </option>
+      </select>
+    </div>
+    <div class="form-sub">
+      <input type="submit" value="Next" />
+    </div>
+  </form>
+</div>
+<div class="reveal" id="msgModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-error">
+      <h2>We'll need to get you a special STC for where your aircraft is registered. We will be in touch shortly to assist with this. If you'd like to contact us please call us at 1-800-441-9230</h2>
+    </div>    
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>  
+  </div>
+</div>
+<div class="reveal" id="stripeModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-stripe"></div>
+  </div>
+</div>
+<div id="preload">
+<img src="/images/vim1.jpg" />
+<img src="/images/vim2.jpg" />
+</div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="home-slider/js/jquery-1.8.2.min.js"></script>
+<!--
+  <script src="home-slider/js/revolver.min.js"></script>
+  <script src="home-slider/js/slideshow.js"></script>
+-->
+<script src="js/webflow.js" type="text/javascript"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/outofview.js"></script>
+<script src="js/what-input.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/stickyactive.js"></script>
+<script>$(document).foundation();</script>
+<script src="js/checkout.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="js/fadeslide.js"></script>
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_partner_id = "441156";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=441156&fmt=gif" />
+</noscript>
+<!-- End LinkedIn Insight Tag -->
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o31f6');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<!-- birdseed 
+<script id="io.birdseed.script-tag" type="text/javascript" src="https://app.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
+ end birdseed -->
+<script id="CookieDeclaration" src="https://consent.cookiebot.com/0dd5556c-45da-432d-88be-726b6905f924/cd.js" type="text/javascript" async></script>
+{% endblock %}
