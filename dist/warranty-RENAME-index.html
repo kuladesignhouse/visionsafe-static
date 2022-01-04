@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <script src="/js/_nav.js?v=1" async></script>
 </head>
-<body class="no-js">
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP63652"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -277,10 +277,31 @@ fires due to lithium batteries</h3>
               </svg>
               <span>+1(800) 441-9230</span>
             </a>
+            <form id="searchsite" role="search" onsubmit=(handleSearch)>
+              <svg version="1.1" id="magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 27 27" style="enable-background:new 0 0 27 27; width: 27px; height: 27px;" xml:space="preserve">
+              <style type="text/css">.st00{clip-path:url(#SVGID_2_);}.st11{fill:#ffffff;}</style>
+              <g>
+                <defs>
+                  <rect id="SVGID_1_" x="0" y="0" width="27" height="27"/>
+                </defs>
+                <clipPath id="SVGID_2_">
+                  <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+                </clipPath>
+                <g class="st00">
+                  <path class="st11" d="M26.8,24.1l-8.4-8.4c1.1-1.6,1.7-3.6,1.7-5.6c0-2.7-1-5.2-2.9-7.1C15.2,1,12.7,0,10,0C7.4,0,4.8,1,2.9,2.9
+                    C1,4.8,0,7.4,0,10c0,2.7,1,5.2,2.9,7.1c1.9,1.9,4.4,2.9,7.1,2.9c2,0,4-0.6,5.6-1.7l8.4,8.4c0.3,0.3,0.8,0.2,1.2-0.1l1.4-1.4
+                    C27,24.9,27.1,24.3,26.8,24.1L26.8,24.1z M10,17.3c-4,0-7.3-3.3-7.3-7.3S6,2.7,10,2.7S17.3,6,17.3,10S14.1,17.3,10,17.3z"/>
+                </g>
+              </g>
+              </svg>
+              <input type="text" name="search" type="search" placeholder="Search Site..." id="q">
+            </form>
           </div>
         </nav>
       </div>
     </div>
+  <div id="alg"></div>
    
   <div class="row">
     <div class="columns small-12">
@@ -1403,6 +1424,8 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
   </div>
 </div>
 
+  <div id="algend"></div>
+  <div id="hits"></div>
    
 <script src="../js/webflow.js" type="text/javascript"></script>
 <script src="../js/jquery.min.js"></script>

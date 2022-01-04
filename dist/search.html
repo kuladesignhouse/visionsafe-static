@@ -111,6 +111,8 @@ c.parentNode.insertBefore(t,c)}();
 <style>.CookieDeclaration {display: none !important;}</style>
 <script defer data-domain="visionsafe.com" src="https://plausible.io/js/plausible.js"></script>
 
+
+<!--
 <script>
 (function() {
 var id = '9cf38358-5915-11ec-bac3-0242ac130002';
@@ -122,12 +124,18 @@ var s = document.getElementsByTagName('script')[0];
 s.parentNode.insertBefore(ci_search, s);
 })();
 </script>
+-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
+<!--
+<link rel="stylesheet" type="text/css" href="https://www.visionsafe.com/css/search.css">
+--!>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,900,b">	
   <link rel="stylesheet" href="css/fadeslide.css">
 
   <script src="/js/_nav.js?v=1" async></script>
 </head>
-<body class="no-js">
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP63652"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -307,7 +315,7 @@ fires due to lithium batteries</h3>
               </svg>
               <span>+1(800) 441-9230</span>
             </a>
-            <form id="searchsite" role="search">
+            <form id="searchsite" role="search" onsubmit=(handleSearch)>
               <svg version="1.1" id="magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 27 27" style="enable-background:new 0 0 27 27; width: 27px; height: 27px;" xml:space="preserve">
               <style type="text/css">.st00{clip-path:url(#SVGID_2_);}.st11{fill:#ffffff;}</style>
@@ -325,12 +333,13 @@ fires due to lithium batteries</h3>
                 </g>
               </g>
               </svg>
-              <input type="text" name="search" type="search" placeholder="Search Site...">
+              <input type="text" name="search" type="search" placeholder="Search Site..." id="q">
             </form>
           </div>
         </nav>
       </div>
     </div>
+  <div id="alg"></div>
    
   <div class="row slideshow-row2">
     <div class="columns small-12">
@@ -2005,6 +2014,8 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
 <img src="/images/vim2.jpg" />
 </div>
 
+  <div id="algend"></div>
+  <div id="hits"></div>
   
   <script src="home-slider/js/jquery-1.8.2.min.js"></script>
 <!--

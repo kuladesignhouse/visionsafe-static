@@ -8,7 +8,7 @@
   {% block head %}{% endblock %}
   <script src="/js/_nav.js?v=1" async></script>
 </head>
-<body class="no-js">
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP63652"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -28,7 +28,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <-- END HOLIDAY ALERT Code -->
   {% include "partials/nav.njk" %}
+  <div id="alg"></div>
   {% block content %}{% endblock %}
+  <div id="algend"></div>
+  <div id="hits"></div>
   {% block javascript %}{% endblock %}
   <script>window._nQc="89268975";</script>
   <script async src="https://serve.albacross.com/track.js"></script>
