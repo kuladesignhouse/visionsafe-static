@@ -59,8 +59,8 @@ gulp.task("index-site", (cb) => {
       }
 
       // fixes homepage title
-      if (href === "/index.html") {
-        title = "Homepage";
+      if (href === "/warranty-RENAME-index.html") {
+        href === "/warranty/index.html";
       }
 
       // remove trailing 'index.html' from qualified paths
