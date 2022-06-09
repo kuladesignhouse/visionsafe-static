@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <meta name="description" content="At VisionSafe we focus our attention on one of the most important principles in aviation - ensuring pilots can see in order to fly.">
+  <meta name="description" content="EVAS has been widely adopted by those who fly on private jets. EVAS is available for the majority of medium to long range aircraft types as either standard equipment or on the options lists.">
 
-  <title>About Us | VisionSafe | EVAS</title>
+  <title>Corporate Aviation | VisionSafe | EVAS</title>
   
   <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0dd5556c-45da-432d-88be-726b6905f924" data-blockingmode="auto" type="text/javascript"></script>
 <!-- Google Tag Manager -->
@@ -100,8 +100,455 @@ c.parentNode.insertBefore(t,c)}();
 <!--
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
 -->
-<script src="extras/current.js"></script>
 <script src="extras/sub-current.js"></script>
+<style>
+.vimmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.vimmodal-content {
+  margin: auto;
+  width: 80%;
+  position: relative;
+}
+#vimclose {
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 8;
+}
+#vimclose:hover,
+#vimclose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.evas-gulf-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0 10%;
+}
+.embraer4 {
+  background-color: #2e2925;
+  background-image: url('./images/embraer-desert.png');
+  background-repeat: no-repeat;
+  /*background-position: 550% center;
+  background-position: 5%;*/
+  background-size: cover;
+}
+.praequo {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #e2e2e2;
+  background-image: url('./images/praetor-600-cockpit.png');
+  background-repeat: no-repeat;
+  background-position: 105%;
+  background-size: cover;
+  margin-top: -2px;
+}
+#praequotxt {
+  margin-right: 25px;
+  margin-bottom: 60px;
+  margin-top: 48px;
+  margin-left: 75px;
+  display: flex;
+  flex-direction: column;
+}
+#praequotxt h2 {
+  max-width: 470px;
+  font-weight: 400;
+  font-family: 'lato';
+  font-size: 20px;
+  font-style: italic;
+  line-height: 28px;
+}
+.embed-container { 
+position: relative; 
+padding-bottom: 56.25%; 
+height: 0; 
+overflow: hidden; 
+max-width: 100%; 
+} 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+position: absolute; 
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 100%; 
+}
+.vimiconwrap {
+  position: relative;
+}
+.vimiconwrap img {
+  width: 100%;
+  height: auto;
+  padding: 5% 10%;
+  cursor: pointer;
+}
+.play-icon {
+  display: block;
+  width: 65px;
+  height: 40px;
+  margin: 0 auto;
+  padding: .2em 0 0 .2em;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  background: rgba(30,30,30,.9);
+  border-radius: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.play-icon svg {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.play-icon svg polygon.fill {
+  fill: #fff;
+  pointer-events: none;
+}
+.gulftxt {
+  padding: 20px 0;
+}
+.gulftxt:first-child {
+  margin-right: 75px;
+}
+.gulftxt > p {
+  font-family: 'lato';
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+}
+h2.e-client-list {
+  color: #b38a5f;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.3;
+  border-bottom: 3px solid #000;
+  font-family: 'lato';
+}
+.praetorinstall {
+  background-image: url('../images/installed-praetor-600.png');
+  background-repeat: no-repeat;
+  background-color: #2e2925;
+  background-position: calc(100% + 1150px);
+  background-size: cover;
+  background-image: none;
+}
+.praequo1 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+#praequotxt1 {
+  margin-right: 25px;
+  margin-bottom: 60px;
+  margin-top: 48px;
+  margin-left: 75px;
+  display: flex;
+  flex-direction: column;
+  color: #f1f1f1;
+}
+#praequotxt1 h2 {
+  max-width: 470px;
+  font-weight: 400;
+  font-family: 'lato';
+  font-size: 20px;
+  font-style: italic;
+  line-height: 28px;
+  margin-bottom: 25px;
+}
+#installedtxtwrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url('../images/installed.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+}
+#installedtxt {
+  background-color: rgba(0,0,0,0.57);
+  padding: 25px;
+  height: 15%;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'lato';
+  font-weight: 800;
+  color: #f1f1f1;
+  font-size: 24px;
+  text-align: center;
+  margin: 25px 20px 20px 20px;
+}
+@media (min-width: 370px) {
+  #praequotxt h2,
+  #praequotxt1 h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 300px);
+  }
+}
+@media (min-width: 375px) {
+  .praequo {
+    background-position: 120%;
+  }
+  .embraer4 {
+    background-position: -15%;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 1275px);
+  }
+}
+@media (min-width: 395px) {
+  .praetorinstall {
+    background-position: calc(100% + 1225px);
+  }
+}
+@media (min-width: 400px) {
+  .praetorinstall {
+    background-position: calc(100% + 1125px);
+  }
+}
+@media (min-width: 425px) {
+  .praequo {
+    background-position: 150%;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 1100px);
+  }
+}
+@media (min-width: 468px) {
+  .embraer4 {
+    background-position: -50%;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 1000px);
+  }
+}
+@media (min-width: 512px) {
+  .praetorinstall {
+    background-position: calc(100% + 800px);
+  }
+}
+@media (min-width: 516px) {
+  .embraer4 {
+    background-position-x: calc(100% + 350px);
+    background-position-y: 100%;
+  }
+}
+@media (min-width: 540px) {
+  .praequo {
+    background-position: 195%;
+  }
+}
+@media (min-width: 600px) {
+  .praequo {
+    background-position: 225%;
+  }
+}
+@media (min-width: 640px) {
+  .evas-gulf-container {
+      min-height: 160px;
+  }
+  .evas-gulf-container {
+      margin: 100px 30px;
+  }
+  .praequo {
+    background-position: 250%;
+  }
+  .evas-gulf-container {
+    padding: 0;
+  }
+  h2.e-client-list {
+    font-size: 45px;
+  }
+}
+@media (min-width: 670px) {
+  .praequo {
+    background-position: 300%;
+  }
+}
+@media (min-width: 720px) {
+  .praequo {
+    background-position: 375%;
+  }
+}
+@media (min-width: 740px) {
+  .praequo {
+    background-position: 450%;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 650px);
+  }
+}
+@media (min-width: 768px) {
+  .praequo {
+    background-position: 500%;
+  }
+  .praequo1 {
+    flex-direction: row;
+  }
+  .praetorinstall {
+    background-image: url('../images/installed-praetor-600.png');
+  }
+  #installedtxtwrap {
+    justify-content: flex-end;
+    height: auto;
+    background-image: none;
+  }
+  #installedtxt {
+    margin: 25px 0 0 0;
+    height: 10%;
+    padding: 25px 120px 25px 75px;
+    min-height: 15%;
+  }
+}
+@media (min-width: 770px) {
+  .evas-gulf-container {
+      margin-left: 70px;
+  }
+  .praequo {
+    background-position: 575%;
+  }
+}
+@media (min-width: 800px) {
+  .praequo {
+    background-position: 700%;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 550px);
+  }
+}
+@media (min-width: 820px) {
+  .praequo {
+    background-position: 900%;
+  }
+  .gulftxt > p {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media (min-width: 840px) {
+  .praequo {
+    background-position: 1350%;
+  }
+}
+@media (min-width: 860px) {
+  .praequo {
+    background-position: 3000%;
+  }
+  #installedtxt {
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 865px) {
+  .praequo {
+    background-position: 4000%;
+  }
+}
+@media (min-width: 870px) {
+  .praequo {
+    background-position: 10000%;
+  }
+}
+@media (min-width: 872px) {
+  .praequo {
+    background-position: 15000%;
+  }
+}
+@media (min-width: 873px) {
+  .praequo {
+    background-position: 25000%;
+  }
+}
+@media (min-width: 874px) {
+  .praequo {
+    background-position: 75000%;
+  }
+}
+@media (min-width: 875px) {
+  .praequo {
+    background-position: calc(100% - 400px);
+    background-size: contain;
+  }
+}
+@media (min-width: 900px) {
+  .praetorinstall {
+    background-position: calc(100% + 350px);
+  }
+}
+@media (min-width: 960px) {
+  .evas-gulf-container {
+      margin-left: 100px;
+      min-height: 200px;
+  }
+  .evas-gulf-container h2 {
+      font-size: 26px !important;
+  }
+}
+@media (min-width: 1000px) {
+  .evas-gulf-container {
+      min-height: 240px;
+  }
+  .evas-gulf-container h2 {
+      font-size: 30px !important;
+  }
+}
+@media (min-width: 1100px) {
+  .evas-gulf-container {
+      margin-left: 100px;
+  }
+  .evas-gulf-container h2 {
+      font-size: 36px !important;
+  }
+  .praetorinstall {
+    background-position: calc(100% + 250px);
+  }
+}
+@media (min-width: 1300px) {
+  .praetorinstall {
+    background-position: calc(100% + 0px);
+  }
+  .embraer4 {
+    background-position-y: calc(100% + 150px);
+  }
+}
+@media (min-width: 1260px) {
+  .praequo {
+    background-position: 0;
+  }
+}
+@media (min-width: 1400px) {
+  #installedtxt {
+    margin-left: 10%;
+  }
+}
+@media (min-width: 1450px) {
+  #praequotxt {
+    margin-right: 10%;
+  }
+}
+</style>
 
   <script src="/js/_nav.js?v=1" async></script>
 </head>
@@ -298,232 +745,160 @@ fires due to lithium batteries</h3>
   <div class="row headerimg-row-no-nav">
     <div class="columns small-12">
       <div class="responsive-picture headerimg">
-        <picture><img alt="Evas Training" srcset="./images/about-us-header-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        <picture><img alt="Aiport with plane flying outside the windows" srcset="./images/embraer-bg.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
         </picture>
       </div>
     </div>
   </div>
-  <div class="row staff-intro">
+  <div class="row row-intro-p">
     <div class="columns small-12">
-      <article class="subgrid subgrid-960">
-        <div class="row">
-          <div class="columns small-12 medium-7">
-            <h1 class="about-h">A Team Focused on Safety</h1>
-            <img class="team-sml hide-for-medium" src="./images/vs-team.jpg" alt="Three staff at VisionSafe working">
-            <p class="paragraph com-par staff-intro-p">For over 25 years we at VisionSafe have focused our attention on one of the most important principles in aviation - ensuring pilots can see in order to fly.  Today the results speak for themselves, EVAS is equipped on thousands of aircraft the world over, with wide spread adoption of the smoke displacement technology.</p>
-          </div>
-          
-          <div class="columns small-12 medium-5 hide-for-small-only">
-            <img class="team" src="./images/vs-team.jpg" alt="Three staff at VisionSafe working">
-          </div>
+      <h1 class="ccc-pages">EVAS + Embraer</h1>
+      <p class="ccc-intro-p">EVAS has been widely adopted among operators of Private Jets. VisionSafe is thrilled to announce EVAS is now available on all Embraer business aircraft.</p>
+    </div>
+  </div>
+  <div class="row row-safety-priority-ccc">
+    <div class="hero-ccc-left small-12 medium-6">
+      <h2>Smoke is the leading defined cause of emergency landing for ETOPS</h2>
+      <p class="p-ccc">After numerous incidences of smoke impeding pilots’ vision, and with catastrophic loss as a result, VisionSafe Corporation came up with the solution. Embraer has proven time and time again that it is an OEM committed to safety, and we are thrilled to announce EVAS is now available on all Embraer business aircraft, giving their clients the option of adding EVAS to their aircraft as an aftermarket upgrade.</p>
+    </div>
+  </div>
+  <div class="row row-info-stats">
+    <div class="small-12 medium-4">
+      <img class="img-stat" src="images/info-9.png" alt="EVAS is equipped on over 1000 Gulfstream Aircraft.">
+      <p class="p-stat">On average due to smoke or fumes on aircraft.</p>
+    </div>
+    <div class="small-12 medium-4">
+      <img class="img-stat" src="images/info-2.png" alt="Certified for use on 10 OEMs and over 120 Aircraft Type.">
+      <p class="p-stat">Certified for use on 10 OEMs and over 120 Aircraft Type.</p>
+    </div>
+    <div class="small-12 medium-4">
+      <img class="img-stat" src="images/info-1.png" alt="Well over 2000 ETOPS aircraft are EVAS equipped.">
+      <p class="p-stat">Well over 2000 ETOPS aircraft are EVAS equipped.</p>
+    </div>
+  </div>
+  <div class="row" style="background-color: #e2e2e2; padding: 4% 0;">
+    <div class="small-12 medium-4">
+      <div class="vimiconwrap">
+        <img src="./images/gulfvid1.jpg" id="vimBtn">
+        <div class="play-icon">
+          <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" focusable="false" aria-hidden="true">
+            <polygon class="fill" points="1,0 20,10 1,20"></polygon>
+          </svg>
         </div>
-<!-- !!! IF UPDATED NEED TO BE UPDATED DOWN LOW on Mobile VERSION !!! -->
-        <div class="row hide-for-small-only">
-          
-          <div class="columns medium-6">
-            <h1 class="about-h">Safety in Every Detail</h1>
-            <p class="paragraph com-par staff-intro-p detail-desk">NSF-ISR has determined that VisionSafe is in compliance with ISO 9001:2015, AS9100  & AS9110 requirements. The key principles that have allowed VisionSafe to earn this certification are: mutually beneficial supplier relations, continual improvement, and customer focus. <a href="about.html#cert">Learn more about VisionSafe's NSF certifications.</a></p>
-          </div>
-          <div class="columns medium-2">
-              <img class="usa" src="./images/nsf-usa.jpg" alt="NSF and Made in the USA badges">
-            </div>
-          <div class="columns iso-check-col staff-check-col medium-4">
-            <h4 class="nsf-h-vsc">ISO 9001 Key Principles</h4>
-            <ul class="unorder-list iso-ul-check">
-              <li class="list-item check-gold iso-check">Customer Focus</li>
-              <li class="list-item check-gold">Leadership</li>
-              <li class="list-item check-gold">Involvement of people</li>
-              <li class="list-item check-gold">System approach to management</li>
-              <li class="list-item check-gold">Continual improvement</li>
-              <li class="list-item check-gold">Factual approach to decision making</li>
-              <li class="list-item check-gold">Mutually beneficial supplier relations</li>
-            </ul>
-          </div>
+      </div>
+      <p style="padding: 0 10%; font-weight: bold;">An overview of the Emergency Vision Assurance System</p>
+    </div>
+    <div class="small-12 medium-4">
+      <div class="vimiconwrap">
+        <img src="./images/gulfvid2.jpg" id="vimBtn2">
+        <div class="play-icon">
+          <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" focusable="false" aria-hidden="true">
+            <polygon class="fill" points="1,0 20,10 1,20"></polygon>
+          </svg>
         </div>
-<!-- !!! IF UPDATED NEED TO BE UPDATED DOWN LOW on Mobile VERSION !!! -->
-      </article>
+      </div>
+      <p style="padding: 0 10%; font-weight: bold;">Pilot Hugh V. Tillman talks about his blinding smoke in the cockpit incident</p>
+    </div>
+    <div class="small-12 medium-4">
+      <div class="vimiconwrap">
+        <img src="./images/gulfvid3.jpg" id="vimBtn3">
+        <div class="play-icon">
+          <svg viewBox="0 0 20 20" preserveAspectRatio="xMidYMid" focusable="false" aria-hidden="true">
+            <polygon class="fill" points="1,0 20,10 1,20"></polygon>
+          </svg>
+        </div>
+      </div>
+      <p style="padding: 0 10%; font-weight: bold;">An overview of the Emergency Vision Assurance System</p>
+    </div>
+  </div>
+  <div class="row praetorinstall">
+    <div class="collumns small-12 praequo1">
+      <div id="praequotxt1">
+        <img src="./images/quo.png" width="39px" height="36px" style="margin-left: -39px;">
+        <h2>This feature will enhance safety on Embraer’s Praetor business jets. This reflects the continuous improvement Embraer brings to its successful business jet portfolio.</h2>
+        <h3 style="font-family: lato; font-weight: 800; font-size: 24px; line-height: 38px; margin-bottom: 0;">- Marsha Woelber,</h3>
+        <h3 style="font-family: lato; font-style: italic; font-weight: 500; font-size: 18px; line-height: 38px; margin: -10px 0 0 10px;">VP for Customer Support & Aftermarket Sales, Embraer Service & Support</h3>
+      </div>
+      <div id="installedtxtwrap">
+        <div id="installedtxt">EVAS installed on Embraer’s Praetor 600</div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: -2px;">
+    <div class="collumns small-12 praequo">
+      <div id="praequotxt">
+        <img src="./images/quo.png" width="39px" height="36px" style="margin-left: -39px;">
+        <h2>If you’d have offered me the product in the middle of my emergency, I’d have agreed to pay my entire year’s salary for it.<br><br>
+
+    Having something like this, just to see a two-foot distance to your instruments would have been golden. You don’t appreciate being able to see something
+    till you can’t see it.
+        </h2>
+        <h3 style="font-family: lato; font-weight: 800; font-size: 24px; line-height: 38px;">- Captain Brian S.</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row row-quotes">
+    <div class="small-12 medium-4 text-center">
+      <img src="images/corp-quote-1.png" alt="">
+    </div>
+    <div class="small-12 medium-4 text-center">
+      <img src="images/corp-quote-2.png" alt="">
+    </div>
+    <div class="small-12 medium-4 text-center">
+      <img src="images/corp-quote-3.png" alt="">
     </div>
   </div>
 
-  <div class="row headerimg-row-no-nav">
-    <div class="columns small-12">
-      <div class="responsive-picture headerimg">
-        <picture><img alt="EVAS staff at work" src="./images/vs-team-squares.jpg">
-        </picture>
+  <div class="row embraer4">
+    <div class="evas-gulf-container">
+      <div>
+        <div style="max-width: fit-content;">
+          <h2 class="h-paris-award">EVAS is available for these Embraer aircraft</h2>
+          <div style="background-image: linear-gradient(to right, #ad906c, #e1e3a2);height: 3px; margin: 0 0 10px;"></div>
+        </div>
+        <div style="display: flex; margin-bottom: 8%;">
+          <div class="gulftxt">
+            <p>Legacy 450</p>
+            <p>Legacy 500</p>
+            <p>Legacy 600</p>
+            <p>Legacy 650</p>
+            <p>Lineage 1000</p>
+          </div>
+          <div class="gulftxt">
+            <p>Phenom 100</p>
+            <p>Phenom 300</p>
+            <p>Praetor 500</p>
+            <p>Praetor 600</p>
+          </div>
+        </div>
+        <a href="https://www.visionsafe.com/wp-content/uploads/2018/03/AML-ST00892LA_07112019.pdf" target="_blank" style="color: #fff; text-decoration: underline; font-family: Lato; font-weight: bold; font-size: 20px; margin-bottom: 5%;">View our approved model list across all OEMs</a>
       </div>
     </div>
   </div>
 
-  <div class="row staff-row">
-      <div class="columns small-12">
-        <article class="subgrid subgrid-960">
-          <div class="row">
-            <div class="columns small-12">
-              <h2 class="quote-h"><img class="startquote" src="./images/start-quote.png" alt="start quote">Every action from our staff and step in our process is intimately linked to the ultimate goal of safeguarding lives.<img class="endquote" src="./images/end-quote.png" alt="start quote"></h2>
-            </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <img class="staff-pic" src="./images/omerod.jpg" alt="">
-                  <h3 class="staff-name">MaryAnn H. Omerod</h3>
-                  <p class="staff-title">Chief Operating Officer</p>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <img class="staff-pic" src="./images/akau.jpg" alt="">
-                  <h3 class="staff-name">Jason Akau</h3>
-                  <p class="staff-title">Director of Certification &amp; Compliance</p>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <img class="staff-pic" src="./images/pak.jpg" alt="">
-                  <h3 class="staff-name">Genet Omerod</h3>
-                  <p class="staff-title">Production Manager</p>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <img class="staff-pic" src="./images/medeiros.jpg" alt="">
-                  <h3 class="staff-name">Damon Medeiros</h3>
-                  <p class="staff-title">QA Manager, Chief Inspector</p>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <img class="staff-pic" src="./images/siu.jpg" alt="">
-                  <h3 class="staff-name">Dionne Siu</h3>
-                  <p class="staff-title">Customer Care Specialist</p>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <h3 class="team-card-quote">Our experienced staff are what have helped VisionSafe to attain outstanding achievement as a quality supplier in the Aviation Sector.
-                    </h3>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
+  <div class="row row-client-list">
+    <h2 class="e-client-list">Some EVAS business Jet operators</h2>
+    <img src="./images/embraer-word-map.png" alt="List of some VisionSafe's commercial clients along with others, including jetBlue Alaska Airlines Emirates Airlines, Gulstream, Qanta Airways, China Eastern Airlines, Bombardier and the US Militar to name a few">
+  </div>
+  <div class="row buy-hero" >
+    <div class="columns small-12">
+      <div class="subgrid subgrid-960">
+        <div class="row row-buy-evas">
+          <div class="columns small-12 sg-col-buy-evas medium-6">
+            <h4 class="buy-evas-h-text show-for-medium">Add a crucial layer of<br>safety to your aircraft.<br>
+            </h4>
           </div>
-        </article>
-      </div>
-    </div>
-    <div class="row">
-      <div class="columns small-12">
-        <article class="subgrid subgrid-960">
-<!-- This is on mobile only if you change here make sure and change above as well -->
-            <div class="row hide-for-medium safe-mobile-row">
-              <div class="columns small-12">
-                <h1 class="about-h">Safety in Every Detail</h1>
-                <p class="paragraph com-par staff-intro-p">NSF-ISR has determined that VisionSafe is in compliance with ISO 9001:2015, AS9100  & AS9110 requirements. The key principles that have allowed VisionSafe to earn this certification are: mutually beneficial supplier relations, continual improvement, and customer focus. <a href="about.html#cert">Learn more about VisionSafe's NSF certifications.</a></p>
-                <img class="usa-sml" src="./images/nsf-usa-mobile.jpg" alt="NSF and Made in the USA badges">
-              </div>
-              <div class="columns iso-check-col staff-check-col medium-4">
-                <h4 class="nsf-h-vsc">ISO 9001 Key Principles</h4>
-                <ul class="unorder-list iso-ul-check">
-                  <li class="list-item check-gold iso-check">Customer Focus</li>
-                  <li class="list-item check-gold">Leadership</li>
-                  <li class="list-item check-gold">Involvement of people</li>
-                  <li class="list-item check-gold">System approach to management</li>
-                  <li class="list-item check-gold">Continual improvement</li>
-                  <li class="list-item check-gold">Factual approach to decision making</li>
-                  <li class="list-item check-gold">Mutually beneficial supplier relations</li>
-                </ul>
-              </div>
+          <div class="columns small-12 sg-buy-evas-btn-container medium-6">
+            <div class="container buy-btn" id="buyEVAS">
+              <span class="text-element buy-btn-text"  id="spanEVAS">Buy EVAS Now</span>
             </div>
-<!-- END This is on mobile only -->
-
-
-          <div class="row" style="padding:60px 0 40px 0;">
-            <div class="columns small-12">
-              <!-- <h2 class="awards-h">Testimonials & Recommendations</h2> -->
-            </div>
-            <div class="columns small-12 medium-4">
-              <div class="quote-card">
-                <p class="quote-p">“JetBlue is committed to being on the forefront of safety for our customers and our crew members.   ...we have added EVAS to our airplanes in order to add that extra safety...”</p>
-                <span><strong>Al Spain,  JetBlue</strong> - V.P. Flight Operations</span>
-              </div>
-            </div>
-            <div class="columns small-12 medium-4">
-              <div class="quote-card">
-                <p class="quote-p">“As an industry there is still more to do. We haven’t done enough to ensure that pilot vision is maintained during such events.”</p>
-                <span><strong>Bill Voss</strong> - Flight Safety Foundation</span>
-              </div>
-            </div>
-            <div class="columns small-12 medium-4">
-              <div class="quote-card">
-                <p class="quote-p"> “Unfortunately, with all the safe guards built into modern aircraft and the operational requirements...  ...smoke/fumes in cabin/cockpits is still a
-                    serious problem.”</p>
-                <span><strong>FAA</strong> - InFO 10019</span>
-              </div>
-            </div>
-<!--AWARDS AND ENDORSMENT SECTION delet comment to add back in
-            <div class="columns small-12 hide-for-small-only">
-              <img class="award-img" src="./images/awards.jpg" alt="">
-            </div>
-            <div class="columns small-12 hide-for-medium">
-              <img class="award-img" src="./images/awards-sml.jpg" alt="">
-            </div>
-Delete comment to add TESTIMONIAL section back in-->
-          </div>
-
-        </article>
-      </div>
-    </div>
-
-    <div class="row headerimg-row-no-nav">
-      <div class="columns small-12">
-        <div class="headerimg hero-quote-section">
-          <div class="quote-section">
-              <h2 class="quote-hero-h"><img class="startquote" src="./images/start-quote.png" alt="start quote">Safeguarding lives, brings a whole different level of meaning to the workplace.<img class="endquote" src="./images/end-quote.png" alt="start quote"></h2>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="columns small-12">
-        <article class="subgrid subgrid-960">
-          <div class="row">
-            <div class="columns small-6">
-              <img class="four-square" src="./images/staff-tl.jpg" alt="">
-            </div>
-            <div class="columns small-6">
-              <img class="four-square" src="./images/staff-tr2.jpg" alt="">
-            </div>
-            <div class="columns small-6 bl-quote">
-              <div class="four-square-text-container">
-                <h2 class="quote-h-square">Dedication to top notch Quality & Customer Service</h2>
-              </div>
-            </div>
-            <div class="columns small-6">
-              <img class="four-square" src="./images/staff-br.jpg" alt="">
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <div class="row headerimg-row-no-nav">
-      <div class="columns small-12">
-        <div class="headerimg hero-cta-gold">
-          <article class="subgrid subgrid-960">
-            <div class="row">
-              <div class="columns small-12 medium-7 cta-col">
-                <h2 class="cta-gold-h">Speak with one of our specialists about adding a crucial layer of safety to your plane or fleet.</h2>
-              </div>
-              <div class="columns small-12 medium-5 phone-gold-col">
-                <div class="phone-wrapper"><span class="phone-number-text">+1 (800) 441-9230</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
+  </div>
+    
+    
 <footer class="row footer-row">
   <div class="columns small-12">
     <div class="subgrid subgrid-960">
@@ -610,7 +985,7 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
       </select>
     </div>
     <label class="notshown" id="countrylabel">What country is your plane or fleet registered in?</label>
-    <div id="countrywrap" class="form-input notshown">
+        <div id="countrywrap" class="form-input notshown">
       <select name="country">
         <option selected="selected" value="0">
           Select country
@@ -1382,9 +1757,20 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
   </div>
 </div>
 
+<div id="vimeoModal" class="vimmodal">
+  <div class="vimmodal-content">
+    <span id="vimclose">&times;</span>
+    <div class="embed-container">
+      <iframe id="gulfvid1" src="https://player.vimeo.com/video/336250903?color=ffd971&title=0&byline=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <iframe id="gulfvid2" src="https://player.vimeo.com/video/568724375?color=ffd971&title=0&byline=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <iframe id="gulfvid3" src="https://player.vimeo.com/video/569038810?color=ffd971&title=0&byline=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
   <!--<div id="algend"></div>-->
   <div id="hits"></div>
-   
+  
 <script src="js/webflow.js" type="text/javascript"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/outofview.js"></script>
@@ -1392,8 +1778,69 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
 <script src="js/foundation.min.js"></script>
 <script>$(document).foundation();</script>
 <script src="js/checkout.js"></script>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+var vimmodal = document.getElementById("vimeoModal");
+var vimbtn = document.getElementById("vimBtn");
+var vimbtn2 = document.getElementById("vimBtn2");
+var vimbtn3 = document.getElementById("vimBtn3");
+var gulfvid1 = document.getElementById("gulfvid1");
+var gulfvid2 = document.getElementById("gulfvid2");
+var gulfvid3 = document.getElementById("gulfvid3");
+var vimclose = document.getElementById("vimclose");
+var gulfvim1 = new Vimeo.Player(gulfvid1);
+var gulfvim2 = new Vimeo.Player(gulfvid2);
+var gulfvim3 = new Vimeo.Player(gulfvid3);
+vimbtn.onclick = function() {
+  gulfvid1.style.display = "block";
+  gulfvid2.style.display = "none";
+  gulfvid3.style.display = "none";
+  vimmodal.style.display = "block";
+}
+vimbtn2.onclick = function() {
+  gulfvid1.style.display = "none";
+  gulfvid2.style.display = "block";
+  gulfvid3.style.display = "none";
+  vimmodal.style.display = "block";
+}
+vimbtn3.onclick = function() {
+  gulfvid1.style.display = "none";
+  gulfvid2.style.display = "none";
+  gulfvid3.style.display = "block";
+  vimmodal.style.display = "block";
+}
+function pauseAllVimeo() {
+  gulfvim1.pause();
+  gulfvim2.pause();
+  gulfvim3.pause();
+  vimmodal.style.display = "none"; 
+}
+vimclose.onclick = function() {
+  pauseAllVimeo();
+}
+window.onclick = function(event) {
+  if (event.target == vimmodal) {
+    pauseAllVimeo();
+  }
+}
+</script>
+
 <!-- LinkedIn Insight Tag -->
 <script type="text/javascript">
+function showMore() {
+  var moreText = document.getElementById("morewrap");
+  var btnText = document.getElementById("readmoreless");  
+  if (moreText.classList.contains("showmore")) {
+    btnText.innerHTML = "Read more"; 
+    moreText.classList.remove("showmore");
+    document.getElementById("moreFaded").classList.remove("hdn");
+  } else {
+    btnText.innerHTML = "Read less";
+    moreText.classList.add("showmore");
+    document.getElementById("moreFaded").classList.add("hdn");
+  }
+}
 _linkedin_partner_id = "441156";
 window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
 window._linkedin_data_partner_ids.push(_linkedin_partner_id);
