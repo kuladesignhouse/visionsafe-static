@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  
 }
 .navtainer {
   background-color: #272727;
@@ -27,14 +28,6 @@ img.vslogoaero {
   z-index: 9999;
   display: none;
 }
-
-
-
-
-
-
-
-
 
 .burgmenu {
   position: absolute;
