@@ -54,18 +54,6 @@ t.onload = function(){ new Happierleads.default };
 c.parentNode.insertBefore(t,c)}();
 </script>
 
-<!-- Hotjar Tracking Code for visionsafe.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:503392,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -101,7 +89,764 @@ c.parentNode.insertBefore(t,c)}();
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.css">
 -->
   <link rel="stylesheet" type="text/css" href="css/checkout.css">
+  <style>
+.cntr {
+  display:flex;
+  justify-content: center;
+}
+#protectdata {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 700;
+  color: #373737;
+  margin-bottom: 70px;
+}
+#protectdata > div.cn {
+  text-align: center;
+}
+#protectdata > div.cn > div {
+  white-space: nowrap;
+}
+.dashd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/images/dashd.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  max-width: 162px;
+  margin: 10px 0;
+}
+.dashd:nth-child(2) {
 
+}
+.dashd:nth-child(4) {
+  margin-left: -10px;
+}
+.dashd > svg {
+  height: 35.74px;
+}
+#prod1 {
+  font-size: 58px;
+}
+#prod2 {
+  font-size: 20px;
+  margin-top: -25px;
+}
+#prod3 {
+  font-size: 38px;
+  margin:-20px 0 0 0;
+  white-space: nowrap;
+}
+#prod4 {
+  font-size: 58px;
+  letter-spacing: 0.5px;
+  margin-top: -10px;
+}
+#prod5 {
+  font-size: 22px;
+  margin-top: -25px;
+}
+#prod6 {
+  font-size: 23px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+#prod7 {
+  /*font-size: 33px;*/
+  font-size: 58px;
+  letter-spacing: 0.5px;
+  margin-top: -10px;
+}
+#prod8 {
+  /*font-size: 33px;
+  margin-top: -10px;*/
+  font-size: 22px;
+  margin-top: -20px;
+}
+#prod9 {
+  /*font-size: 33px;
+  margin-top: -14px;*/
+  font-size: 23px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+#prod11 {
+  margin-top: 99px;
+  margin-bottom: 47px;
+}
+.linesonside {
+  width: 100%;
+  max-width: 1000px;
+}
+.linesonside h2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: adelle-sans,sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 38px;
+  color: #373737;
+  margin: 0;
+}
+.linesonside h2 span {
+  display: none;
+}
+.linesonside h2:before,
+.linesonside h2:after {
+  content: '';
+  border-top: 3px solid #373737;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+}
+.linesonside h2:after {
+  margin: 0 0 0 20px;
+}
+p.b-info {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 33px;
+}
+#protectdata > div.cn:first-child > p.b-info {
+  margin-top: 26px;
+}
+#inflight-info {
+  flex-direction: column;
+  align-items: center;
+  margin-top: -10px;
+  background-color: #e2e2e2;
+}
+#inflight-info > div {
+  max-width: 500px;
+}
+.custhr {
+  padding: 0 10px;
+  margin: 18px 0;
+  height: 3px;
+  width: 100%;
+  background-color: #373737;
+}
+#dlqts {
+  display: flex;
+  flex-direction: column;
+}
+#dsplcmnt {
+  margin: 16px 27px;
+}
+#dsplcmnt > div{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 7px;
+}
+h2.mnhd {
+  margin: 0;
+  text-align: left;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #212121;
+}
+.grdshp {
+  border-radius: 8px 8px 48px 0px;
+  background: -webkit-linear-gradient(#fff7cc 0%, #fae28b 100%);
+  background: -moz-linear-gradient(#fff7cc 0%, #fae28b 100%);
+  background: linear-gradient(#fff7cc 0%, #fae28b 100%);
+  padding: 18px 26px;
+  display: flex;
+  align-items: center;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #1A1A1A;
+  max-width: 315px;
+}
+a.dlfull {
+  background-color: #373737;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  padding: 9px 25px;
+  margin: 8px 0 23px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 315px;
+  text-decoration: none;
+}
+a.dlfull:hover, a.dlfull:focus {
+  background-color: #212121;
+}
+a.dlfull .st0{
+  fill:none;
+  stroke:#fff;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+a.dlfull#docu33 {
+  margin: 8px 0 10px;
+}
+a.dlfull h4 {
+  margin: 0;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 17px;
+  line-height: 32px;
+}
+#aconetwo {
+  margin: 16px 27px;
+}
+#aconetwo > div {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 7px;
+}
+#aconetwo > div > h3 {
+  margin: 20px 0;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  color: #373737;
+}
+#aconetwo > div > p {
+  margin: 0 0 50px 0;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: #505050;
+}
+a#dlall {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #373737;
+  display: flex;
+  justify-content: space-around;
+  padding: calc(9px - 1px) calc(25px - 1px);
+  margin: 8px 0 44px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 315px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+a#dlall:hover, a#dlall:focus {
+  border: 2px solid #000;
+  padding: calc(9px - 2px) calc(25px - 2px);
+}
+#dlall h4 {
+  margin: 0;
+  font-family: adelle-sans, sans-serif;
+  font-weight: 700;
+  color: #373737;
+  font-size: 17px;
+  line-height: 32px;
+}
+.st01,.st11,.st21{
+  fill:#fff;
+  stroke:#373737;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+.st11,.st21{
+  stroke-width:1.5
+}
+.st21{
+  stroke-width:2
+}
+#criticalsafety {
+  width: 100%;
+  max-width: 1500px;
+  background-color: #E2E2E2;
+  background-image: url('/images/256161474.png');
+  background-position-x: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 204px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#criticalsafety p {
+  font-family: adelle-sans, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212121;
+  margin: 0 34px 0 40%;
+}
+#criticalsafety p b {
+  font-weight: 700;
+}
+#criticalsafety p span {
+  font-weight: 900;
+}
+#battery-stats {
+  align-items: center;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+#report-btn {
+  cursor: pointer;
+}
+#reportModal {
+  display: none;
+  position: fixed;
+  padding: 100px 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  z-index: 9999;
+}
+.report-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 95%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: #434343;
+  max-width: 1000px;
+  box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 22px -2px rgba(0, 0, 0, 0.5);
+}
+.report-content > h1 {
+  border-bottom: 3px solid #434343;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 4px;
+  margin-bottom: 21px;
+  color: #434343;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 32px;
+}
+.report-content > h2 {
+  font-family: "Lato";
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: left;
+  color: #434343;
+  margin-bottom: 37px;
+}
+#close-report {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#close-report:hover,
+#close-report:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+.custom-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 25px;
+
+  font-weight: 600;
+  font-family: "Lato";
+  font-size: 18px;
+  line-height: 28px;
+  text-align: left;
+  color: #434343;
+}
+.custom-list li:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-image: url('./images/evas-bullet.svg');
+    background-size: cover;
+    background-position: center;
+    left: -15px;
+    top: 15px;
+    transform: translateY(-50%);
+}
+.border-bar {
+  height: 3px;
+  background-color: #434343;
+  width: 100%;
+  margin-bottom: 83px;
+}
+#shadow-hero {
+  width: 100vw;
+  position: relative;
+}
+#shadow-hero > img:first-child {
+  position: absolute;
+  top: -42px;
+  height: 42px;
+  width: 100vw;
+  object-fit: fill;
+}
+#shadow-hero > img:last-child {
+  position: absolute;
+  bottom: -44px;
+  height: 44px;
+  width: 100vw;
+  object-fit: fill;
+}
+#shadow-hero > div {
+  width: 100vw;
+  padding: 75px 10% 104px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#shadow-hero > div > h1 {
+  color: #434343;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+}
+#shadow-hero > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 40rem) {
+  #inflight-info {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-bottom: 30px;
+  }
+  #inflight-info > img {
+    width: 100%;
+    max-width: 333px;
+    height: auto;
+  }
+  #battery-stats {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 48rem) {
+  #inflight-info {
+    padding-bottom: 80px;
+  }
+  #inflight-info > img {
+    max-width: 400px;
+  }
+  #shadow-hero > div {
+    flex-direction: row;
+  }
+  #shadow-hero > div > h1 {
+    text-align: left;
+  }
+  .report-content {
+    padding: 93px;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .linesonside h2:before,
+  .linesonside h2:after {
+    content: '';
+    border-top: 3px solid #373737;
+    margin: 0 84px 0 0;
+    flex: 1;
+  }
+  .linesonside h2:after {
+    margin: 0 0 0 84px;
+  }
+}
+@media screen and (min-width: 64rem) {
+  #battery-stats {
+    padding: 0 5%;
+  }
+  #protectdata {
+    flex-direction: row;
+    width: auto;
+    max-width: 100%;
+  }
+  .dashd {
+    width: 197px;
+    max-width: 197px;
+    background-image: url('/images/dotcurve.svg');
+    margin-bottom: 80px;
+  }
+  .dashd > svg {
+    margin-top: -14px;
+    height: 43.53px;
+  }
+  #prod1 {
+    font-size: 71px;
+  }
+  #prod2 {
+    font-size: 25px;
+  }
+  #prod3 {
+    font-size: 50px;
+  }
+  #prod4 {
+    font-size: 71px;
+  }
+  #prod5 {
+    font-size: 28px;
+  }
+  #prod6 {
+    font-size: 28px;
+  }
+  #prod7 {
+    /*margin-top: 65px;*/
+    font-size: 71px;
+    margin-top: -15px;
+  }
+  #prod8 {
+    /*font-size: 41px;*/
+    font-size: 28px;
+  }
+  #prod9 {
+    /*font-size: 41px;*/
+    font-size: 28px;
+  }
+  #protectdata > div.cn:first-child {
+    margin-right: 10px;
+    margin-top: -19px;
+    margin-left: 5%;
+  }
+  #protectdata > div.cn:last-child {
+    margin-right: 5%;
+    margin-left: 10px;
+  }
+  .dashd:nth-child(4) {
+    margin-right: 10px;
+  }
+  .linesonside h2 {
+    font-size: 35px;
+    line-height: 63px;
+  }
+  .linesonside h2 br {
+    display: none;
+  }
+  .linesonside h2 span{
+    display: inline-block;
+  }
+  #inflight-info > img {
+    max-width: 500px;
+  }
+  #dlqts {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .grdshp {
+    height: 280px;
+    align-items: flex-start;
+    font-size: 18px;
+    line-height: 29px;
+  }
+  h2.mnhd {
+    font-size: 24px;
+    line-height: 39px;
+  }
+  a.dlfull h4 {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  #aconetwo > div > h3 {
+    font-size: 22px;
+    line-height: 38px;
+  }
+  #aconetwo > div > p {
+    font-size: 18px;
+    line-height: 35px;
+  }
+  #dlallwrap.cntr {
+    justify-content: flex-start;
+  }
+  #criticalsafety {
+    background-image: url('/images/256161474.png');
+    background-position-x: 90%;
+    height: 465px;
+    justify-content: center;
+  }
+  #criticalsafety p {
+    font-size: 28px;
+    line-height: 50px;
+    font-weight: 700;
+    max-width: 594px;
+    margin: 0 0 0 40%;
+  }
+  #criticalsafety p span {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 74rem) {
+  #protectdata {
+    max-width: calc(1000px + 10%);
+  }
+}
+
+
+#inflight-info p.p-fire-icon {
+  padding: 0 18px;
+  margin: 20px 30px;
+  background-image: url("https://www.visionsafe.com/images/fire-icon.jpg");
+  background-repeat: no-repeat;
+  background-size: 11px 19px;
+  font-weight: bold;
+}
+@media (min-width: 40rem) {
+  #inflight-info p.p-fire-icon {
+    max-width: 220px;
+  }
+  .row-li-battery p.p-li-ion {
+      margin-bottom: 10px;
+  }
+}
+@media (min-width: 1000px) {
+  #inflight-info p.p-fire-icon {
+    font-size: 20px;
+    background-size: 14px 24px;
+    max-width: 400px;
+  }
+}
+@media (min-width: 1140px) {
+  #inflight-info p.p-fire-icon {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1270px) {
+  #inflight-info p.p-fire-icon {
+    margin-bottom: 40px;
+    background-size: 19px 33px;
+    padding-left: 30px;
+    max-width: 500px;
+  }
+}
+img.img-stat2 {
+  display: block;
+  margin: 40px auto 10px;
+}
+@media (min-width: 640px) {
+  img.img-stat2 {
+    max-height: 63px;
+  }
+}
+@media (min-width: 1000px) {
+  img.img-stat2 {
+    max-height: 79px;
+  }
+  #battery-stats > div:first-child img.img-stat2 {
+    max-height: 79px;
+  }
+}
+@media (min-width: 1180px) {
+  img.img-stat2 {
+    max-height: 100px;
+  }
+  #battery-stats > div:first-child {
+    height: 234px;
+  }
+  #battery-stats > div:first-child img.img-stat2 {
+    max-height: 79px;
+  }
+}
+@media (min-width: 1300px) {
+  img.img-stat2 {
+    max-height: 113px;
+  }
+  #battery-stats > div:first-child {
+    height: 247px;
+  }
+  #battery-stats > div:first-child img.img-stat2 {
+    max-height: 79px;
+  }
+}
+@media (min-width: 1333px) {
+  #battery-stats > div:first-child {
+    height: 223px;
+  }
+}
+.row-hero-progress-ccc {
+  background: no-repeat url(../images/father-son-hero-sml.jpg) bottom left;
+  padding: 40px 20px 10px 60px;
+  min-height: 315px;
+  background-position: -10px 0;
+}
+.row-hero-progress-ccc span {
+  font-weight: 900;
+}
+@media (max-width: 639px) {
+  .row-hero-progress-ccc {
+    background-size: calc(100% + 10px) 315px;
+    background-position: -10px 100%;
+  }
+}
+@media (min-width: 640px) {
+  .row-hero-progress-ccc {
+    background: no-repeat url(../images/father-son-hero.jpg);
+    background-position: -300px 0;
+    min-height: 400px;
+  }
+}
+@media (min-width: 840px) {
+  .row-hero-progress-ccc {
+    background-position: -200px 0;
+    padding: 40px 50px 10px 60px;
+  }
+}
+@media (min-width: 960px) {
+  .row-hero-progress-ccc {
+    background-position: -200px 0;
+    min-height: 430px;
+    padding: 90px 50px 10px 60px;
+  }
+}
+@media (min-width: 1000px) {
+  .row-hero-progress-ccc {
+    min-height: 480px;
+  }
+}
+@media (min-width: 1190px) {
+  .row-hero-progress-ccc {
+    padding-right: 150px;
+  }
+}
+@media (min-width: 1290px) {
+  .row-hero-progress-ccc {
+    padding-right: 250px;
+  }
+}
+@media (min-width: 1440px) {
+  .row-hero-progress-ccc {
+    padding-right: 350px;
+  }
+}
+</style>
 <!--<script src="extras/current.js"></script>
 <script src="extras/sub-current.js"></script>-->
 
@@ -311,26 +1056,72 @@ fires due to lithium batteries</h3>
       <p class="ccc-intro-p">This partnership is bound to come from those in the industry who treat safety as a priority, and fortunately for the flying public, that change appears to be just around the corner.</p>
     </div>
   </div>
-  <div class="row row-stats">
-    <div class="small-12 medium-4">
-      <img class="img-stat" src="images/stat-560-li.png" alt="">
-      <p class="p-stat">An average of 560+ lithium batteries per flight.</p>
-    </div>
-    <div class="small-12 medium-4">
-      <img class="img-stat" src="images/stat-3-day.png" alt="">
-      <p class="p-stat">Due to smoke or fumes on the aircraft in the US alone.</p>
-    </div>
-    <div class="small-12 medium-4">
-      <img class="img-stat" src="images/info-6.png" alt="">
-      <p class="p-stat">EVAS is certified on over 120 aircraft types.</p>
+
+  <div class="cntr" id="prod11">
+    <div class="linesonside">
+      <h2>Protected From Blinding Cockpit Smoke</h2>
     </div>
   </div>
+
+  <div class="cntr">
+    <div id="protectdata">
+      <div class="cn">
+        <div id="prod1">86%</div>
+        <div id="prod2">of domestic</div>
+        <div id="prod3">Air Cargo</div>
+        <p class="b-info">And on over 70% of world Air Cargo</p>
+      </div>
+      <div class="dashd">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 39.1">
+          <path d="M10.3 39.1c.3 0 .6-.2.9-.5 1.2-1.2 2.2-2.5 3.3-3.7.9-1 1.9-2.1 2.8-3.1.4-.5.9-1 1.3-1.5.5-.5.9-1 1.4-1.4.4.1.8.1 1.1 0 .6 0 1.1-.1 1.3-.1.3 0 .4-.4.4-.4L23 27s0-.4-.2-.5c-.3-.1-.6-.2-.9-.2 1.3-1.5 3.8-3.7 4.4-4.4.7 0 5.3-.2 5.7-.3 1 0 3.8-.6 3.8-2 0-1.3-2.8-2-3.8-2-.4 0-5-.2-5.7-.3-.6-.7-3-3-4.4-4.4.3 0 .6-.1.9-.2.2-.1.2-.5.2-.5l-.2-1.4s-.1-.4-.4-.4c-.3 0-.7-.1-1.3-.1H20c-.5-.5-1-.9-1.4-1.5-.4-.5-.8-1-1.3-1.5-.9-1.1-1.9-2.1-2.8-3.1C13.4 3 12.3 1.7 11.2.5c-.3-.3-.6-.5-.9-.5H9.1c-.2 0-.1.1-.1.1L16.9 14l1 3.3h-1.6c-.8 0-8 .4-9.2.6L2 13.3H0l.5.7 3.3 4.3.2.3c-.8.2-3.1.9-3.1.9s2.3.7 3.1.9l-.2.3L.5 25l-.5.8h1.9L7 21.2c1.2.2 8.3.6 9.2.6h1.6l-1 3.3L9 38.9s-.1.1.1.1c.3.1 1.2.1 1.2.1z" fill="#373737"/>
+        </svg>
+      </div>
+      <div class="cn">
+        <div id="prod4">1000s</div>
+        <div id="prod5">of corporate,</div>
+        <div id="prod6">executive, & VIP</div>
+        <p class="b-info">Including Government, Military and Part 91/135 operators.</p>
+      </div>
+      <div class="dashd">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.7 39.1" height="35.74">
+          <path d="M10.3 39.1c.3 0 .6-.2.9-.5 1.2-1.2 2.2-2.5 3.3-3.7.9-1 1.9-2.1 2.8-3.1.4-.5.9-1 1.3-1.5.5-.5.9-1 1.4-1.4.4.1.8.1 1.1 0 .6 0 1.1-.1 1.3-.1.3 0 .4-.4.4-.4L23 27s0-.4-.2-.5c-.3-.1-.6-.2-.9-.2 1.3-1.5 3.8-3.7 4.4-4.4.7 0 5.3-.2 5.7-.3 1 0 3.8-.6 3.8-2 0-1.3-2.8-2-3.8-2-.4 0-5-.2-5.7-.3-.6-.7-3-3-4.4-4.4.3 0 .6-.1.9-.2.2-.1.2-.5.2-.5l-.2-1.4s-.1-.4-.4-.4c-.3 0-.7-.1-1.3-.1H20c-.5-.5-1-.9-1.4-1.5-.4-.5-.8-1-1.3-1.5-.9-1.1-1.9-2.1-2.8-3.1C13.4 3 12.3 1.7 11.2.5c-.3-.3-.6-.5-.9-.5H9.1c-.2 0-.1.1-.1.1L16.9 14l1 3.3h-1.6c-.8 0-8 .4-9.2.6L2 13.3H0l.5.7 3.3 4.3.2.3c-.8.2-3.1.9-3.1.9s2.3.7 3.1.9l-.2.3L.5 25l-.5.8h1.9L7 21.2c1.2.2 8.3.6 9.2.6h1.6l-1 3.3L9 38.9s-.1.1.1.1c.3.1 1.2.1 1.2.1z" fill="#373737"/>
+        </svg>
+      </div>
+      <div class="cn">
+        <div id="prod7">100s</div>
+        <div id="prod8">of EVAS protecting</div>
+        <div id="prod9">PAX aircraft</div>
+        <p class="b-info">Yet thousands are flying unprotected</p>
+      </div>
+    </div>
+  </div>
+
   <div class="row row-hero-progress-ccc">
     <div class="hero-ccc-right small-12 medium-6 medium-push-6">
       <h2>Progress in safety is coming...</h2>
       <p class="p-ccc">Today while cargo operators the world over are equipping their fleets with EVAS, passenger fleets are still behind the curve in equipping their aircraft. Despite the rising concern of smoke and fire on aircraft due to Lithium batteries and their increasing presence aboard commercial flights, <span>the fact is that a higher percentage of cargo aircraft are protected today than are the planes that fly millions of people around the globe annually...</span> a staggering fact that can be changed.</p>
     </div>
   </div>
+
+  <div class="cntr">
+    <div id="shadow-hero">
+      <img src="./images/top-shadow.png">
+      <div>
+        <h1>A few considerations<br>for EVAS for PAX<br>Operators</h1>
+        <div>
+          <lottie-player
+            mode="normal"
+            src="https://www.visionsafe.com/js/report.json"
+            style="width: 226px; margin-bottom: 24px"
+          >
+          </lottie-player>
+          <img src="./images/report-btn.svg" id="report-btn" width="254px" height="67px">
+        </div>
+      </div>
+      <img src="./images/bottom-shadow.png">
+    </div>
+  </div>
+
   <div class="row row-video-ccc">
     <h2 class="h-gold-underline">Emergency Vision Assurance System</h2>
     <div class="small-12 medium-6 vimeo-video">
@@ -431,30 +1222,38 @@ fires due to lithium batteries</h3>
     <h2 class="h-gold-underline">Inflight Fires due to Lithium Batteries</h2>
     <img class="img-li-fire-icon" src="images/li-fire-icon.jpg" alt="Lithium-ion electronic device on fire icon">
     <p class="p-li-ion">One of the largest trends in the growth of in-flight fire is due to the transportation of lithium batteries. Grey market batteries and chargers are a high risk. The demand for lithium batteries continues to rise. They are in virtually every electronic device. Lithium batteries are part of modern life, so we as an industry have no choice but to mitigate it because we are not going to eliminate this threat.</p>
+    <!--
     <div class="small-12 medium-5">
       <p class="p-fire-icon">Inflight fires due to lithium-ion batteries has doubled every years since 2014.</p>
       <p class="p-fire-icon">A 2016 FAA report found that on average every 10 days a lithium-ion battery fire occors on a flight in the US alone.</p>
-      <!--<p class="p-fire-icon">An estimated 500+ lithium batteries are carried on commercial flights.</p>-->
     </div>
     <div class="small-12 medium-7">
       <img src="images/li-ion-chart.jpg" alt="Chart showing growing predicted demand of lithiu-ion batteries">
     </div>
+    -->
   </div>
 
-  <div class="row headerimg-row-no-nav">
-    <div class="columns small-12">
-      <div class="headerimg hero-cta-gold">
-        <article class="subgrid subgrid-960">
-          <div class="row">
-            <div class="columns small-12 medium-7 cta-col">
-              <h2 class="cta-gold-h">Speak with one of our specialists about adding a crucial layer of safety to your fleet.</h2>
-            </div>
-            <div class="columns small-12 medium-5 phone-gold-col">
-              <div class="phone-wrapper"><span class="phone-number-text">+1 (800) 441-9230</span></div>
-            </div>
-          </div>
-        </article>
-      </div>
+  <div class="cntr" id="inflight-info">
+    <div>
+      <p class="p-fire-icon">Inflight fires due to lithium-ion batteries has doubled every years since 2014.</p>
+      <p class="p-fire-icon">A 2016 FAA report found that on average every 10 days a lithium-ion battery fire occors on a flight in the US alone.</p>
+    </div>
+    <img src="images/li-ion-chart.jpg" alt="Chart showing growing predicted demand of lithiu-ion batteries">
+  </div>
+
+
+  <div class="cntr" id="battery-stats">
+    <div style="display: flex; flex-direction: column; justify-content: flex-end;">
+      <img class="img-stat2" src="images/stat-560-li.png" alt="">
+      <p class="p-stat">An average of 560+ lithium batteries per flight.</p>
+    </div>
+    <div>
+      <img class="img-stat2" src="images/stat-3-day.png" alt="">
+      <p class="p-stat">Due to smoke or fumes on the aircraft in the US alone.</p>
+    </div>
+    <div>
+      <img class="img-stat2" src="images/info-6.png" alt="">
+      <p class="p-stat">EVAS is certified on over 120 aircraft types.</p>
     </div>
   </div>
 
@@ -473,6 +1272,91 @@ fires due to lithium batteries</h3>
       <p class="p-gov">Both CAPA and ALPA, some of the largest pilot unions in the world, have supported smoke displacement as a viable and valuable method to safeguard pilots from blinding smoke in the cockpit.</p>
     </div>
   </div>
+
+  <div class="cntr" id="dsplcmnt">
+    <div>
+      <h2 class="mnhd">Organization, Pilot Unions, and Government Agencies Recommend and Most Advocate for a Required Smoke Displacement System.</h2>
+      <div class="custhr"></div>
+      <div id="dlqts">
+        <div class="cntrc">
+          <div class="grdshp">Initiatives such as the CAST Safety Enhancements SE 226 have pushed for implementing “a means to maintain a pilot's view of necessary flight information” while referencing EVAS specifically as a solution to meet this end.</div>
+          <a class="dlfull" href="/docs/legislation/CAST_SE226.pdf" download="CAST_SE266.pdf">
+            <svg version="1.1" id="docu1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 26.9 36.2" xml:space="preserve" height="34">
+              <g transform="translate(1 1)">
+                <path id="Path_28" class="st0" d="M12.6 18v11.7m-5.2-5l5 5m5.6-5l-5 5"/>
+                <path id="Path_30" class="st0" d="M24.9 34.2H0V0h18l3.4 3.2 3.4 3.2c.1-.1.1 27.8.1 27.8z"/>
+                <path id="Path_31" class="st0" d="M23.7 6.7h-5.6V.2"/>
+              </g>
+            </svg>
+            <h4>Download Full Document</h4>
+          </a>
+        </div>
+        <div class="cntrc">
+          <div class="grdshp">Pilot Unions such as CAPA and ALPA, Congressmen, Senators, and more have openly supported the use of Smoke displacement technology to aid in blinding smoke events on aircraft.</div>
+          <a class="dlfull" href="/docs/legislation/Recommendations-3.pdf" download="Recommendations-3.pdf">
+            <svg version="1.1" id="docu2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 26.9 36.2" xml:space="preserve" height="34">
+              <g transform="translate(1 1)">
+                <path id="Path_28" class="st0" d="M12.6 18v11.7m-5.2-5l5 5m5.6-5l-5 5"/>
+                <path id="Path_30" class="st0" d="M24.9 34.2H0V0h18l3.4 3.2 3.4 3.2c.1-.1.1 27.8.1 27.8z"/>
+                <path id="Path_31" class="st0" d="M23.7 6.7h-5.6V.2"/>
+              </g>
+            </svg>
+            <h4>Download Full Document</h4>
+          </a>
+        </div>
+        <div class="cntrc">
+          <div class="grdshp">The FAA released an INFO report indicating that on average over 900 declared emergencies leading to diversions due to smoke or fumes on aircraft happen each year….in the U.S alone.</div>
+          <a class="dlfull" id="docu33" href="/docs/legislation/FAA.pdf" download="FAA.pdf">
+            <svg version="1.1" id="docu3" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 26.9 36.2" xml:space="preserve" height="34">
+              <g transform="translate(1 1)">
+                <path id="Path_28" class="st0" d="M12.6 18v11.7m-5.2-5l5 5m5.6-5l-5 5"/>
+                <path id="Path_30" class="st0" d="M24.9 34.2H0V0h18l3.4 3.2 3.4 3.2c.1-.1.1 27.8.1 27.8z"/>
+                <path id="Path_31" class="st0" d="M23.7 6.7h-5.6V.2"/>
+              </g>
+            </svg>
+            <h4>Download Full Document</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cntr" id="aconetwo">
+    <div>
+      <h2 class="mnhd">Currently, AC 120-SRACC contains references to smoke displacement and the need to ensure pilots can maintain visibility on the flight deck “to guide airlines in prevention and preparedness in the event of a flight deck smoke emergency.”</h2>
+      <h3>Under the Risk Control section of this document, paragraph 11.2.6 reads:</h3>
+      <p>11.2.6 In the event that the other controls and mitigations listed above have not been effective, the crew may experience smoke in the flight deck that reduces visibility (protective breathing equipment is already required     <b>but does not necessarily provide visibility). There are means to displace smoke physically in order to make the flight critical instruments and electronic systems visible in the event of significant loss of visibility in the flight deck. To be most effective, a manufacturer should align any vision augmentation system</b> with the capability and duration of the protective breathing system.</p>
+
+      <div class="cntr" id="dlallwrap">
+        <a id="dlall" href="/docs/legislation/all-documents-visionsafe.zip" download="all-documents-visionsafe.zip">
+          <svg version="1.1" id="docu2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 30.8 39.7" xml:space="preserve" height="32.74">
+            <g transform="translate(6.47 .5)">
+              <path id="Path_30" class="st01" d="M23.9 32.7H0V0h17.3l3.3 3 3.3 3v26.7z"/>
+              <path id="Path_31" class="st01" d="M22.7 6.4h-5.4V.2"/>
+              <path id="Path_28" class="st01" d="M12.1 17.3v11.2m-5-4.8l4.8 4.8m5.4-4.8l-4.8 4.8"/>
+            </g>
+            <g transform="translate(3.735 3.235)">
+              <path id="Path_30-2" class="st11" d="M23.9 32.7H0V0h17.3l3.3 3 3.3 3v26.7z"/>
+              <path id="Path_31-2" class="st11" d="M22.7 6.4h-5.4V.2"/>
+              <path id="Path_28-2" class="st11" d="M12.1 17.3v11.2m-5-4.8l4.8 4.8m5.4-4.8l-4.8 4.8"/>
+            </g>
+            <g transform="translate(1 5.97)">
+              <path id="Path_30-3" class="st21" d="M23.9 32.7H0V0h17.3l3.3 3 3.3 3v26.7z"/>
+              <path id="Path_31-3" class="st21" d="M22.7 6.4h-5.4V.2"/>
+              <path id="Path_28-3" class="st21" d="M12.1 17.3v11.2m-5-4.8l4.8 4.8m5.4-4.8l-4.8 4.8"/>
+            </g>
+          </svg>
+          <h4>Download All Documents</h4>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row row-client-list">
+    <h2 class="h-client-list">Every day thousands of EVAS units are protecting countless operators around the world</h2>
+    <img src="images/clients-commercial.png" alt="List of some VisionSafe's commercial clients along with others, including jetBlue Alaska Airlines Emirates Airlines, Gulstream, Qanta Airways, China Eastern Airlines, Bombardier and the US Militar to name a few">
+  </div>
   <div class="row row-paris-award">
     <div class="paris-award-container">
       <h2 class="h-paris-award">Product of the Year at Paris Air Show</h2>
@@ -480,47 +1364,23 @@ fires due to lithium batteries</h3>
       <p class="p-paris-award">EVAS has received the Aerospace Industry’s highest award in the category of “Training & Safety” at the International Paris Air Show</p>
     </div>
   </div>
-  <!-- <div class="row row-evas-illustrations">
-    <div class="small-12 medium-4">
-      <img src="images/evas-normal-view.jpg" alt="Normal view that a pilot has in typical cockpit conditions">
-      <h2>Normal View</h2>
-      <p>Thousands of Emergency Vision Assurance Systems (EVAS) are in service now, protecting aircraft around the world.</p>
-    </div>
-    <div class="small-12 medium-4">
-      <img src="images/evas-smoke-view.jpg" alt="Pilot in plane filled with blinding smoke in the cockpit">
-      <h2>Smoke View</h2>
-      <p>In the U.S. alone, more than 1,000 in-flight smoke events are reported each year.</p>
-    </div>
-    <div class="small-12 medium-4">
-      <img src="images/evas-view-smoke.jpg" alt="Pilot in plane with EVAS deployed allowing him to see through the smoke">
-      <h2>EVAS View</h2>
-      <p>EVAS protected aircraft can be flown no matter how much smoke gets in the cockpit.</p>
-    </div>
-  </div> -->
-
-  <div class="row row-client-list">
-    <h2 class="h-client-list">Every day thousands of EVAS units are protecting countless operators around the world</h2>
-    <img src="images/clients-commercial.png" alt="List of some VisionSafe's commercial clients along with others, including jetBlue Alaska Airlines Emirates Airlines, Gulstream, Qanta Airways, China Eastern Airlines, Bombardier and the US Militar to name a few">
-  </div>
-<!--
-  <div class="row buy-hero-comm" >
+  <div class="row headerimg-row-no-nav">
     <div class="columns small-12">
-      <div class="subgrid subgrid-960">
-        <div class="row row-buy-evas">
-          <div class="columns small-12 sg-col-buy-evas medium-6">
-            <h4 class="buy-evas-h-text show-for-medium">Add a crucial layer of<br>safety to your aircraft.<br>
-            </h4>
-          </div>
-          <div class="columns small-12 sg-buy-evas-btn-container medium-6">
-            <div class="container buy-btn" id="buyEVAS">
-              <span class="text-element buy-btn-text"  id="spanEVAS">Buy EVAS Now</span>
+      <div class="headerimg hero-cta-gold">
+        <article class="subgrid subgrid-960">
+          <div class="row">
+            <div class="columns small-12 medium-7 cta-col">
+              <h2 class="cta-gold-h">Speak with one of our specialists about adding a crucial layer of safety to your fleet.</h2>
+            </div>
+            <div class="columns small-12 medium-5 phone-gold-col">
+              <div class="phone-wrapper"><span class="phone-number-text">+1 (800) 441-9230</span></div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </div>
--->
+
 <footer class="row footer-row">
   <div class="columns small-12">
     <div class="subgrid subgrid-960">
@@ -1378,6 +2238,26 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
     <div id="msg-modal-stripe"></div>
   </div>
 </div>
+<div id="reportModal">
+  <div class="report-content">
+    <span id="close-report">&times;</span>
+    <h1>Consideration for EVAS for PAX Operators</h1>
+    <h2>The Emergency Vision Assurance System, EVAS, represents a significant and demonstrable enhancement in air safety.  Smoke in airliner cockpits is a known occurrence, and one that has been a factor in a number of fatal air accidents. EVAS allows pilots to see cockpit instruments and through the windshield in the event of blinding smoke. Today, over 4,500 aircraft have EVAS.</h2>
+    <ul class="custom-list">
+      <li>The very fact that air carriers have face masks or integrated smoke goggles makes clear that they understand and recognize the risk of smoke in the cockpit.</li>
+      <li>Former NTSB Chairman Jim Hall, who oversaw the agency during two fatal smoke-in-cockpit accidents, says installation of systems to see through cockpit smoke should be required. The need for such systems has “always been a no-brainer,” Hall says. “The nearest fire exit doesn’t work well at 30,000 feet.”</li>
+      <li>An EVAS® shipset costs less than an average tank of fuel, for one cross-country flight.</li>
+      <li>The absence of EVAS® is the absence of a system that addresses a known potential safety issue – continuous smoke that impairs pilot vision.</li>
+      <li>EVAS® is a Category “D” deferred maintenance item (DMI) in most of our operators MEL.  Which means it will never ground a flight if inoperable.</li>
+      <li>The FAAs reference to Safety Enhancement 226, Advisory Circular 120, and its own InFO report highlight the dangers of smoke in the cockpit, and the value that a Smoke Displacement system like EVAS® offers during a smoke emergency.</li>
+      <li>A Proven, In-Use Solution. The EVAS® system has been approved by the Federal Aviation Administration and is now in use at numerous air carriers, most cargo operators, and on FAA aircraft.</li>
+      <li>In Advisory Circular 25.9a, the FAA recommends that aircraft meet higher standards for continuous cockpit smoke protection. Those standards are delivered by EVAS®.</li>
+      <li>The added safety of the EVAS® system represents not only increased protection for passengers, crew, and cargo, but, on a secondary basis, adds a higher protection of the value of the airline’s key assets, which range from the value of the aircraft to the brand identity of the airline.</li>
+      <li>Major airlines and Part 135 operators have adopted the EVAS® system, which validates the efficacy of the system, and the fact that it is a compatible and cost-effective addition to the cockpit of the modern airliner.</li>
+    </ul>
+    <div class="border-bar"></div>
+  </div>
+</div>
 
   <!--<div id="algend"></div>-->
   <div id="hits"></div>
@@ -1389,7 +2269,51 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
 <script src="js/foundation.min.js"></script>
 <script>$(document).foundation();</script>
 <script src="js/checkout.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+<script>
+var reportModal = document.getElementById("reportModal");
+var closeReport = document.getElementById("close-report");
+var viewReport = document.getElementById("report-btn");
+viewReport.onclick = function() {
+  reportModal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+closeReport.onclick = function() {
+  reportModal.style.display = "none";
+  document.body.style.overflow = "";
+}
+window.onclick = function(event) {
+  if (event.target == reportModal) {
+    reportModal.style.display = "none";
+    document.body.style.overflow = "";
+  }
+}
 
+var element = document.querySelector("lottie-player");
+var elementHeight = element.clientHeight;
+
+document.addEventListener('scroll', animate);
+
+function inView() {
+  var windowHeight = window.innerHeight;
+  var scrollY = window.scrollY || window.pageYOffset;
+  var scrollPosition = scrollY + windowHeight;
+  var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+  if (scrollPosition > elementPosition) {
+    return true;
+  }  
+  return false;
+}
+
+function animate() {
+  if (inView()) {
+      setTimeout(() => {
+        element.play();
+      }, "1000")
+
+  }
+}
+</script>
 <!-- LinkedIn Insight Tag -->
 <script type="text/javascript">
 function showMore() {
@@ -1437,7 +2361,5 @@ twq('track','PageView');
 <script id="CookieDeclaration" src="https://consent.cookiebot.com/0dd5556c-45da-432d-88be-726b6905f924/cd.js" type="text/javascript" async></script>
 
   <script defer id="io.birdseed.script-tag" type="text/javascript" src="https://cdn.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
-  <script>window._nQc="89268975";</script>
-  <script async src="https://serve.albacross.com/track.js"></script>
 </body>
 </html>

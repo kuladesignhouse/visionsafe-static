@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="526" height="150" viewBox="0 0 526 150">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fae594"/>
+      <stop offset="1" stop-color="#fdf1bb"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_6" data-name="Group 6" transform="translate(-197 -243)">
+    <path id="underline" d="M310.532,1.254c-.975,1.311-3.605,2.214-6.133,2.084-7.659-.39-15.331-.206-23-.155q-12.017.08-24.033.252-16.186.207-32.37.449-12.422.177-24.841.364-11.277.184-22.553.41-17.519.332-35.039.681c-7.444.161-14.883.387-22.323.587s-14.863.383-22.292.608c-5.752.174-11.5.406-17.246.6-3.4.114-6.8.2-10.2.3-7.757.212-15.512.472-23.275.612-5.893.107-11.8.067-17.7.082-5.141.013-10.283.038-15.424.013-3.958-.019-7.916-.094-11.87-.171-1.645-.032-1.7-.09-1.985-.91C.228,6.989.2,6.92.185,6.85-.257,5.215-.123,5.136,3.027,4.609A125.8,125.8,0,0,1,17.591,3.275c8.588-.419,17.2-.737,25.809-1.012,6.528-.208,13.072-.3,19.612-.42C73.3,1.65,83.6,1.423,93.894,1.306,107.56,1.15,121.23,1.083,134.9.98Q149.963.866,165.031.755,179.364.645,193.7.524C202,.449,210.292.338,218.592.27Q233.658.148,248.728.078,268.094.005,287.461,0c6.838.006,13.678.112,20.424.775.684.067,1.356.166,2.024.264a4.027,4.027,0,0,1,.622.212" transform="matrix(1, 0.017, -0.017, 1, 395.095, 286.291)" fill="url(#linear-gradient)"/>
+    <text id="Give_pilots_complete_control_of_the_aircraft_even_in_blinding_cockpit_smoke." data-name="Give pilots complete control of the aircraft even in blinding cockpit smoke." transform="translate(197 243)" fill="#fff" font-size="42" font-family="Lato-Regular, Lato"><tspan x="0" y="41">Give pilots complete control </tspan><tspan x="0" y="91">of the aircraft even in </tspan><tspan x="0" y="141" font-family="Lato-Heavy, Lato" font-weight="800">blinding cockpit smoke.</tspan></text>
+  </g>
+</svg>
