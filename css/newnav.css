@@ -42,6 +42,7 @@ img.vslogoaero {
   height: 100%;
   position: absolute;
   z-index: 1002;
+  pointer-events: all;
 }
 
 .burgmenu-icon {
