@@ -1,0 +1,1530 @@
+{% extends "layout.njk" %}
+
+{% block meta %}
+  <meta name="description" content="EVAS has been widely adopted by those who fly on private jets. EVAS is available for the majority of medium to long range aircraft types as either standard equipment or on the options lists.">
+{% endblock %}
+
+{% block title %}Bombardier | VisionSafe | EVAS{% endblock %}
+
+{% block head %}
+  {% include "partials/head.njk" %}
+<script src="extras/sub-current.js"></script>
+<link rel="stylesheet" href="https://use.typekit.net/wst0dzm.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+<style>
+body > div.row.row-intro-p > div > h1 {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  text-align: center;
+  color: #000000;
+}
+body > div.row.row-intro-p > div > p {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+.row.infograph {
+  height: 1107px;
+  background-image: url('https://visionsafe.com/images/movment-background-mobile.jpg');  
+  background-repeat: no-repeat;
+  background-size: 115% 115%;
+  position: relative;
+}
+.row.infograph > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+}
+.row.infograph > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row.infograph > div > div:first-child {
+  display: flex;
+  align-items: center;
+}
+.row.infograph > div > div h2 {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.row.infograph > div > div > img {
+  width: 100%;
+  /*max-width: calc(100vw / 5);*/
+  height: auto;
+  margin-bottom: 50px;
+}
+.row.infograph > div > div:nth-child(1) > img:nth-child(2) {
+  display: none;
+}
+.row.infograph > div > div:nth-child(2) > div:first-child > img {
+  max-height: 161.39px;
+  width: auto;
+}
+.row.infograph > div > div:nth-child(2) > div:nth-child(2) > img {
+  max-height: 119.51px;
+  width: auto;
+}
+.row.infograph > div > div:nth-child(2) > div:nth-child(3) > img {
+  max-height: 180.42px;
+  width: auto;
+}
+.row.infograph > div > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row.infograph > div > div > div > div {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin: 25px 0 55px;
+  max-width: 60%;
+}
+@media (min-width: 25rem) {
+  .row.infograph > div > div h2 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 32.5rem) {
+  .row.infograph > div > div h2 {
+    font-size: 34px;
+    line-height: 40.8px;
+  }  
+}
+@media (min-width: 57.5rem) {
+  .logo-container {
+    margin: 0 10%;
+  }
+  .row.infograph > div > div h2 {
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+@media (min-width: 60rem) {
+  .row.infograph {
+    height: 584px;
+    background-image: url('https://visionsafe.com/images/movment-background.jpg');
+  }
+  .row.infograph > div {
+    padding: 0 10%;
+  }
+  .row.infograph > div > div:last-child {
+    flex-direction: row;
+  }
+  .row.infograph > div > div h2 {
+    font-size: 28px;
+    white-space: nowrap;
+  }
+  .row.infograph > div > div:nth-child(1) > img:nth-child(2) {
+    display: block;
+  }
+  .row.infograph > div > div:nth-child(1) > img:nth-child(3) {
+    display: none;
+  }
+  .row.infograph > div > div > h2 > br {
+    display: none;
+  }
+  .row.infograph > div > div:nth-child(2) > div:first-child {
+    margin: 0 5% 0 0;
+  }
+  .row.infograph > div > div:nth-child(2) > div:nth-child(2) {
+    margin: 0 5% 0 5%;
+  }
+  .row.infograph > div > div:nth-child(2) > div:nth-child(3) {
+    margin: 0 0 0 5%;
+  }
+  .row.infograph > div > div > div > div {
+    max-width: 100%;
+  }
+  .row.infograph > div > div > img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .logo-container {
+    gap: 30px;
+  }
+}
+@media (min-width: 70rem) {
+  .row.infograph > div > div h2 {
+    font-size: 34px;
+  }
+}
+
+/* evas-section */
+.evas-section {
+  padding: 10% 10%;
+  text-align: center;
+  background-color: #FAFAFA;
+}
+
+.evas-title {
+    margin-bottom: 30px;
+}
+
+.evas-title h1 {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.evas-highlight {
+  color: #EDD374;
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure this layer is on top */
+  background: linear-gradient(87.39deg, #EDD374 3.31%, #FBF2C6 97.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  white-space: nowrap;
+}
+.evas-highlight::before {
+  content: attr(data-text); /* Use the text content */
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 0;
+  color: #000; /* Solid color */
+  -webkit-text-stroke: 0; /* No stroke */
+  -webkit-text-fill-color: #000; /* Ensure fill color is solid */
+  background: none; /* No gradient */
+  white-space: nowrap;
+  z-index: -1;
+}
+
+
+.evas-flexbox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap; /* Prevent wrapping above 60rem */
+}
+
+.evas-box {
+  padding: 20px 0;
+  border-radius: 10px;
+  width: 30%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(13px);
+}
+.evas-box h2 {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 0.5px solid #000;
+}
+
+/* Full-width columns below 60rem */
+@media (max-width: 60rem) {
+  .evas-flexbox {
+    flex-direction: column;
+  }
+
+  .evas-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .evas-box h2 {
+    font-size: 34px;
+    line-height: 41px;
+  }
+  .evas-title h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+.evas-box ul li span {
+  width: 17.13px;
+  height: 15.68px;
+  background-image: url('https://visionsafe.com/images/tiny-jet.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  left: -35px;
+  top: 4px;
+}
+
+.evas-box ul {
+  list-style: none;
+  margin: 0 20px 0 calc(30px + 1.5rem);
+}
+
+.evas-box ul li {
+  text-align: left;
+  margin: 10px 0;
+  position: relative;
+
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+@media (min-width: 70rem) {
+  .evas-box ul li {
+    margin: 20px 0;
+  }
+}
+/* end evas-section */
+
+/* demo modal */
+.demo-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.0s ease, visibility 1.0s ease;
+  padding-right: 20px;
+  background: linear-gradient(140.44deg, #FFF7CC 12.07%, #FAE28C 60.95%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: #1B1B1B;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0 29px;
+
+  max-width: 195px;
+  height: 51.66px;
+  background: linear-gradient(140.44deg, #FFF7CC 12.07%, #FAE28C 60.95%);
+  border-radius: 12.9139px;
+  font-size: 20.6623px;
+  white-space: nowrap;
+}
+a#request-demo,
+a.request-demo {
+  max-width: 302px;
+  height: 80px;
+  min-height: 80px;
+  background: linear-gradient(140.44deg, #FFF7CC 12.07%, #FAE28C 60.95%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 38px;
+  color: #1B1B1B;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0 29px;
+  margin: 0 0 23px;
+  white-space: nowrap;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.7);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #F7F7F7;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 80%;
+  position: relative;
+}
+
+.close-button,
+.close-demo {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  right: 10px;
+  top: -3px;
+}
+
+.close-button:hover,
+.close-button:focus,
+.close-demo:hover,
+.close-demo:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form#demo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+form#demo > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  flex-grow: 1;
+}
+
+div.input-spacer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+div.input-spacer > div {
+  margin-bottom: 8px;
+}
+form#demo input {
+width: 100%;
+}
+form#demo h1 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #000000;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form#demo label {
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #000000;
+}
+form#demo label span {
+  font-weight: 300;
+}
+
+form#demo input[type="text"],
+form#demo input[type="email"],
+form#demo input[type="tel"] {
+  margin: 6px 0 0px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #AAAAAA;
+  border-radius: 10px;
+}
+
+form#demo input[type="submit"] {
+  box-sizing: border-box;
+  background: linear-gradient(140.44deg, #FFF7CC 12.07%, #FAE28C 60.95%);
+  border: 1px solid #AAAAAA;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: rgba(27, 27, 27, 0.4);
+  height: 42px;
+  margin-top: 35px;
+}
+form#demo input[type="submit"].validated {
+  color: rgba(27, 27, 27, 1);
+}
+div#demoModal.modal.successful form#demo {
+  display: none;
+}
+div#demoModal.modal.successful .modal-content {
+  width: 80%;
+  height: 176px;
+}
+#demoModal > div > div.success-msg {
+  display: none;
+}
+#demoModal.successful > .modal-content {
+  padding: 20px;
+}
+#demoModal.successful > div > div.success-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+#demoModal.successful > div > div.success-msg h1 {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+}
+@media (min-width: 21.875rem) {
+  a#request-demo,
+  a.request-demo {
+    font-size: 32px;
+  }
+  form#demo h1 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 24rem) {
+  form#demo h1 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 26rem) {
+  form#demo h1 {
+    font-size: 20px;
+  }
+  div.input-spacer > div {
+    margin-bottom: 18px;
+  }
+}
+@media (min-width: 33rem) {
+  div#demoModal.modal.successful .modal-content {
+    max-width: 522px;
+  }
+  form#demo h1 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 40rem) {
+  .modal-content {
+    padding: 67px;
+    width: 520px;
+    max-height: 650px;
+  }
+  form#demo h1 {
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 40px;
+  }
+  form#demo input[type="submit"] {
+    font-size: 32px;
+    line-height: 38px;
+    height: 62px;
+    margin-top: 50px;demo
+  }
+  form#demo input[type="text"],
+  form#demo input[type="email"],
+  form#demo input[type="tel"] {
+    height: 57px;
+    margin: 6px 0 0px;
+  }
+  .close-button {
+    right: 1rem;
+    top: 0.5rem;
+  }
+}
+@media (min-width: 46rem) {
+  .demo-btn {
+    max-width: 215px;
+    height: 56.95px;
+    font-size: 22.78px;
+  }
+}
+/* end demo modal */
+
+/* demo-request */
+.demo-container {
+  display: flex;
+  align-items: center;
+  height: auto;
+  flex-direction: column-reverse;
+  position: relative;
+}
+.demo-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.cover-text-section {
+  width: 100%;
+  max-width: 45%;
+  height: 100%;
+  padding: 10% 20px 10% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-section {
+  width: 100%;
+  height: auto;
+  background-image: url('https://visionsafe.com/images/movment-background-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10% 5% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.text-section img,
+.cover-text-section img {
+  max-height: 86px;
+  width: auto;
+  margin-bottom: 25px;
+}
+.text-section h1,
+.cover-text-section h1 {
+  margin-top: 0;
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28.7816px;
+  line-height: 35px;
+  color: #FFFFFF;
+  text-shadow: 0px 3.5977px 179.885px #000000;
+  text-align: center;
+  width: 90%;
+}
+.text-section p,
+.cover-text-section p {
+  margin: 0 0 30px;
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  text-align: center;
+  width: 80%;
+}
+.text-section img,
+.text-section h1,
+.text-section p {
+  display: block;
+}
+.text-section a {
+  display: flex;
+}
+.cover-text-section img,
+.cover-text-section h1,
+.cover-text-section p,
+.cover-text-section a {
+  display: none;
+}
+.image-section {
+  width: 100%;
+  height: 100%;
+}
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (min-width: 60rem) {
+ .text-section h1 {
+  max-width: 520px;
+ }
+}
+@media (min-width: 60rem) {
+  .demo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 600px;
+  }
+  .demo-cover {
+    z-index: 3;
+  }
+  .text-section {
+    width: 45%;
+    height: 100%;
+    padding: 0 20px 0 5%;
+    align-items: flex-start;
+  }
+  .cover-text-section {
+    padding: 10% 20px 10% 5%;
+  }
+  .text-section h1,
+  .cover-text-section h1 {
+    margin-top: 0;
+    font-size: 28.7816px;
+    line-height: 35px;
+    text-align: left;
+    width: 59%;
+  }
+  .text-section p,
+  .cover-text-section p {
+    margin: 0 0 30px;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: left;
+    width: 59%;
+  }
+  .image-section {
+    width: 55%;
+    height: 100%;
+  }
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 25px;
+  }
+  .cover-text-section img,
+  .cover-text-section h1,
+  .cover-text-section p {
+    display: block;
+    max-width: 360px;
+  }
+  .cover-text-section a {
+    display: flex;
+    width: 100%;
+  }
+  .text-section img,
+  .text-section h1,
+  .text-section p,
+  .text-section a {
+    display: none;
+  }
+}
+@media (min-width: 86rem) {
+  .cover-text-section {
+    padding: 10% 20px 10% 8.5%;
+  }
+}
+/* end demo-request */
+
+/* logo-container */
+.logo-section {
+  background-color: #E9E8E2;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+.logo-section > div {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-section h1 {
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28.8px;
+  text-align: center;
+  color: #000000;
+  /*margin: 0 10% 10px;*/
+  margin: 0 0 10px;
+}
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+.logo-container img {
+  object-fit: contain;
+  width: 100%;
+  max-width: calc(33% - 20px);
+  margin: 8px 0;
+}
+.logo-section > div > div > img:nth-child(7),
+.logo-section > div > div > img:nth-child(10),
+.logo-section > div > div > img:nth-child(11) {
+  height: 50px;
+}
+.logo-section > div > div > img:nth-child(1) {
+  order: 1;
+}
+.logo-section > div > div > img:nth-child(2) {
+  order: 2;
+}
+.logo-section > div > div > img:nth-child(3) {
+  order: 3;
+  height: 30px;
+}
+.logo-section > div > div > img:nth-child(4) {
+  order: 4;
+}
+.logo-section > div > div > img:nth-child(5) {
+  order: 5;
+}
+.logo-section > div > div > img:nth-child(6) {
+  order: 7;
+  max-width: calc(50% - 20px);
+}
+.logo-section > div > div > img:nth-child(7) {
+  order: 6;
+}
+.logo-section > div > div > img:nth-child(8) {
+  order: 8;
+  max-width: calc(50% - 20px);
+}
+.logo-section > div > div > img:nth-child(9) {
+  order: 9;
+  max-width: calc(40% - 20px);
+}
+.logo-section > div > div > img:nth-child(10) {
+  order: 10;
+}
+.logo-section > div > div > img:nth-child(11) {
+  order: 11;
+}
+.logo-section > div > div > img:nth-child(12) {
+  order: 12;
+}
+.logo-section > div > div > img:nth-child(13) {
+  order: 13;
+}
+.logo-section > div > div > img:nth-child(14) {
+  order: 14;
+}
+.logo-section > div > div > img:nth-child(15) {
+  order: 15;
+  max-width: calc(50% - 20px);
+}
+.logo-section > div > div > img:nth-child(16) {
+  order: 16;
+  max-width: calc(50% - 20px);
+}
+.logo-section > div > div > img:nth-child(17) {
+  order: 17;
+  max-width: calc(50% - 20px);
+}
+.logo-section > div > div > img:nth-child(18) {
+  order: 18;
+  max-width: calc(50% - 20px);
+}
+@media (min-width: 26rem) {
+  .logo-section > div > div > img:nth-child(3) {
+    height: 40px;
+  }
+  .logo-section > div > div > img:nth-child(7),
+  .logo-section > div > div > img:nth-child(10),
+  .logo-section > div > div > img:nth-child(11) {
+    height: 60px;
+  }
+}
+@media (min-width: 43rem) {
+  .logo-section h1 {
+    font-size: 28px;
+    line-height: normal;
+  }
+}
+@media (min-width: 40rem) {
+  .logo-section > div > div > img:nth-child(3) {
+    height: 50px;
+  }
+  .logo-section > div > div > img:nth-child(7),
+  .logo-section > div > div > img:nth-child(10),
+  .logo-section > div > div > img:nth-child(11) {
+    height: 70px;
+  }
+}
+@media (min-width: 50rem) {
+  .logo-section h1 {
+    font-size: 32px;
+    line-height: normal;
+  }
+  .logo-section > div > div > img:nth-child(3) {
+    height: 60px;
+  }
+  .logo-section > div > div > img:nth-child(7),
+  .logo-section > div > div > img:nth-child(10),
+  .logo-section > div > div > img:nth-child(11) {
+    height: 80px;
+  }
+}
+@media (min-width: 57.5rem) {
+  .logo-section h1 {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .logo-section > div {
+    padding: 0;
+  }
+}
+@media (min-width: 60rem) {
+  .logo-section h1 {
+    font-size: 26px;
+  }
+  .logo-container img {
+    max-width: calc(20% - 30px);
+  }
+  .logo-section > div > div > img:nth-child(3) {
+    height: 50px;
+  }
+  .logo-section > div > div > img:nth-child(7),
+  .logo-section > div > div > img:nth-child(10),
+  .logo-section > div > div > img:nth-child(11) {
+    height: 65px;
+  }
+  .logo-section > div > div > img:nth-child(6),
+  .logo-section > div > div > img:nth-child(8),
+  .logo-section > div > div > img:nth-child(9),
+  .logo-section > div > div > img:nth-child(15),
+  .logo-section > div > div > img:nth-child(16),
+  .logo-section > div > div > img:nth-child(17),
+  .logo-section > div > div > img:nth-child(18) {
+    max-width: calc(20% - 30px);
+  }
+
+}
+@media (min-width: 63.75rem) {
+  .logo-section h1 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 70rem) {
+  .logo-section h1 {
+    font-size: 26px;
+  }
+}
+@media (min-width: 76.25rem) {
+  .logo-section h1 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 80rem) {
+  .logo-section h1 {
+    font-size: 34px;
+    line-height: 41px;
+  }
+  .logo-container {
+    gap: 50px;
+  }
+  .logo-container img {
+    max-width: calc(20% - 50px);
+  }
+  .logo-section > div > div > img:nth-child(3) {
+    height: 60px;
+  }
+  .logo-section > div > div > img:nth-child(7),
+  .logo-section > div > div > img:nth-child(10),
+  .logo-section > div > div > img:nth-child(11) {
+    height: 75px;
+  }
+  .logo-section > div > div > img:nth-child(6),
+  .logo-section > div > div > img:nth-child(8),
+  .logo-section > div > div > img:nth-child(9),
+  .logo-section > div > div > img:nth-child(15),
+  .logo-section > div > div > img:nth-child(16),
+  .logo-section > div > div > img:nth-child(17),
+  .logo-section > div > div > img:nth-child(18) {
+    max-width: calc(20% - 50px);
+  }
+}
+@media (min-width: 85rem) {
+  .logo-section h1 {
+    margin: 0 10% 10px;
+  }
+}
+/* end logo-container */
+
+/* jet-section */
+.jet-section {
+  height: 800px;
+  background-image: url('https://visionsafe.com/images/movment-background.jpg');
+  background-repeat: no-repeat;
+  background-size: 115% 115%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 20% 10px;
+}
+.jet-section > div:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://visionsafe.com/images/jet-with-evas.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 calc(100% - 20px);
+  pointer-events: none;
+}
+.right-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 25%;
+  padding-top: 5%;
+  z-index: 2;
+}
+.right-content h1 {
+  margin-bottom: 10px;
+
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33.66px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+.right-content p {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18.7px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.right-content a[href^="tel:"] {
+  margin-top: 10px;
+
+  font-family: 'Basic Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33.66px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (min-width: 27.5rem) {
+  .right-content {
+    padding-top: 0;
+  }
+}
+@media (min-width: 29rem) {
+  .jet-section {
+    padding: 10% 20px;
+  }
+}
+@media (min-width: 37.5rem) {
+  .jet-section > div:first-child {
+    background-size: 80% auto;
+  }
+}
+@media (min-width: 49rem) {
+  .jet-section > div:first-child {
+    background-size: 70% auto;
+  }
+}
+@media (min-width: 60rem) {
+  .jet-section {
+    height: 673px;
+    padding: 0;
+  }
+  .jet-section > div:first-child {
+    background-size: 50% auto;
+  }
+  .right-content {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+  }
+}
+@media (min-width: 90rem) {
+  .jet-section > div:first-child {
+    background-size: 45% auto;
+  }
+}
+/* end jet-section */
+
+/* scroll quote */
+.glide {
+  padding: 10% 0;
+}
+.glide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* end scroll quote */
+
+
+.row-vid-ccc {
+  padding-top: 90px;
+  padding-bottom: 70px;
+}
+@media (min-width: 60rem) {
+  .row-vid-ccc {
+    padding: 90px 10% 70px;
+  }
+}
+</style>
+{% endblock %}
+
+{% block content %} 
+  <div class="row headerimg-row-no-nav">
+    <div class="columns small-12">
+      <div class="responsive-picture headerimg">
+        <picture><img alt="Aiport with plane flying outside the windows" srcset="https://www.visionsafe.com/images/bombardier-plane.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div class="row row-intro-p">
+    <div class="columns small-12">
+      <h1 class="ccc-pages">EVAS + Bombardier</h1>
+      <p class="ccc-intro-p">EVAS is widely adopted on Bombardier Global and Challenger platforms.  It is available as a production upgrade option, as well as an aftermarket upgrade through Bombardier and VisionSafe.</p>
+    </div>
+  </div>
+
+  <div class="row infograph">
+    <div>
+      <div>
+        <h2>Smoke is the leading cause of<br> emergency landings for ETOPS</h2>
+        <img src="https://visionsafe.com/images/underline.svg" >
+        <img src="https://visionsafe.com/images/underline-mobile.svg" >
+      </div>
+      <div>
+        <div>
+          <img src="https://visionsafe.com/images/1000-bombardier.svg">
+          <div>Over 1000 EVAS units installed on Bombardier Aircraft.</div>
+        </div>
+        <div>
+          <img src="https://visionsafe.com/images/fuel.svg">
+          <div>An EVAS shipset costs less than the average tank of fuel</div>
+        </div>
+        <div>
+          <img src="https://visionsafe.com/images/3-a-day.svg">
+          <div>Due to smoke, fire, or fumes on the aircraft</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="evas-section">
+    <div class="evas-title">
+      <h1>Purchase EVAS directly from VisionSafe for under $40,000</h1>
+    </div>
+    <div class="evas-flexbox">
+      <div class="evas-box">
+        <h2>What’s Included</h2>
+        <ul>
+          <li><span></span> 2 EVAS units (left and right seats)</li>
+          <li><span></span> EVAS installation hardware</li>
+          <li><span></span> STC installation drawing</li>
+          <li><span></span> 10 year warranty</li>
+        </ul>
+      </div>
+      <div class="evas-box">
+        <h2>Installation</h2>
+        <ul>
+          <li><span></span> &lt; 2 hour install on average</li>
+          <li><span></span> EVAS can be installed by Bombardier, your MRO provider, or by your in house technician.</li>
+        </ul>
+      </div>
+      <div class="evas-box">
+        <h2>Training</h2>
+        <ul>
+          <li><span></span> Simulator based EVAS Training offered by both FlightSafety & CAE</li>
+          <li><span></span> EVAS training is also offered at select regional training facilities around the world</li>
+        </ul>
+      </div>
+    </div>
+  </div>   
+  
+  <div class="demo-container">
+    <div class="demo-cover">
+      <div class="cover-text-section">
+        <img src="https://www.visionsafe.com/images/evas-logo.svg" >
+        <h1>Restore pilots’ vision during a blinding smoke in the cockpit incident.</h1>
+        <p>Save the lives of your passengers and crew with EVAS on board.</p>
+        <a class="request-demo">Request A Demo</a>
+      </div>
+    </div>
+    <div class="text-section">
+      <img src="https://www.visionsafe.com/images/evas-logo.svg" >
+      <h1>Restore pilots’ vision during a blinding smoke in the cockpit incident.</h1>
+      <p>Save the lives of your passengers and crew with EVAS on board.</p>
+      <a class="request-demo">Request A Demo</a>
+    </div>
+    <div class="image-section">
+      <img src="https://www.visionsafe.com/images/pilot-deploys-evas.png" alt="Pilot using EVAS system in cockpit">
+    </div>
+  </div>
+
+  <div class="row row-vid-ccc">
+    <div class="small-12 medium-6 vimeo-video">
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe class="vimeo-video" src="https://player.vimeo.com/video/336709398?color=ffd971&title=0&byline=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+      <p class="p-vimeo-desc">David Dalpiaz shares why EVAS is so important</p>
+    </div>
+    <div class="small-12 medium-6 vimeo-video">
+      <div style="padding:56.25% 0 0 0;position:relative;">
+        <iframe class="vimeo-video" src="https://player.vimeo.com/video/336250903?color=ffd971&title=0&byline=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+      <p class="p-vimeo-desc">An overview of the Emergency Vision Assurance System</p>
+    </div>
+  </div>
+
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide"><img src="https://www.visionsafe.com/images/corp-quote-1.png" alt="Image 1"></li>
+        <li class="glide__slide"><img src="https://www.visionsafe.com/images/corp-quote-2.png" alt="Image 2"></li>
+        <li class="glide__slide"><img src="https://www.visionsafe.com/images/corp-quote-3.png" alt="Image 3"></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="logo-section">
+    <div>
+      <h1>EVAS units are protecting countless Bombardier flights around the world</h1>
+      <div class="logo-container">
+        <img src="https://www.visionsafe.com/images/logos/boston-scientific.svg" alt="Boston Scientific">
+        <img src="https://www.visionsafe.com/images/logos/cat.svg" alt="Caterpillar">
+        <img src="https://www.visionsafe.com/images/logos/citi.svg" alt="Citi">
+        <img src="https://www.visionsafe.com/images/logos/fedex.svg" alt="FedEx">
+        <img src="https://www.visionsafe.com/images/logos/flexjet.svg" alt="Flexjet">
+        <img src="https://www.visionsafe.com/images/logos/kalitta_air_logo.png" alt="Kalitta Air">
+        <img src="https://www.visionsafe.com/images/logos/p&g.svg" alt="P&G">
+        <img src="https://www.visionsafe.com/images/logos/nordstrom.svg" alt="Nordstrom">
+        <img src="https://www.visionsafe.com/images/logos/ns.svg" alt="Norfold Southern">
+        <img src="https://www.visionsafe.com/images/logos/paramount.svg" alt="Paramount">
+        <img src="https://www.visionsafe.com/images/logos/mccormick.png" alt="McCormick">
+        <img src="https://www.visionsafe.com/images/logos/qatar.svg" alt="Qatar Airways">
+        <img src="https://www.visionsafe.com/images/logos/rtx.svg" alt="RTX">
+        <img src="https://www.visionsafe.com/images/logos/bosch.svg" alt="Bosch">
+        <img src="https://www.visionsafe.com/images/logos/saab.svg" alt="Saab">
+        <img src="https://www.visionsafe.com/images/logos/skechers.svg" alt="Skechers">
+        <img src="https://www.visionsafe.com/images/logos/wegmans.svg" alt="Wegmans">
+        <img src="https://www.visionsafe.com/images/logos/texas_instruments.svg" alt="Texas Instruments">
+      </div>
+    </div>
+  </div>
+  <div class="jet-section">
+    <div></div>
+    <div class="right-content">
+      <h1>Fly the safest Bombardier in the sky</h1>
+      <p>Allow your pilots to safely land the aircraft during a blinding smoke in the cockpit event</p>
+      <a class="request-demo">Request A Demo</a>
+      <p>or call</p>
+      <a href="tel:+18004419230" style="color: white;">+1(800) 441-9230</a>
+    </div>
+  </div>
+{% include "partials/footer.njk" %} 
+
+<div id="demoModal" class="modal">
+  <div class="modal-content">
+    <div class="success-msg">
+      <h1>Great! We will reach out soon to book your demo.</h1>
+    </div>
+    <form id="demo">
+      <span class="close-demo">&times;</span>
+      <h1>Learn more about EVAS and see<br>exactly how EVAS works</h1>
+      <div>
+        <div class="input-spacer">
+          <div>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName">
+          </div>
+          <div>
+            <label for="businessEmail">Business Email</label>
+            <input type="email" id="businessEmail" name="businessEmail">
+          </div>
+          <div>
+            <label for="phone">Phone <span>(optional)</span></label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </div>
+        <input type="submit" value="Send Request">
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="reveal" id="checkoutModal" >
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div id="airload"></div>
+  <h1 id="checkoutheader">Great! We'll guide you through the steps to getting your plane or fleet protected with EVAS.</h1>
+  <form id="checkout" name="checkout">
+    <label>Contact Information</label>
+    <div class="form-input">
+      <input id="fullname" name="fullname" placeholder="Full Name" required="required" type="text">
+      <label for="fullname">Full Name</label>
+    </div>
+    <div class="form-input">
+      <input id="company" name="company" placeholder="Company" required="required" type="text">
+      <label for="company">Company</label>
+    </div>
+    <div class="form-input">
+      <input id="phone" name="phone" placeholder="Phone" required="required" type="tel">
+      <label for="phone">Phone</label>
+    </div>
+    <div class="form-input">
+      <input id="email" name="email" placeholder="Email" required="required" type="email">
+      <label for="email">Email</label>
+    </div>
+    
+    <label class="slct">Where is your plane or fleet registered?</label>
+    <div class="form-input">
+      <select name="location">
+        <option selected="selected" value="0">Select country</option>
+        <option value="US">United States</option>
+        <option value="EU">European Union</option>
+        <option value="OTHER">Other</option>
+      </select>
+    </div>
+    <label class="notshown" id="countrylabel">What country is your plane or fleet registered in?</label>    
+    {% include "partials/countries.njk" %}
+    <div class="form-sub">
+      <input type="submit" value="Next" />
+    </div>
+  </form>
+</div>
+<div class="reveal" id="msgModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-error">
+      <h2>We'll need to get you a special STC for where your aircraft is registered. We will be in touch shortly to assist with this. If you'd like to contact us please call us at 1-800-441-9230</h2>
+    </div>    
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>  
+  </div>
+</div>
+<div class="reveal" id="stripeModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-stripe"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="js/webflow.js" type="text/javascript"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/outofview.js"></script>
+<script src="js/what-input.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>$(document).foundation();</script>
+<script src="js/checkout.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const demoModal = document.getElementById('demoModal');
+  const demoForm = document.getElementById('demo');
+  const requestButtons = document.querySelectorAll('.request-demo');
+  var closeDemos = document.querySelectorAll('.close-demo');
+
+  requestButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (demoModal.classList.contains("successful")) {
+        demoModal.classList.remove("successful");
+      }
+      demoModal.style.display = "flex";
+    });
+  });
+  closeDemos.forEach(button => {
+    button.addEventListener('click', () => {
+      demoModal.style.display = "none";
+    });
+  });
+
+  window.onclick = function(event) {
+    if (event.target == demoModal) {
+      demoModal.style.display = "none";
+    }
+  }
+
+  demoForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (checkValidation()) {
+      const formData = {
+        fullName: e.target.fullName.value,
+        businessEmail: e.target.businessEmail.value,
+        phone: e.target.phone.value
+      };
+      const formURL = "https://script.google.com/macros/s/AKfycbyRjh8xBcsLasatUHTDb3jdnN23IJusd4urzuX8jqnnGsUz2rMAxz_cjPCVBrHOEUKbeA/exec";
+      const response = await fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      const statusCode = response.status;
+      if (!response.ok) {
+        if (response.status == 0) {
+          demoModal.classList.add("successful");
+        } else {
+          console.error(`Error occurred: ${statusCode}`);
+          alert('Error submitting data.');
+        }
+        return;
+      }
+    }
+  });
+
+  demoModal.addEventListener('click', (e) => {
+    if (e.target === demoModal) {
+      demoModal.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape') {
+      demoModal.style.display = 'none';
+    }
+  });
+
+  const fullNameInput = demoForm.querySelector('#fullName');
+  const businessEmailInput = demoForm.querySelector('#businessEmail');
+  const submitButton = demoForm.querySelector('input[type="submit"]');
+
+  function isValidEmail(email) {
+    const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return pattern.test(email);
+  }
+
+  function checkValidation() {
+    if (fullNameInput.value.trim() !== '' && isValidEmail(businessEmailInput.value.trim())) {
+      submitButton.classList.add('validated');
+      return true;
+    } else {
+      submitButton.classList.remove('validated');
+      return false;
+    }
+  }
+
+  fullNameInput.addEventListener('input', checkValidation);
+  businessEmailInput.addEventListener('input', checkValidation);
+  // Initial check (in case the browser auto-fills the form)
+  checkValidation();
+
+  new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 4,
+    gap: 50,
+    focusAt: 'center',
+    breakpoints: {
+      800: {
+        perView: 2,
+        gap:40
+      }
+    }
+  }).mount();
+
+});
+</script>
+
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+function showMore() {
+  var moreText = document.getElementById("morewrap");
+  var btnText = document.getElementById("readmoreless");  
+  if (moreText.classList.contains("showmore")) {
+    btnText.innerHTML = "Read more"; 
+    moreText.classList.remove("showmore");
+    document.getElementById("moreFaded").classList.remove("hdn");
+  } else {
+    btnText.innerHTML = "Read less";
+    moreText.classList.add("showmore");
+    document.getElementById("moreFaded").classList.add("hdn");
+  }
+}
+_linkedin_partner_id = "441156";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=441156&fmt=gif" />
+</noscript>
+<!-- End LinkedIn Insight Tag -->
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o31f6');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<!-- birdseed 
+<script id="io.birdseed.script-tag" type="text/javascript" src="https://app.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
+ end birdseed -->
+{% endblock %}

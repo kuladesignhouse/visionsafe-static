@@ -7,13 +7,35 @@ import difflib
 server_url = 'http://visionsafe.com/'  # Replace with your server URL
 server_files_list = [
     'warranty-RENAME-index.html',
-    'faqs.html', 'videos.html', 'index.html', 'testimonials.html', 'about.html', 
-    'contact.html', 'gulfstream.html', 'terms.html', 'cargo-search.html', 
-    'corporate.html', 'cargo.html', 'military.html', 'smoke-in-the-cockpit.html', 
-    'evas360.html', 'holiday-closure.html', 'thankyou.html', 'smokescope.html', 
-    'buy.html', 'about-us.html', 'search.html', 'embraer.html', 'training.html', 
-    'algolia.html', 'legislation.html', 'faa-lithium-batteries.html', 'vr.html', 
-    'passenger.html', 'privacy.html'
+    'faqs.html',
+    'videos.html',
+    'index.html',
+    'testimonials.html',
+    'about.html', 
+    'contact.html',
+    'gulfstream.html',
+    'terms.html',
+    'cargo-search.html', 
+    'corporate.html',
+    'cargo.html',
+    'military.html',
+    'smoke-in-the-cockpit.html', 
+    'evas360.html',
+    'holiday-closure.html',
+    'thankyou.html',
+    'smokescope.html', 
+    'buy.html',
+    'about-us.html',
+    'search.html',
+    'embraer.html',
+    'training.html', 
+    'algolia.html',
+    'legislation.html',
+    'faa-lithium-batteries.html',
+    'vr.html', 
+    'passenger.html',
+    'privacy.html',
+    'bombardier.html'
 ]
 local_directory = './dist/'  # Replace with the path to your local Gulp build directory
 
