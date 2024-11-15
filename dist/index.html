@@ -111,6 +111,89 @@ c.parentNode.insertBefore(t,c)}();
 -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,900,b">	
   <link rel="stylesheet" href="css/fadeslide.css">
+<style>
+#about {
+  display: flex;
+  justify-content: center;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 20px;
+  margin: 5% 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.flex-item {
+  flex: 1 1 calc(33.33% - 40px);
+  box-sizing: border-box;
+}
+
+.flex-item h3 {
+  position: relative;
+  font-weight: 700;
+  color: #212121;
+  white-space: nowrap;
+}
+
+.flex-item > div > h3 {
+  display: block;
+}
+
+.flex-item h3 sup {
+  position: absolute;
+  top: 12px;
+  font-size: 16px;
+}
+
+.flex-item:not(:last-child) img {
+  margin-bottom: 10px;
+  width: 160px;
+  height: 125.23px;
+}
+
+.flex-item:last-child img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 23.4375rem) {
+  .flex-item:not(:last-child) img {
+    width: 220px;
+    height: 172.19px;
+  }
+}
+
+@media (max-width: 40rem) {
+  .flex-item {
+    flex: 1 1 100%;
+  }
+  .flex-item:not(:last-child) {
+    display: flex;
+    gap: 20px;
+  }
+  #about > div > div:nth-child(1) > h3,
+  #about > div > div:nth-child(2) > h3 {
+    display: none;
+  }
+}
+
+@media (min-width: 40rem) {
+  .flex-item:not(:last-child) img {
+    width: 100%;
+    height: auto;
+  }
+  .flex-item > h3 {
+    display: block;
+  }
+  .flex-item > div > h3 {
+    display: none;
+  }
+}
+</style>
 
 </head>
 <body>
@@ -374,14 +457,14 @@ fires due to lithium batteries</h3>
       </nav>
     </div>
   </div>
-  
+<!--
   <div class="row">
     <div class="columns small-12">
 
       <div class="row" id="about" data-magellan-target="about">
         <div class="small-12 medium-4">
           <h3 class="show-for-medium">Normal View</h3>
-          <img src="images/view1.png" alt="">
+          <img src="images/normal-view.jpg" alt="">
           <p class="show-for-medium">Thousands of Emergency Vision Assurance Systems (EVAS<sup>®</sup>) are in service now, protecting aircraft around the world.</p>
           <div class="hide-for-medium">
             <h3>Normal View</h3>
@@ -391,7 +474,7 @@ fires due to lithium batteries</h3>
         </div>
         <div class="small-12 medium-4">
           <h3 class="show-for-medium">Smoke View</h3>
-          <img src="images/view2.png" alt="">
+          <img src="images/smoke-view.jpg" alt="">
           <p class="show-for-medium">In the U.S. alone, more than 1,000 in-flight smoke events are reported each year.</p>
           <div class="hide-for-medium">
             <h3>Smoke View</h3>
@@ -400,14 +483,39 @@ fires due to lithium batteries</h3>
         </div>
         <div class="small-12 medium-4">
           <h3>EVAS<sup>®</sup>&nbsp;View</h3>
-          <img src="images/view3.png" alt="">
+          <img src="images/evas-view01.jpg" alt="">
           <p>EVAS<sup>®</sup>&nbsp;protected aircraft can be flown no matter how much smoke gets in the cockpit.</p>
         </div>
       </div>
       
     </div>
   </div>
-
+-->
+  <div id="about">
+    <div class="flex-container">
+      <div class="flex-item">
+        <h3>Normal View</h3>
+        <img src="images/normal-view.jpg" alt="Normal View">
+        <div>
+          <h3>Normal View</h3>
+          <p>Thousands of Emergency Vision Assurance Systems (EVAS) are in service now, protecting aircraft around the world.</p>
+        </div>
+      </div>
+      <div class="flex-item">
+        <h3>Smoke View</h3>
+        <img src="images/smoke-view.jpg" alt="Smoke View">
+        <div>
+          <h3>Smoke View</h3>
+          <p>In the U.S. alone, more than 1,000 in-flight smoke events are reported each year.</p>
+        </div>
+      </div>
+      <div class="flex-item">
+        <h3>EVAS<sup>&reg;</sup>&nbsp;&nbsp;&nbsp;&nbsp;View</h3>
+        <img src="images/evas-view01.jpg" alt="EVAS View">
+        <p>EVAS protected aircraft can be flown no matter how much smoke gets in the cockpit.</p>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <div class="ovrly">
@@ -754,6 +862,10 @@ fires due to lithium batteries</h3>
         </div>
         <div class="row">
           <div class="columns medium-12">
+            <h2 class="vid-section-heading" style="margin-top: 20px">EVAS Featured on Aero News Network </h2>
+            <div style="padding:56.25% 0 0 0;position:relative; margin-bottom: 50px;"><iframe src="https://player.vimeo.com/video/1029023427?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="EVAS - Aero News Network"></iframe></div>
+          </div>
+          <div class="columns medium-12">
             <h2 class="vid-section-heading" style="margin-top: 20px">Capt. Joseph Depete's Reaction to EVAS.</h2>
             <div style="padding:56.25% 0 0 0;position:relative; margin-bottom:50px;"><iframe src="https://player.vimeo.com/video/336714982?color=ffd971&title=0&byline=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Former Marine Pilot Hugh V. Tillman talks about his blinding smoke in the cockpit incident."></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
           </div>
@@ -953,11 +1065,14 @@ and ERJ 190-200 STD/LR/IGW</a>
             <h1 class="main-h">Certifications</h1>
             <h2 class="install-h">Repair Station Certificates</h2>
             <ul class="link-list intall-ul">
-              <li class="list-item-link install-item"><a href="docs/certifications/repair/FAA_Repair_Station_Certificate.pdf" target="_blank">FAA Repair</a>
+              <li class="list-item-link install-item"><a href="docs/certifications/repair/VS-LLC-FAA-Repair-Station-Certificate.pdf" target="_blank">FAA Repair</a>
               </li>
-              <li class="list-item-link install-item"><a href="docs/certifications/repair/VSC-EASA-Certificate-2023.pdf" target="_blank">EASA Part 145</a>
+              <li class="list-item-link install-item"><a href="docs/certifications/repair/VS-LLC-EASA-Part-145-Certificate.pdf" target="_blank">EASA Part 145</a>
               </li>
               <li class="list-item-link install-item"><a href="/wp-content/uploads/2020/09/F00100830-20241231.pdf" target="_blank">CAAC Certificate</a>
+              </li>
+              <li class="list-item-link install-item">
+                <a href="/docs/certifications/20241023-UK14550423-Initial-Approval-Certificate.pdf" target="_blank">UK CAA Part 145</a>
               </li>
             </ul>
             <h2 class="install-h">ISO 9001/AS 9100/AS 9110</h2>
