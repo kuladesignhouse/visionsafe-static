@@ -35,7 +35,8 @@ server_files_list = [
     'vr.html', 
     'passenger.html',
     'privacy.html',
-    'bombardier.html'
+    'bombardier.html',
+    'smoke-event-in-commercial-airliner.html'
 ]
 local_directory = './dist/'  # Replace with the path to your local Gulp build directory
 
