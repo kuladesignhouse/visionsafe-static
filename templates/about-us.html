@@ -10,6 +10,118 @@
   {% include "partials/head.njk" %}
 <script src="extras/current.js"></script>
 <script src="extras/sub-current.js"></script>
+<style>
+.row.leadership-section {
+  box-sizing: border-box;
+  background: radial-gradient(64.46% 77.38% at 28.3% 35.54%, #FFFFFF 0%, #E0D7D0 100%);
+  padding: 4rem 0 6rem;
+}
+
+.row.leadership-section article h2 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  color: #202020;
+  padding: 0 20px;
+}
+
+.staff-intro h1.about-h {
+  text-align: left;
+}
+
+.leadership-grid {
+  column-count: 3;
+  column-gap: 30px;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 40px auto 0;
+}
+
+.leader-card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  background: #FFFCFA;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  break-inside: avoid;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+}
+
+.leader-pic {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  /*
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  */
+}
+
+.leader-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.leader-name {
+  font-family: 'Basic Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin: 0;
+}
+
+.leader-title {
+  font-family: 'Basic Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 15px;
+}
+
+.leader-desc {
+  flex-grow: 1; /* makes description stretch */
+  font-family: 'Basic Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.row.staff-row .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+  float: left;
+}
+
+@media (max-width: 900px) {
+  .leadership-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .leadership-grid {
+    column-count: 1;
+  }
+}
+
+.leader-card {
+  transition: transform 0.2s ease, top 0.3s ease;
+}
+</style>
 {% endblock %}
 
 {% block content %} 
@@ -63,6 +175,90 @@
     </div>
   </div>
 
+  <div class="row leadership-section">
+    <div class="columns small-12">
+      <article class="subgrid subgrid-960">
+        <h2>Leadership</h2>
+        <div class="leadership-grid">
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/jon-michael-kasten.jpg" alt="Jon-Michael Kasten">
+            <div class="leader-content">
+              <h3 class="leader-name">Jon-Michael Kasten</h3>
+              <p class="leader-title">Chief Executive Officer</p>
+              <p class="leader-desc">Jon-Michael brings 20+ years leading aerospace parts manufacturing businesses for industry leaders including TransDigm, Crane Aerospace and Electronics, and Cornerstone Capital.
+                <br><br>
+                Jon-Michael's career has included roles in Engineering, Manufacturing, Sales, Strategy, and Leadership.</p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/alex-werjefelt.jpg" alt="Alex Werjefelt">
+            <div class="leader-content">
+              <h3 class="leader-name">Alex Werjefelt</h3>
+              <p class="leader-title">Marketing Director</p>
+              <p class="leader-desc">Alex has served as Managing Director of VisionSafe’s Sales and Marketing divisions, led major initiatives in intellectual property and product development, and has been a member of the company's Board of Directors for over 15 years.</p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/kristen-richmond.jpg" alt="Kristen Richmond">
+            <div class="leader-content">
+              <h3 class="leader-name">Kristen Richmond</h3>
+              <p class="leader-title">Senior Advisor</p>
+              <p class="leader-desc">Kristen brings over two decades of experience at Boeing, where she held senior executive roles spanning strategy, government affairs, and international policy. Most recently Kristen served as the Managing Director of EU Government Affairs based in Brussels, Belgium, where she led engagement across Boeing's commercial, defense, and services businesses. </p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/maryann-omerod.jpg" alt="MaryAnn Omerod">
+            <div class="leader-content">
+              <h3 class="leader-name">MaryAnn Omerod</h3>
+              <p class="leader-title">Chief Operating Officer</p>
+              <p class="leader-desc">MaryAnn has led the VisionSafe operations in Kaneohe, Hawaii for 25+ years, overseeing the company's daily operations, including finance, human resources, administration, and developing business strategies and procedures to optimize the organization’s resources and operational capabilities. MaryAnn works closely with department heads, managers, and supervisors to support the day-to-day activities of the company and its employees.
+                <br><br>
+                Maryann has a combined 46 years of experience in management, manufacturing, wholesale, distribution, and retail.
+                <br><br>
+                Born, raised, and educated in Hawaii.  Her passion and values are rooted in community engagement and family.</p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/myles-nomura.jpg" alt="Myles Nomura">
+            <div class="leader-content">
+              <h3 class="leader-name">Myles Nomura</h3>
+              <p class="leader-title">Finance Controller</p>
+              <p class="leader-desc">Myles leads VisionSafe's Finance and Accounting team. Myles has extensive accounting experience with Controller and CFO roles at Happy Town, Servo Pacific, Foodland, as well as leading his own advisor firm.</p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/james-zanino.jpg" alt="James Zanino">
+            <div class="leader-content">
+              <h3 class="leader-name">James Zanino</h3>
+              <p class="leader-title">Head of Sales</p>
+              <p class="leader-desc">James (Jim) leads our sales team and customer experience. Jim has 25+ years of aerospace business development experience with Gogo, Honeywell, and Bose.
+                <br><br>
+                Additionally, Jim is a former Naval Aviator and instructor of aviation safety.</p>
+            </div>
+          </div>
+
+          <div class="leader-card">
+            <img class="leader-pic" src="./images/leadership/will-fraser.jpg" alt="Gen. Will Fraser, ret.">
+            <div class="leader-content">
+              <h3 class="leader-name">Gen. Will Fraser, ret.</h3>
+              <p class="leader-title">Senior Advisor</p>
+              <p class="leader-desc">Will Fraser, a decorated retired U.S. Air Force General, earned a reputation as a motivational leader, strategic thinker, and change agent who delivered solutions to the most complex challenges. 
+                <br><br>
+                During his 40-year career, he rose to become one of nine Combatant Commanders, leading U.S. Transportation Command where he reported directly to the President. Fraser previously commanded Air Combat Command and served as Vice Chief of Staff, demonstrating his ability to lead diverse, global organizations effectively.</p>
+            </div>
+          </div>
+  
+        </div>
+      </article>
+    </div>
+  </div>  
+
   <div class="row headerimg-row-no-nav">
     <div class="columns small-12">
       <div class="responsive-picture headerimg">
@@ -79,14 +275,6 @@
             <div class="columns small-12">
               <h2 class="quote-h"><img class="startquote" src="./images/start-quote.png" alt="start quote">Every action from our staff and step in our process is intimately linked to the ultimate goal of safeguarding lives.<img class="endquote" src="./images/end-quote.png" alt="start quote"></h2>
             </div>
-              <div class="columns small-6 medium-4">
-                <div class="team-card">
-                  <img class="staff-pic" src="./images/omerod.jpg" alt="">
-                  <h3 class="staff-name">MaryAnn H. Omerod</h3>
-                  <p class="staff-title">Chief Operating Officer</p>
-                  <img class="goldbar" src="./images/goldbar.jpg" alt="goldbar">
-                </div>
-              </div>
               <div class="columns small-6 medium-4">
                 <div class="team-card">
                   <img class="staff-pic" src="./images/akau.jpg" alt="">
@@ -168,7 +356,7 @@
             </div>
             <div class="columns small-12 medium-4">
               <div class="quote-card">
-                <p class="quote-p">“As an industry there is still more to do. We haven’t done enough to ensure that pilot vision is maintained during such events.”</p>
+                <p class="quote-p">“As an industry there is still more to do. We haven't done enough to ensure that pilot vision is maintained during such events.”</p>
                 <span><strong>Bill Voss</strong> - Flight Safety Foundation</span>
               </div>
             </div>
