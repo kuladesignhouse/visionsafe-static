@@ -13,626 +13,77 @@
 <script src="extras/current.js"></script>
 <script src="extras/sub-current.js"></script>
 <script defer data-domain="visionsafe.com" src="https://plausible.io/js/script.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-<style>
-#img-header {
-  width: 100%;
-  display: flex;
-}
-#img-header > img {
-  width: 100%;
-  height: auto;
-}
-
-.traintainer {
-  max-width: 60rem;
-  margin: auto;
-  padding: 20px;
-}
-
-.traintainer h1 {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 43px;
-  color: #000000;
-  flex: none;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-.traintainer h2 {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
-  flex: none;
-  flex-grow: 0;
-}
-
-.traintainer p {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 29px;
-  color: #000000;
-  flex: none;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-.traintainer a {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #000000;
-  flex: none;
-  flex-grow: 0;
-  text-decoration: underline;
-}
-
-.section {
-  margin-bottom: 40px;
-}
-
-.training-options {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.training-option {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 30px;
-  gap: 10px;
-
-  background: #F6F6F6;
-  border: 1px solid #E7E7E7;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.15);
-  border-radius: 14px;
-
-  flex: none;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-.training-option > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.training-option h3 {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-  flex: none;
-  flex-grow: 0;
-  margin: 0;
-}
-
-.training-option h3.mobile-only {
-  display: none;
-}
-
-.training-option p {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  color: #000000;
-  flex: none;
-  align-self: stretch;
-  flex-grow: 0;
-}
-
-.training-option li {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  color: #000000;
-}
-
-.training-option img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
-.benefits ul, .features ul {
-    padding-left: 20px;
-}
-
-.benefits li, .features li {
-    margin-bottom: 10px;
-}
-
-.traintainer ul {
-  list-style: none;
-  padding-inline-start: 0;
-}
-
-.traintainer ul li {
-  display: inline-flex;
-  align-items: center;
-  gap: 1.5em; /* spacing between bullet and text */
-}
-
-.traintainer ul li::before {
-  content: '';
-  width: 1em;
-  height: 1em;
-  background-image: url('data:image/svg+xml;utf8,<svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.20792 23.7838C6.37129 23.7838 6.53465 23.6757 6.75247 23.4595C7.46039 22.7568 8.11386 21.9459 8.82178 21.1892C9.42079 20.5405 10.0198 19.8919 10.5644 19.2432C10.8366 18.9189 11.1089 18.5946 11.3267 18.3243C11.599 18 11.9257 17.7297 12.198 17.4595C12.3614 17.4595 12.5248 17.4595 12.9059 17.4595C13.2871 17.4595 13.5594 17.4054 13.7228 17.4054C13.8861 17.4054 13.9406 17.1351 13.9406 17.1351L14.0495 16.3243C14.0495 16.3243 14.0495 16.1081 13.9406 16.0541C13.8317 16.0541 13.6683 15.9459 13.3416 15.9459C14.1584 15.027 15.6832 13.6216 16.0644 13.2432C16.5 13.2432 19.3317 13.0811 19.604 13.0811C20.2574 13.0811 22 12.7027 22 11.8919C22 11.0811 20.2574 10.7027 19.6584 10.7027C19.3861 10.7027 16.5545 10.5405 16.1188 10.5405C15.7376 10.1081 14.2129 8.7027 13.396 7.83784C13.6683 7.83784 13.8317 7.78378 13.9951 7.72973C14.1584 7.72973 14.104 7.45946 14.104 7.45946L13.9951 6.64865C13.9951 6.64865 13.995 6.37838 13.7772 6.37838C13.6139 6.37838 13.3416 6.32432 12.9604 6.32432C12.5792 6.32432 12.4158 6.32432 12.2525 6.32432C11.9257 6 11.6535 5.78378 11.3812 5.45946C11.1089 5.13514 10.8366 4.81081 10.6188 4.54054C10.0198 3.89189 9.47525 3.24324 8.87624 2.59459C8.16832 1.83784 7.51485 1.08108 6.80693 0.324325C6.58911 0.108109 6.42574 -6.80772e-07 6.26238 -6.87913e-07C6.26238 -6.87913e-07 5.71782 -7.11717e-07 5.55446 -7.18858e-07C5.44555 -7.23618e-07 5.5 0.0540546 5.5 0.0540546L10.401 8.5946L11.0545 10.5946L10.0198 10.5946C9.5297 10.5946 5.11881 10.8649 4.35644 10.973L1.19802 8.10811L-3.54417e-07 8.10811L0.326736 8.54054L2.34159 11.1892L2.50495 11.4054C1.9604 11.5135 0.544555 12 0.544555 12C0.544555 12 1.9604 12.4324 2.50495 12.5946L2.34159 12.8108L0.326736 15.4595L-6.94657e-07 15.8919L1.19802 15.8919L4.35644 13.027C5.11881 13.1351 9.5297 13.4054 10.0198 13.4054L11.0545 13.4054L10.401 15.4054L5.5 23.9459C5.5 23.9459 5.44555 24 5.55446 24C5.77228 24 6.26238 24 6.26238 24L6.20792 23.7838Z" fill="black"/></svg>');
-  background-size: contain;
-  background-repeat: no-repeat;
-  flex-shrink: 0;
-}
-
-
-.requestaquote {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 13px 29px 15px;
-  gap: 10px;
-  width: 230px;
-  height: 56px;
-  background: #000000;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  flex: none;
-  flex-grow: 0;
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  line-height: 28px;
-  color: #FFFFFF;
-  white-space: nowrap;
-  margin-top: 25px;
-  cursor: pointer;
-}
-
-
-.traintainer a.contact-info {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 13px 30px 15px 29px;
-
-  width: 252px;
-  height: 56px;
-
-  background: #000000;
-  border: 1px solid #000000;
-  border-radius: 10px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 23px;
-  line-height: 28px;
-  color: #FFFFFF;
-  flex: none;
-  flex-grow: 0;
-  white-space: nowrap;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.logos {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.logos img {
-    height: 50px;
-}
-@media (max-width: 60rem) {
-  .training-option {
-    flex-direction: column;
-  }
-  .training-option h3 {
-    display: none;
-  }
-  .training-option h3.mobile-only {
-    display: inline-flex;
-  }
-
-  .training-option img {
-    order: 2;
-  }
-  .training-option > div {
-    order: 3;
-  }
-
-}
-</style>
-<style>
-.open-modal-btn {
-    background: #333;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.form-container {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    position: relative;
-    transform: scale(0.8);
-    transition: all 0.3s ease;
-}
-
-.modal-overlay.active .form-container {
-    transform: scale(1);
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #666;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.close-btn:hover {
-    background: #f0f0f0;
-    color: #333;
-}
-
-.form-title {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  color: #272727;
-
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-label {
-
-  font-family: "Lato", sans-serif;
-font-style: normal;
-font-weight: 590;
-font-size: 15px;
-line-height: 18px;
-/* identical to box height */
-
-color: #000000;
-
-flex: none;
-align-self: stretch;
-flex-grow: 0;
-
-}
-
-.form-input {
-
-box-sizing: border-box;
-
-width: 411px;
-height: 54px;
-
-background: #FFFFFF;
-border: 1px solid #272727;
-border-radius: 11px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-margin-bottom: 15px;;
-}
-
-
-
-.submit-btn {
-
-margin-top: 25px;
-
-box-sizing: border-box;
-
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 13px 29px 15px;
-gap: 10px;
-
-background: #000000;
-border: 1px solid #000000;
-border-radius: 10px;
-
-width: 198px;
-height: 56px;
-
-  font-family: "Lato", sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 23px;
-line-height: 28px;
-
-color: #FFFFFF;
-flex: none;
-flex-grow: 0;
-  white-space: nowrap;
-}
-
-.submit-btn:active {
-    transform: translateY(0);
-}
-
-.success-message {
-    background: #4caf50;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    display: none;
-    margin-top: 20px;
-}
-
-.error-message {
-    background: #f44336;
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    display: none;
-    margin-top: 20px;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-  .form-container {
-      padding: 30px 20px;
-  }
-}
-</style>
 {% endblock %}
 
 {% block content %} 
-  <div id="img-header">
-    <img src="imgs/training-header.png">
-  </div>
-
-  <div class="traintainer">
-
-      <div class="section" >
-          <h1>VisionSafe EVAS Training Solutions</h1>
+  <div class="row headerimg-row-no-nav">
+    <div class="columns small-12">
+      <div class="responsive-picture headerimg">
+        <picture><img alt="Evas Training" srcset="./images/training-header-img.jpg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+        </picture>
       </div>
-
-      <div class="section">
-          <p>VisionSafe offers comprehensive training solutions for the Emergency Vision Assurance System (EVAS), providing pilots and flight crews with the skills needed to operate effectively during smoke-in-cockpit emergencies. Our training options range from high-fidelity simulators to computer-based programs, ensuring every organization can find a solution that meets their operational needs and budget.</p>
-      </div>
-
-      <div class="section">
-          <h2>Training Benefits</h2>
-          <ul class="benefits">
-              <li><span><b>Enhanced Safety:</b> Crews trained with EVAS respond more effectively during smoke emergencies.</span></li>
-              <li><span><b>Confidence Building:</b> Hands-on experience builds crew confidence in emergency equipment.</span></li>
-              <li><span><b>Muscle Memory Development:</b> Practice creates automatic responses during high-stress situations. Critical to practice removing the inflatable vision unit and installing the unit on the glare shield so that it becomes a natural habit.</span></li>
-              <li><span><b>Realistic Scenarios:</b> Smoke-filled training environments prepare crews for actual emergencies.</span></li>
-          </ul>
-      </div>
-
-      <div class="section">
-          <h2>Training Options</h2>
-          <div class="training-options">
-
-              <div class="training-option">
-                <h3 class="mobile-only">Full Cockpit Trainer</h3>
-                <div>
-                  <h3>Full Cockpit Trainer</h3>
-                  <p>Our premier training solution provides a realistic cockpit environment for high-fidelity, hands-on training.</p>
-                  <ul class="features">
-                    <li>Complete mock-ups with EVAS and smoke generation for realistic emergency simulation.</li>
-                    <li>Allows operators to conduct training at their own facility.</li>
-                    <li>Simulator includes two EVAS units to simplify training process and eliminate need to refold the Inflatable Vision Unit after each use.</li>
-                    <li>On-site simulation and instructor training is included.</li>
-                    <li>Ideal for flight schools, airlines, and large corporate flight departments.</li>
-                  </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
-                </div>
-                <img src="imgs/full-cockpit-trainer.png" alt="Full Cockpit Trainer">    
-              </div>
-
-              <div class="training-option">
-                <h3 class="mobile-only">Table Top System</h3>
-                <div>
-                  <h3>Table Top System</h3>
-                  <p>A compact yet comprehensive training solution that simulates the pressure of an inflatable vision unit.</p>
-                  <ul class="features">
-                    <li>A flight deck and glare-shield mockup that can be placed on 2 X 4' table.</li>
-                    <li>Simulator includes two EVAS units to simplify training process and eliminate need to refold the Inflatable Vision Unit after each use.</li>
-                    <li>Portable design requires minimal space.</li>
-                  </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
-                </div>
-                <img src="imgs/table-top-training-system.png" alt="Table Top System">    
-              </div>
-
-              <div class="training-option">
-                <h3 class="mobile-only">Training Units with Smoke Machine</h3>
-                <div>
-                  <h3>Training Units with Smoke Machine</h3>
-                  <p>Designed for integration with existing flight simulators to enhance system familiarity.</p>
-                  <ul class="features">
-                    <li>Professional-grade smoke machine compatible with flight simulators.</li>
-                    <li>Includes two EVAS units to simplify training process and eliminate need to refold the Inflatable Vision Unit after each use.</li>
-                    <li>Integration guidance for existing simulator environments.</li>
-                    <li>Ideal for organizations with existing simulator facilities.</li>
-                  </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
-                </div>
-                <img src="imgs/training-units-with-smoke-machine.png" alt="Training Units with Smoke Machine">    
-              </div>
-
-              <div class="training-option">
-                <h3 class="mobile-only">On-Site Training</h3>
-                <div>
-                  <h3>On-Site Training</h3>
-                  <p>Expert-led training at your facility with our mobile simulation unit.</p>
-                  <ul class="features">
-                    <li>Classroom instruction on EVAS operation and emergency procedures.</li>
-                    <li>Hands-on practice with EVAS units.</li>
-                    <li>Live smoke demonstration on our mobile simulation unit (conducted in parking lot).</li>
-                    <li>Customizable curriculum based on aircraft type and operator needs.</li>
-                    <li>Certification of completion for all participants.</li>
-                    <li>Travel expenses may apply depending on location.</li>
-                  </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
-                </div>
-                <img src="imgs/on-site-training.png" alt="On-Site Training">    
-              </div>
-
-              <div class="training-option">
-                <h3 class="mobile-only">Computer-Based Training Program</h3>
-                <div>
-                  <h3>Computer-Based Training Program</h3>
-                  <p>A digital learning solution providing foundational knowledge of EVAS operations.</p>
-                  <ul class="features">
-                    <li>Comprehensive EVAS deployment and usage tutorials.</li>
-                    <li>Interactive simulations.</li>
-                    <li>Knowledge assessment quizzes.</li>
-                    <li>Unlimited user access within purchasing organization.</li>
-                    <li>Regular content updates.</li>
-                    <li>Accessible on multiple devices.</li>
-                    <li>Ideal as a refresher or supplement to hands-on training.</li>
-                  </ul>
-                  <a class="contact-info" href="https://training.visionsafe.com/">Explore EVAS CBT</a>
-                </div>
-                <img src="imgs/computer-based-training-program.png" alt="Computer-Based Training Program">    
-              </div>
-
-          </div>
-      </div>
-
-      <div class="section">
-          <h1>Training Partners</h1>
-          <h2>Simulator Training</h2>
-          <p>Simulator training is available at more than 75 locations worldwide through <a href="https://www.flightsafety.com/">Flight Safety International</a>, <a href="https://www.cae.com/">CAE</a>, and <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/">Airventure</a>.</p>
-          <div class="logos">
-              <img src="imgs/flight-safety-international.svg" alt="Flight Safety">
-              <img src="imgs/cae.svg" alt="CAE">
-              <img src="imgs/airventure.svg" alt="Airventure">
-          </div>
-          <h2>Computer-Based Training</h2>
-          <p>EVAS CBT is available through <a href="https://kingschools.com/visionsafe-evas-video-training-course">King Schools</a>.</p>
-          <img src="imgs/king-schools.png" alt="King Schools">
-      </div>
-
-      <div class="section">
-        <h1>Custom Training Solutions</h1>
-        <p>VisionSafe can develop custom training programs to meet specific operational requirements. Contact our training team to discuss specialized needs for your organization.</p>
-        <a href="tel:+18084419230" class="contact-info">+1 (808) 441-9230</a>
-      </div>
-  </div>
-  
-  <div id="modalOverlay" class="modal-overlay">
-    <div class="form-container">
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-      <h1 class="form-title">Full Cockpit Trainer Quote Request</h1>
-      
-      <form id="quoteForm" method="POST" action="https://www.visionsafe.com/warranty/gmailertoo.php" >
-        <div class="form-group">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" id="name" name="name" class="form-input" required>
-        </div>
-          
-        <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" id="email" name="email" class="form-input" required>
-        </div>
-          
-        <div class="form-group">
-          <label for="phone" class="form-label">Phone</label>
-          <input type="tel" id="phone" name="phone" class="form-input" required>
-        </div>
-          
-        <button type="submit" class="submit-btn">Send Request</button>
-      </form>
-      <div id="successMessage" class="success-message">Thank you! Your quote request has been submitted successfully.</div>
-      <div id="errorMessage" class="error-message">Please fill in all required fields.</div>
     </div>
   </div>
+  <div class="row">
+    <div class="columns small-12">
+      <article class="subgrid subgrid-960">
+        <div class="row">
+          <div class="columns small-12 sg-col-line">
+            <h1 class="main-h train-main-left">EVAS training is offered in several ways</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns small-12 large-9">
+            <div class="responsive-picture pilot">
+              <picture><img alt="EVAS Pilot says never fly blind" srcset="./images/evas-pilot.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+              </picture>
+            </div>
 
+            <h3 class="h-for-par2">Simulator Training</h3>
+            <p class="paragraph com-par2">Simulator training is available at more than 75 locations worldwide through <a href="https://www.flightsafety.com/business-commercial/pilot/" target="_blank" class="p-link2">
+              Flight Safety International</a> and <a href="https://bombardieratp.cae.com/elearning/freecourses/cl604605EVAS" target="_blank" class="p-link2">CAE</a>.</p>
+              <img src="images/fsi-logo.png"  style="margin:0 30px 0 0;" width="180" alt="EVAS training is available at Flight Safety International">
+              <img src="images/cae-logo.png"  style="margin:-10px 0 0 0;"width="110" alt="EVAS training is available through CAE">
+              <p class="paragraph com-par2">Training is available for EVAS at a location near you. Please contact your Training Provider for more information on their EVAS Training Program.</p>
+
+            <h3 class="h-for-par2">Online Training</h3>
+
+            <h3 class="h-for-par">Flight Safety E-learning for EVAS</h3>
+            <p class="paragraph com-par2">Click here to access <a title="" href="https://www.flightsafety.com/online-training/" target="_blank" class="p-link2">Flight Safety's comprehensive EVAS e-learning course</a>
+            </p>
+            
+            <h3 class="h-for-par">King School Computer Based Training for EVAS</h3>  
+            <p class="paragraph com-par2">Click here to access <a title="" href="https://kingschools.com/visionsafe-evas-video-training-course" target="_blank" class="p-link2">King School's computer based training course for EVAS</a>
+            </p>
+          </div>
+          <div class="columns small-12 large-3 sg-col-nfb medium-12">
+            <h2 class="nfb-h">Never Fly Blind</h2>
+            <p class="paragraph nfb-p">"When you can't see... You can't fly"<br>
+            </p>
+            <div class="container training-cont">
+              <p class="paragraph hero-par">To learn more about EVAS or EVAS Training please call us at:<br>
+              </p><a href="tel:+1-808-441-9230" class="link-container phonenum-link-cont"><span class="text-element phonenum-training">+1 (808) 441-9230</span></a>
+            </div>
+          </div>
+          <div class="columns small-12 medium-12 sg-col-line">
+            <h1 class="main-h train-main-left">Additional training materials</h1>
+          </div>
+          <div class="columns small-12 medium-6 sg-col-training-vid">
+            <h3 class="h-for-par">Training overview and EVAS options</h3>
+            <div class="vimeo training-video responsive-video" data-original-url="https://vimeo.com/361216233"><iframe src='https://player.vimeo.com/video/361216233' data-original-url='https://vimeo.com/361216233' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            <p class="paragraph com-par">This video provides a complete comprehensive description of what the EVAS product is and options for arming and deploying the unit in a continuous smoke environment. Please view the video in conjunction with our <a title="" href="docs/training/8015_RevO_107STCTC_Training_Outline_20220701.pdf" target="_blank" class="p-link">Training Document (8015)</a>
+            </p>
+          </div>
+          <div class="columns small-12 medium-6 sg-col-training-vid">
+            <h3 class="h-for-par">IVU refolding video (authorized training facilities only)</h3>
+            <div class="vimeo training-video responsive-video" data-original-url="https://vimeo.com/361217611"><iframe src='https://player.vimeo.com/video/361217611' data-original-url='https://vimeo.com/361217611' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+            <p class="paragraph com-par">This video requires a password and is only intended for use by our authorized training facilities. For more information contact <a title="" href="mailto:training@visionsafe.com" class="p-link">Training@VisionSafe.com</a>
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
 {% include "partials/footer.njk" %}
 <div class="reveal" id="checkoutModal" >
   <button class="close-button" data-close aria-label="Close reveal" type="button">
@@ -1482,89 +933,4 @@ twq('track','PageView');
 <!-- birdseed 
 <script id="io.birdseed.script-tag" type="text/javascript" src="https://app.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
  end birdseed -->
-
-<script>
-function openModal() {
-    document.getElementById('modalOverlay').classList.add('active');
-}
-
-function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('active');
-}
-
-// Close modal when clicking outside the form
-document.getElementById('modalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
-    }
-});
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeModal();
-    }
-});
-document.getElementById('quoteForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  
-  const successMessage = document.getElementById('successMessage');
-  const errorMessage = document.getElementById('errorMessage');
-  
-  // Hide any previous messages
-  successMessage.style.display = 'none';
-  errorMessage.style.display = 'none';
-  
-  // Basic validation
-  if (!name || !email || !phone) {
-    errorMessage.style.display = 'block';
-    return;
-  }
-  
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    errorMessage.textContent = 'Please enter a valid email address.';
-    errorMessage.style.display = 'block';
-    return;
-  }
-  
-  // Simulate form submission
-  const submitBtn = document.querySelector('.submit-btn');
-  submitBtn.textContent = 'Sending...';
-  submitBtn.disabled = true;
-  
-  setTimeout(() => {
-    successMessage.style.display = 'block';
-    submitBtn.textContent = 'Send Request';
-    submitBtn.disabled = false;
-    
-    // Reset form
-    document.getElementById('quoteForm').reset();
-    
-    // Log form data (in real application, this would be sent to a server)
-    console.log('Form submitted:', {
-      name: name,
-      email: email,
-      phone: phone,
-      timestamp: new Date().toISOString()
-    });
-  }, 1500);
-});
-
-// Phone number formatting
-document.getElementById('phone').addEventListener('input', function(e) {
-  let value = e.target.value.replace(/\D/g, '');
-  if (value.length >= 6) {
-    value = value.substring(0, 3) + '-' + value.substring(3, 6) + '-' + value.substring(6, 10);
-  } else if (value.length >= 3) {
-    value = value.substring(0, 3) + '-' + value.substring(3);
-  }
-  e.target.value = value;
-});
-</script>
 {% endblock %}

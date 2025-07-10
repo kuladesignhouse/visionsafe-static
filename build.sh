@@ -6,7 +6,7 @@ gulp
 # Check if the Gulp task was successful
 if [ $? -eq 0 ]; then
     # Transfer the file to the server using scp
-    scp ./dist/g500-video.html brgr@visionsafe.com:/home/brgr/visionsafe.com/g500-video/index.html
+    scp ./dist/training.html brgr@visionsafe.com:/home/brgr/visionsafe.com/training.html
 
     # Check if the file transfer was successful
     if [ $? -eq 0 ]; then
