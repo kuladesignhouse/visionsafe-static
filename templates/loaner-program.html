@@ -1,0 +1,467 @@
+{% extends "layout.njk" %}
+
+{% block meta %}
+  <meta name="description" content="Loaner program for Emergency Vision Assurance System (EVAS).">
+{% endblock %}
+
+{% block title %}Loaner Program | VisionSafe | EVAS{% endblock %}
+
+{% block head %}
+  {% include "partials/head.njk" %}
+  <link rel="stylesheet" type="text/css" href="css/checkout.css">
+
+<script src="extras/current.js"></script>
+<script src="extras/sub-current.js"></script>
+<script defer data-domain="visionsafe.com" src="https://plausible.io/js/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+#img-header {
+  width: 100%;
+  display: flex;
+}
+#img-header > img {
+  width: 100%;
+  height: auto;
+}
+
+.maintainer {
+  max-width: 60rem;
+  margin: auto;
+  padding: 20px;
+}
+
+.maintainer h1 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  text-align: left;
+}
+
+.maintainer p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  color: #000000;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.maintainer p b {
+
+}
+
+.numtainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  min-width: 0; /* Ensures that the flex item can shrink below its content size */
+}
+.step-number {
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-weight: bold;
+  flex-shrink: 0; /* Prevents the circle from shrinking */
+}
+.step-description {
+  font-size: 16px;
+  word-wrap: break-word; /* Allows text to wrap to the next line */
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.icon-container {
+  margin-right: 10px;
+}
+.icon-container img {
+  width: 20px; /* Adjust the size as needed */
+  height: auto;
+}
+.item-text {
+  font-size: 16px;
+}
+
+
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container > form {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+.form-container h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  color: white;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.checkbox-group input {
+  margin-right: 10px;
+}
+.checkbox-group label {
+  color: white;
+}
+.form-submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #DAA520;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form-submit-btn:hover {
+  background-color: #CD853F;
+}
+</style>
+{% endblock %}
+
+{% block content %} 
+  <div id="img-header">
+    <img src="/images/loaner-program-header.png">
+  </div>
+
+  <div class="maintainer">
+    <h1>EVAS Loaner Program</h1>
+    <p>During service of your EVAS units, Visionsafe offers a loaner program to keep your aircraft in the air and always flying protected by EVAS.</p>
+
+    <div class="numtainer">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-description">Receive an EVAS loaner unit when your unit is up for maintenance. We ship the unit directly to you for quick replacement.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-description">Use the same box with a prepaid label to send your EVAS unit for inspection and repair. When we are done we send it back to you.</div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-description">Install your serviced unit back in your aircraft and send us the loaner unit back (box and prepaid shipping label included).</div>
+      </div>
+    </div>
+
+
+    <h2>Program Benefits</h2>
+    <div class="layout-container">
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="/images/plane.svg">
+        </div>
+        <div class="item-text">Always have EVAS on board</div>
+      </div>
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="/images/plane.svg">
+        </div>
+        <div class="item-text">Maximize jet availability</div>
+      </div>
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="/images/plane.svg">
+        </div>
+        <div class="item-text">Quick 2 week turnaround</div>
+      </div>
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="/images/plane.svg">
+        </div>
+        <div class="item-text">Keep the Unit for up to 30 days</div>
+      </div>
+    </div>
+
+    <h2>Starting at only $355 per EVAS unit</h2>
+    <p>To get started please fill out the from below.</p>
+
+
+    <div class="form-container">
+      <form>
+        <h3>EVAS Loaner Program Form</h3>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="company">Company:</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="evasSerialNumbers">EVAS Serial Numbers:</label>
+          <input type="text" id="evasSerialNumbers" name="evasSerialNumbers">
+        </div>
+        <div class="form-group">
+          <label for="aircraftSerialNumber">Aircraft Serial/Registration Number:</label>
+          <input type="text" id="aircraftSerialNumber" name="aircraftSerialNumber">
+        </div>
+        <div class="form-group">
+          <label for="shippingAddress">Shipping Address:</label>
+          <input type="text" id="shippingAddress" name="shippingAddress">
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="sameAsShipping" name="sameAsShipping">
+          <label for="sameAsShipping">Same as Shipping Address</label>
+        </div>
+        <div class="form-group">
+          <label for="billingAddress">Billing Address:</label>
+          <input type="text" id="billingAddress" name="billingAddress">
+        </div>
+        <button type="submit" class="form-submit-btn">Submit Info</button>
+      </form>
+    </div>
+
+
+  </div>
+
+{% include "partials/footer.njk" %}
+<div class="reveal" id="checkoutModal" >
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div id="airload"></div>
+  <h1 id="checkoutheader">Great! We'll guide you through the steps to getting your plane or fleet protected with EVAS.</h1>
+  <form id="checkout" name="checkout">
+    <label>Contact Information</label>
+    <div class="form-input">
+      <input id="fullname" name="fullname" placeholder="Full Name" required="required" type="text">
+      <label for="fullname">Full Name</label>
+    </div>
+    <div class="form-input">
+      <input id="company" name="company" placeholder="Company" required="required" type="text">
+      <label for="company">Company</label>
+    </div>
+    <div class="form-input">
+      <input id="phone" name="phone" placeholder="Phone" required="required" type="tel">
+      <label for="phone">Phone</label>
+    </div>
+    <div class="form-input">
+      <input id="email" name="email" placeholder="Email" required="required" type="email">
+      <label for="email">Email</label>
+    </div>
+    
+    <label class="slct">Where is your plane or fleet registered?</label>
+    <div class="form-input">
+      <select name="location">
+        <option selected="selected" value="0">Select country</option>
+        <option value="US">United States</option>
+        <option value="EU">European Union</option>
+        <option value="OTHER">Other</option>
+      </select>
+    </div>
+    <label class="notshown" id="countrylabel">What country is your plane or fleet registered in?</label>
+    {% include "partials/countries.njk" %}
+    <div class="form-sub">
+      <input type="submit" value="Next" />
+    </div>
+  </form>
+</div>
+<div class="reveal" id="msgModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-error">
+      <h2>We'll need to get you a special STC for where your aircraft is registered. We will be in touch shortly to assist with this. If you'd like to contact us please call us at 1-800-441-9230</h2>
+    </div>    
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>  
+  </div>
+</div>
+<div class="reveal" id="stripeModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-stripe"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %} 
+<script src="js/webflow.js" type="text/javascript"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/outofview.js"></script>
+<script src="js/what-input.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>$(document).foundation();</script>
+<script src="js/checkout.js"></script>
+
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_partner_id = "441156";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=441156&fmt=gif" />
+</noscript>
+<!-- End LinkedIn Insight Tag -->
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o31f6');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<!-- birdseed 
+<script id="io.birdseed.script-tag" type="text/javascript" src="https://app.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
+ end birdseed -->
+
+<script>
+function openModal() {
+    document.getElementById('modalOverlay').classList.add('active');
+}
+
+function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+}
+
+// Close modal when clicking outside the form
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+document.getElementById('quoteForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  
+  const successMessage = document.getElementById('successMessage');
+  const errorMessage = document.getElementById('errorMessage');
+  
+  // Hide any previous messages
+  successMessage.style.display = 'none';
+  errorMessage.style.display = 'none';
+  
+  // Basic validation
+  if (!name || !email || !phone) {
+    errorMessage.style.display = 'block';
+    return;
+  }
+  
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    errorMessage.textContent = 'Please enter a valid email address.';
+    errorMessage.style.display = 'block';
+    return;
+  }
+  
+  // Simulate form submission
+  const submitBtn = document.querySelector('.submit-btn');
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+  
+  setTimeout(() => {
+    successMessage.style.display = 'block';
+    submitBtn.textContent = 'Send Request';
+    submitBtn.disabled = false;
+    
+    // Reset form
+    document.getElementById('quoteForm').reset();
+    
+    // Log form data (in real application, this would be sent to a server)
+    console.log('Form submitted:', {
+      name: name,
+      email: email,
+      phone: phone,
+      timestamp: new Date().toISOString()
+    });
+  }, 1500);
+});
+
+// Phone number formatting
+document.getElementById('phone').addEventListener('input', function(e) {
+  let value = e.target.value.replace(/\D/g, '');
+  if (value.length >= 6) {
+    value = value.substring(0, 3) + '-' + value.substring(3, 6) + '-' + value.substring(6, 10);
+  } else if (value.length >= 3) {
+    value = value.substring(0, 3) + '-' + value.substring(3);
+  }
+  e.target.value = value;
+});
+</script>
+{% endblock %}
