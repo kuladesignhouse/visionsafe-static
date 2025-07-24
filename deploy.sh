@@ -12,6 +12,7 @@ SPECIAL_FILES=(
   "warranty-RENAME-index.html:/home/brgr/visionsafe.com/warranty/index.html"
   "g500-video.html:/home/brgr/visionsafe.com/g500-video/index.html"
   "g600-video.html:/home/brgr/visionsafe.com/g600-video/index.html"
+  "van-tour.html:/home/brgr/visionsafe.com/van-tour/index.html"
 )
 
 # --- BUILD ---

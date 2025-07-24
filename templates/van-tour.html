@@ -1,0 +1,654 @@
+{% extends "layout.njk" %}
+
+{% block meta %}
+  <meta name="description" content="Loaner program for Emergency Vision Assurance System (EVAS).">
+{% endblock %}
+
+{% block title %}2025 EVAS Van Tour | VisionSafe{% endblock %}
+
+{% block head %}
+  {% include "partials/head.njk" %}
+  <link rel="stylesheet" type="text/css" href="/css/checkout.css">
+
+<script src="/extras/current.js"></script>
+<script src="/extras/sub-current.js"></script>
+<script defer data-domain="visionsafe.com" src="https://plausible.io/js/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+#img-header {
+  width: 100%;
+  display: flex;
+}
+#img-header > img {
+  width: 100%;
+  height: auto;
+}
+
+.vantainer {
+  max-width: 60rem;
+  margin: auto;
+  padding: 20px;
+}
+
+.vantainer h1 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  text-align: left;
+  margin: 50px 0 20px 0;
+}
+
+.vantainer p {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  color: #000000;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+.vantainer h2 {
+  margin: 20px 0;
+
+  font-family: 'Basic Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;  
+}
+
+.vidninfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.vidninfo > img {
+  width: 50%;
+  height: auto;
+}
+
+
+
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.icon-container {
+  margin-right: 10px;
+}
+.icon-container img {
+  width: 20px; /* Adjust the size as needed */
+  height: auto;
+}
+.item-text {
+  margin-left: 0px;
+
+  font-family: 'Basic Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+
+
+
+
+
+
+
+a.request-demo {
+  max-width: 399px;
+  min-height: 56px;
+  background: linear-gradient(140.44deg, #FFF7CB 12.07%, #FAE493 60.95%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+
+  margin: 0 0 23px;
+
+  border-radius: 10px;
+  border: 1px solid #000;
+  padding: 13px 31px 15px 29px;
+
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #F7F7F7;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 80%;
+  position: relative;
+}
+
+.close-demo {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  right: 10px;
+  top: -3px;
+}
+
+.close-demo:hover,
+.close-demo:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form#demo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+form#demo > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  flex-grow: 1;
+}
+
+div.input-spacer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+div.input-spacer > div {
+  margin-bottom: 8px;
+}
+
+form#demo input {
+  width: 100%;
+}
+
+form#demo h1 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #000000;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form#demo label {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+form#demo label span {
+  font-weight: 300;
+}
+
+form#demo input[type="text"],
+form#demo input[type="email"],
+form#demo input[type="tel"] {
+  margin: 6px 0 0px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #AAAAAA;
+  border-radius: 10px;
+}
+
+form#demo input[type="submit"] {
+  box-sizing: border-box;
+  background: linear-gradient(140.44deg, #FFF7CC 12.07%, #FAE28C 60.95%);
+  border: 1px solid #AAAAAA;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  height: 42px;
+  margin-top: 35px;
+}
+
+form#demo input[type="submit"].validated {
+  color: rgba(27, 27, 27, 1);
+}
+
+div#demoModal.modal.successful form#demo {
+  display: none;
+}
+
+div#demoModal.modal.successful .modal-content {
+  width: 80%;
+  height: 176px;
+}
+
+#demoModal > div > div.success-msg {
+  display: none;
+}
+
+#demoModal.successful > .modal-content {
+  padding: 20px;
+}
+
+#demoModal.successful > div > div.success-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+#demoModal.successful > div > div.success-msg h1 {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  color: #000000;
+}
+
+@media (min-width: 21.875rem) {
+  form#demo h1 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 24rem) {
+  form#demo h1 {
+    font-size: 18px;
+  }
+  a.request-demo {
+    font-size: 23px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 26rem) {
+  form#demo h1 {
+    font-size: 20px;
+  }
+  div.input-spacer > div {
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 33rem) {
+  div#demoModal.modal.successful .modal-content {
+    max-width: 522px;
+  }
+  form#demo h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 40rem) {
+  .modal-content {
+    padding: 67px;
+    width: 520px;
+    max-height: 650px;
+  }
+  form#demo h1 {
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 40px;
+  }
+  form#demo input[type="submit"] {
+    font-size: 32px;
+    line-height: 38px;
+    height: 62px;
+    margin-top: 50px;
+  }
+  form#demo input[type="text"],
+  form#demo input[type="email"],
+  form#demo input[type="tel"] {
+    height: 57px;
+    margin: 6px 0 0px;
+  }
+  .close-demo {
+    right: 1rem;
+    top: 0.5rem;
+  }
+}
+</style>
+{% endblock %}
+
+{% block content %} 
+  <div id="img-header">
+    <img src="imgs/evas-van-tour-2025.jpg">
+  </div>
+
+  <div class="vantainer">
+    <h1>Experience EVAS in Action: The 2025 Van Tour</h1>
+    <div class="vidninfo">
+      <img src="imgs/van-placeholder.png">
+      <div>
+        <h2>See Through the Smoke</h2>
+        <p>VisionSafe’s EVAS Demonstration Van is on the road, bringing the power of the Emergency Vision Assurance System directly to aviation professionals across the country.</p>
+        <br>
+        <p>Step inside one of our custom-outfitted vans, featuring a cockpit designed to simulate a real in-flight smoke emergency. Watch the cabin fill with dense smoke — then see how EVAS instantly restores a clear, see-through environment, allowing pilots to view vital instruments and safely see out the windshield.</p>
+      </div>
+    </div>
+
+    <div>
+      <img src="imgs/pin.svg" width="23.02" height="31.38">
+      <h2>Van Tour Schedule</h2>
+    </div>
+
+    <div>
+      <img src="imgs/calendar.svg" width="23.02" height="31.38">
+      <h2>Schedule a Stop By Your Hangar or Location</h2>
+    </div>
+
+    <p>If you’re located near one of our upcoming stops, we may be able to bring the EVAS Van directly to your location. Perfect for flight departments, FBOs, training teams, and anyone responsible for flight safety.</p>
+
+    <div class="layout-container">
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="imgs/plane.svg">
+        </div>
+        <div class="item-text">Personalized demonstration at your location</div>
+      </div>
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="imgs/plane.svg">
+        </div>
+        <div class="item-text">Fast, impactful training for pilots and crews</div>
+      </div>
+      <div class="list-item">
+        <div class="icon-container">
+          <img src="imgs/plane.svg">
+        </div>
+        <div class="item-text">EVAS deployment in a smoke-filled cockpit</div>
+      </div>
+    </div>
+    
+    <a class="request-demo">Request a Demo at Your Location</a>
+
+  </div>
+
+{% include "partials/footer.njk" %}
+
+<div id="demoModal" class="modal">
+  <div class="modal-content">
+    <div class="success-msg">
+      <h1>Great! We will reach out soon to book your demo.</h1>
+    </div>
+    <form id="demo">
+      <span class="close-demo">&times;</span>
+      <h1>Learn more about EVAS and see<br>exactly how EVAS works</h1>
+      <div>
+        <div class="input-spacer">
+          <div>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName">
+          </div>
+          <div>
+            <label for="businessEmail">Business Email</label>
+            <input type="email" id="businessEmail" name="businessEmail">
+          </div>
+          <div>
+            <label for="phone">Phone <span>(optional)</span></label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </div>
+        <input type="submit" value="Send Request">
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="reveal" id="checkoutModal" >
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div id="airload"></div>
+  <h1 id="checkoutheader">Great! We'll guide you through the steps to getting your plane or fleet protected with EVAS.</h1>
+  <form id="checkout" name="checkout">
+    <label>Contact Information</label>
+    <div class="form-input">
+      <input id="fullname" name="fullname" placeholder="Full Name" required="required" type="text">
+      <label for="fullname">Full Name</label>
+    </div>
+    <div class="form-input">
+      <input id="company" name="company" placeholder="Company" required="required" type="text">
+      <label for="company">Company</label>
+    </div>
+    <div class="form-input">
+      <input id="phone" name="phone" placeholder="Phone" required="required" type="tel">
+      <label for="phone">Phone</label>
+    </div>
+    <div class="form-input">
+      <input id="email" name="email" placeholder="Email" required="required" type="email">
+      <label for="email">Email</label>
+    </div>
+    
+    <label class="slct">Where is your plane or fleet registered?</label>
+    <div class="form-input">
+      <select name="location">
+        <option selected="selected" value="0">Select country</option>
+        <option value="US">United States</option>
+        <option value="EU">European Union</option>
+        <option value="OTHER">Other</option>
+      </select>
+    </div>
+    <label class="notshown" id="countrylabel">What country is your plane or fleet registered in?</label>
+    {% include "partials/countries.njk" %}
+    <div class="form-sub">
+      <input type="submit" value="Next" />
+    </div>
+  </form>
+</div>
+<div class="reveal" id="msgModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-error">
+      <h2>We'll need to get you a special STC for where your aircraft is registered. We will be in touch shortly to assist with this. If you'd like to contact us please call us at 1-800-441-9230</h2>
+    </div>    
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>  
+  </div>
+</div>
+<div class="reveal" id="stripeModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="modal-wrap">
+    <div id="msg-modal-stripe"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %} 
+<script src="/js/webflow.js" type="text/javascript"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/outofview.js"></script>
+<script src="/js/what-input.min.js"></script>
+<script src="/js/foundation.min.js"></script>
+<script>$(document).foundation();</script>
+<script src="/js/checkout.js"></script>
+
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_partner_id = "441156";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=441156&fmt=gif" />
+</noscript>
+<!-- End LinkedIn Insight Tag -->
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o31f6');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<!-- birdseed 
+<script id="io.birdseed.script-tag" type="text/javascript" src="https://app.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
+ end birdseed -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const demoModal = document.getElementById('demoModal');
+  const demoForm = document.getElementById('demo');
+  const requestButtons = document.querySelectorAll('.request-demo');
+  const closeDemos = document.querySelectorAll('.close-demo');
+
+  requestButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (demoModal.classList.contains("successful")) {
+        demoModal.classList.remove("successful");
+      }
+      demoModal.style.display = "flex";
+    });
+  });
+
+  closeDemos.forEach(button => {
+    button.addEventListener('click', () => {
+      demoModal.style.display = "none";
+    });
+  });
+
+  window.onclick = function(event) {
+    if (event.target == demoModal) {
+      demoModal.style.display = "none";
+    }
+  }
+
+  demoForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (checkValidation()) {
+      const formData = {
+        fullName: e.target.fullName.value,
+        businessEmail: e.target.businessEmail.value,
+        phone: e.target.phone.value
+      };
+
+      const formURL = "https://script.google.com/macros/s/AKfycbygNwLwq81Z0DJZmX88034ZR-EV1IeAxS1OprCnhTLlgm6wf9-4SBnE4Xo7IHlvs4E/exec";
+
+      const response = await fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const statusCode = response.status;
+      if (!response.ok) {
+        if (response.status == 0) {
+          demoModal.classList.add("successful");
+        } else {
+          console.error(`Error occurred: ${statusCode}`);
+          alert('Error submitting data.');
+        }
+        return;
+      }
+    }
+  });
+
+  demoModal.addEventListener('click', (e) => {
+    if (e.target === demoModal) {
+      demoModal.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape') {
+      demoModal.style.display = 'none';
+    }
+  });
+
+  const fullNameInput = demoForm.querySelector('#fullName');
+  const businessEmailInput = demoForm.querySelector('#businessEmail');
+  const submitButton = demoForm.querySelector('input[type="submit"]');
+
+  function isValidEmail(email) {
+    const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return pattern.test(email);
+  }
+
+  function checkValidation() {
+    if (fullNameInput.value.trim() !== '' && isValidEmail(businessEmailInput.value.trim())) {
+      submitButton.classList.add('validated');
+      return true;
+    } else {
+      submitButton.classList.remove('validated');
+      return false;
+    }
+  }
+
+  fullNameInput.addEventListener('input', checkValidation);
+  businessEmailInput.addEventListener('input', checkValidation);
+
+  // Initial check (in case the browser auto-fills the form)
+  checkValidation();
+});
+</script>
+{% endblock %}
