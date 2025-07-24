@@ -164,8 +164,41 @@ c.parentNode.insertBefore(t,c)}();
 .iconinfo {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
-
+.vaninfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  flex-direction: column-reverse;
+}
+.vaninfoleft p {
+  margin: 20px 0 30px;
+}
+.vaninfoleft a.request-demo {
+  margin-top: 10px;
+}
+.vaninforight {
+  position: relative;
+  width: 100%;
+}
+.vaninforight img {
+  margin-left: 10%;
+  margin-bottom: -10%;
+}
+@media (min-width: 60rem) {
+  .vaninfo {
+    flex-direction: row;
+  }
+  .vaninforight img {
+    position: absolute;
+    top: -145px;
+    left: -230px;
+    max-width: 730px;
+    height: auto;
+    margin: 0;
+  }
+}
 
 
 .layout-container {
@@ -787,34 +820,41 @@ fires due to lithium batteries</h3>
 
 
     <div class="iconinfo">
-      <img src="imgs/calendar.svg" width="23.02" height="31.38">
+      <img src="imgs/schedule.svg" width="23.02" height="31.38">
       <h2>Schedule a Stop By Your Hangar or Location</h2>
     </div>
 
-    <p>If you’re located near one of our upcoming stops, we may be able to bring the EVAS Van directly to your location. Perfect for flight departments, FBOs, training teams, and anyone responsible for flight safety.</p>
+    <div class="vaninfo">
+      <div class="vaninfoleft">
+        <p>If you're located near one of our upcoming stops, we may be able to bring the EVAS Van directly to your location. Perfect for flight departments, FBOs, training teams, and anyone responsible for flight safety.</p>
 
-    <div class="layout-container">
-      <div class="list-item">
-        <div class="icon-container">
-          <img src="imgs/plane.svg">
+        <div class="layout-container">
+          <div class="list-item">
+            <div class="icon-container">
+              <img src="imgs/plane.svg">
+            </div>
+            <div class="item-text">Personalized demonstration at your location</div>
+          </div>
+          <div class="list-item">
+            <div class="icon-container">
+              <img src="imgs/plane.svg">
+            </div>
+            <div class="item-text">Fast, impactful training for pilots and crews</div>
+          </div>
+          <div class="list-item">
+            <div class="icon-container">
+              <img src="imgs/plane.svg">
+            </div>
+            <div class="item-text">EVAS deployment in a smoke-filled cockpit</div>
+          </div>
         </div>
-        <div class="item-text">Personalized demonstration at your location</div>
+        
+        <a class="request-demo">Request a Demo at Your Location</a>
       </div>
-      <div class="list-item">
-        <div class="icon-container">
-          <img src="imgs/plane.svg">
-        </div>
-        <div class="item-text">Fast, impactful training for pilots and crews</div>
-      </div>
-      <div class="list-item">
-        <div class="icon-container">
-          <img src="imgs/plane.svg">
-        </div>
-        <div class="item-text">EVAS deployment in a smoke-filled cockpit</div>
+      <div class="vaninforight">
+        <img src="imgs/evas-van.png">
       </div>
     </div>
-    
-    <a class="request-demo">Request a Demo at Your Location</a>
 
   </div>
 
