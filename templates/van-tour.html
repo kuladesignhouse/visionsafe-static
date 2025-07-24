@@ -34,41 +34,33 @@
 }
 
 .vantainer h1 {
-  font-family: "Lato", sans-serif;
+  text-align: left;
+  margin: 50px 0 20px 0;
+  font-family: basic-sans, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 43px;
   color: #000000;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  text-align: left;
-  margin: 50px 0 20px 0;
 }
 
 .vantainer p {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 29px;
-  color: #000000;
-  flex: none;
-  align-self: stretch;
-  flex-grow: 0;
-  margin: 0;
-}
-.vantainer h2 {
-  margin: 20px 0;
-
-  font-family: 'Basic Sans';
+  font-family: basic-sans, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #000000;  
+  color: #000000;
+  margin: 0;
+}
+.vantainer h2 {
+  margin: 20px 0;
+  font-family: basic-sans, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000; 
 }
 
 .vidninfo {
@@ -81,7 +73,10 @@
   width: 50%;
   height: auto;
 }
-
+.iconinfo {
+  display: flex;
+  align-items: center;
+}
 
 
 
@@ -106,12 +101,92 @@
 .item-text {
   margin-left: 0px;
 
-  font-family: 'Basic Sans';
+  font-family: basic-sans, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+}
+
+
+
+
+
+
+
+.responsive-table {
+  overflow-x: auto;
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+}
+
+.responsive-table th, .responsive-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #828282;
+}
+
+.responsive-table thead {
+  font-family: basic-sans, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.responsive-table tbody tr:nth-child(even) {
+  background: #F5F5F5;
+}
+
+.responsive-table td {
+  font-family: basic-sans, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+/* Responsive: stack cells on narrow screens */
+@media (max-width: 37.5rem) {
+  .responsive-table table, .responsive-table thead, .responsive-table tbody, .responsive-table th, .responsive-table td, .responsive-table tr {
+    display: block;
+  }
+
+  .responsive-table thead tr {
+    display: none;
+  }
+
+  .responsive-table tbody tr {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #828282;
+  }
+
+  .responsive-table td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    white-space: nowrap;
+
+    font-family: basic-sans, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
 }
 
 
@@ -167,6 +242,8 @@ a.request-demo {
   border-radius: 20px;
   width: 80%;
   position: relative;
+  max-height: 100vh;
+  max-width: 520px;
 }
 
 .close-demo {
@@ -338,11 +415,6 @@ div#demoModal.modal.successful .modal-content {
 }
 
 @media (min-width: 40rem) {
-  .modal-content {
-    padding: 67px;
-    width: 520px;
-    max-height: 650px;
-  }
   form#demo h1 {
     font-size: 26px;
     line-height: 31px;
@@ -365,6 +437,13 @@ div#demoModal.modal.successful .modal-content {
     top: 0.5rem;
   }
 }
+@media (min-height: 660px) {
+  .modal-content {
+    padding: 67px;
+    width: 520px;
+    max-height: 650px;
+  }
+}
 </style>
 {% endblock %}
 
@@ -385,12 +464,52 @@ div#demoModal.modal.successful .modal-content {
       </div>
     </div>
 
-    <div>
+    <div class="iconinfo">
       <img src="imgs/pin.svg" width="23.02" height="31.38">
       <h2>Van Tour Schedule</h2>
     </div>
 
-    <div>
+    <div class="responsive-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Event/Airport Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Date">July 16</td>
+            <td data-label="Location">Seattle, WA</td>
+            <td data-label="Event/Airport Code">KSEA</td>
+          </tr>
+          <tr>
+            <td data-label="Date">July 17</td>
+            <td data-label="Location">Portland, OR</td>
+            <td data-label="Event/Airport Code">KHIO</td>
+          </tr>
+          <tr>
+            <td data-label="Date">July 23</td>
+            <td data-label="Location">Napa, CA</td>
+            <td data-label="Event/Airport Code">KAPC</td>
+          </tr>
+          <tr>
+            <td data-label="Date">July 24</td>
+            <td data-label="Location">San Jose, CA</td>
+            <td data-label="Event/Airport Code">KSJC</td>
+          </tr>
+          <tr>
+            <td data-label="Date">July 28</td>
+            <td data-label="Location">Omaha, NE</td>
+            <td data-label="Event/Airport Code">KOMA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="iconinfo">
       <img src="imgs/calendar.svg" width="23.02" height="31.38">
       <h2>Schedule a Stop By Your Hangar or Location</h2>
     </div>
