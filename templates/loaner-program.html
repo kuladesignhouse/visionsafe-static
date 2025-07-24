@@ -8,10 +8,10 @@
 
 {% block head %}
   {% include "partials/head.njk" %}
-  <link rel="stylesheet" type="text/css" href="css/checkout.css">
+  <link rel="stylesheet" type="text/css" href="/css/checkout.css">
 
-<script src="extras/current.js"></script>
-<script src="extras/sub-current.js"></script>
+<script src="/extras/current.js"></script>
+<script src="/extras/sub-current.js"></script>
 <script defer data-domain="visionsafe.com" src="https://plausible.io/js/script.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +45,7 @@
   align-self: stretch;
   flex-grow: 0;
   text-align: left;
+  margin: 50px 0 20px 0;
 }
 
 .maintainer p {
@@ -57,12 +58,32 @@
   flex: none;
   align-self: stretch;
   flex-grow: 0;
+  margin: 0;
+}
+.maintainer h2 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  flex: none;
+  flex-grow: 0;
+  margin: 20px 0;
 }
 
-.maintainer p b {
-
+.imgnumtainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
 }
-
+.imgnumtainer > img {
+  width: 100%;
+  max-width: 309px;
+  height: auto;
+}
 .numtainer {
   display: flex;
   flex-direction: column;
@@ -113,6 +134,7 @@
 }
 .item-text {
   font-size: 16px;
+  margin-left: 14px;
 }
 
 
@@ -121,6 +143,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0 70px;
 }
 .form-container > form {
   background-color: #333;
@@ -131,48 +154,111 @@
   max-width: 500px;
 }
 .form-container h3 {
-  color: white;
-  text-align: center;
   margin-bottom: 20px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  flex: none;
+  flex-grow: 0;
 }
 .form-group {
   margin-bottom: 15px;
 }
 .form-group label {
   display: block;
-  color: white;
   margin-bottom: 5px;
+
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  color: #FFFFFF;
 }
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: none;
-  border-radius: 5px;
   box-sizing: border-box;
+
+  background: #FCFCFC;
+  border: 1px solid #9D9D9D;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+}
+.form-group input[type='checkbox'] {
+  margin: 0 0 0 10px;
 }
 .checkbox-group {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin-top: 5px;
 }
 .checkbox-group input {
   margin-right: 10px;
+  width: auto;
 }
 .checkbox-group label {
   color: white;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 16px;
 }
 .form-submit-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #DAA520;
-  color: black;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 31px 15px 29px;
+  gap: 10px;
+  width: 179px;
+  height: 56px;
+  background: linear-gradient(90deg, #FFF7CB 8.47%, #FAE493 86%), #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  flex: none;
+  flex-grow: 0;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 28px;
+  color: #000000;
+  white-space: nowrap;
 }
 .form-submit-btn:hover {
   background-color: #CD853F;
+}
+.form-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+.error-message {
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .imgnumtainer {
+    flex-direction: row;
+  }
 }
 </style>
 {% endblock %}
@@ -186,20 +272,24 @@
     <h1>EVAS Loaner Program</h1>
     <p>During service of your EVAS units, Visionsafe offers a loaner program to keep your aircraft in the air and always flying protected by EVAS.</p>
 
-    <div class="numtainer">
-      <div class="step">
-        <div class="step-number">1</div>
-        <div class="step-description">Receive an EVAS loaner unit when your unit is up for maintenance. We ship the unit directly to you for quick replacement.</div>
+    <div class="imgnumtainer">
+      <div class="numtainer">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-description">Receive an EVAS loaner unit when your unit is up for maintenance. We ship the unit directly to you for quick replacement.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-description">Use the same box with a prepaid label to send your EVAS unit for inspection and repair. When we are done we send it back to you.</div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-description">Install your serviced unit back in your aircraft and send us the loaner unit back (box and prepaid shipping label included).</div>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <div class="step-description">Use the same box with a prepaid label to send your EVAS unit for inspection and repair. When we are done we send it back to you.</div>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <div class="step-description">Install your serviced unit back in your aircraft and send us the loaner unit back (box and prepaid shipping label included).</div>
-      </div>
+      <img src="/images/evas-loaner-units.png">
     </div>
+
 
 
     <h2>Program Benefits</h2>
@@ -235,7 +325,7 @@
 
 
     <div class="form-container">
-      <form>
+      <form id="loanerForm">
         <h3>EVAS Loaner Program Form</h3>
         <div class="form-group">
           <label for="name">Name:</label>
@@ -265,18 +355,19 @@
           <label for="shippingAddress">Shipping Address:</label>
           <input type="text" id="shippingAddress" name="shippingAddress">
         </div>
-        <div class="checkbox-group">
-          <input type="checkbox" id="sameAsShipping" name="sameAsShipping">
-          <label for="sameAsShipping">Same as Shipping Address</label>
-        </div>
         <div class="form-group">
           <label for="billingAddress">Billing Address:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="sameAsShipping" name="sameAsShipping">
+            <label for="sameAsShipping">Same as Shipping Address</label>
+          </div>
           <input type="text" id="billingAddress" name="billingAddress">
         </div>
-        <button type="submit" class="form-submit-btn">Submit Info</button>
+        <button type="submit" class="form-submit-btn" id="submitBtn">Submit Info</button>
+        <div id="successMessage" class="success-message">Thank you! Your request has been submitted successfully.</div>
+        <div id="errorMessage" class="error-message">Oops! Something went wrong. Please try again or contact support.</div>
       </form>
     </div>
-
 
   </div>
 
@@ -340,13 +431,13 @@
 {% endblock %}
 
 {% block javascript %} 
-<script src="js/webflow.js" type="text/javascript"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/outofview.js"></script>
-<script src="js/what-input.min.js"></script>
-<script src="js/foundation.min.js"></script>
+<script src="/js/webflow.js" type="text/javascript"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/outofview.js"></script>
+<script src="/js/what-input.min.js"></script>
+<script src="/js/foundation.min.js"></script>
 <script>$(document).foundation();</script>
-<script src="js/checkout.js"></script>
+<script src="/js/checkout.js"></script>
 
 <!-- LinkedIn Insight Tag -->
 <script type="text/javascript">
@@ -381,76 +472,123 @@ twq('track','PageView');
  end birdseed -->
 
 <script>
-function openModal() {
-    document.getElementById('modalOverlay').classList.add('active');
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbybS-ZYLL8KfS6CiN3PxN2metKMBn1oP3kF9pmm2oVD1n13KjHX-ViMCQItC1KumLQw2w/exec';
+
+// JSONP function to bypass CORS
+function submitWithJSONP(data, callback) {
+  const script = document.createElement('script');
+  const callbackName = 'jsonp_callback_' + Math.round(100000 * Math.random());
+  
+  // Create global callback function
+  window[callbackName] = function(response) {
+    callback(null, response);
+    document.head.removeChild(script);
+    delete window[callbackName];
+  };
+  
+  // Handle script loading errors
+  script.onerror = function() {
+    callback(new Error('Failed to load script'), null);
+    document.head.removeChild(script);
+    delete window[callbackName];
+  };
+  
+  // Create URL with data as query parameters
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(data)) {
+    params.append(key, value);
+  }
+  params.append('callback', callbackName);
+  
+  script.src = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+  document.head.appendChild(script);
 }
 
-function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.getElementById("sameAsShipping");
+  const billingInput = document.getElementById("billingAddress");
+  const shippingInput = document.getElementById("shippingAddress");
 
-// Close modal when clicking outside the form
-document.getElementById('modalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
+  function toggleBillingAddress() {
+    if (checkbox.checked) {
+      billingInput.disabled = true;
+      billingInput.style.backgroundColor = "#e0e0e0";
+      billingInput.value = shippingInput.value;
+    } else {
+      billingInput.disabled = false;
+      billingInput.style.backgroundColor = "";
     }
-});
+  }
 
-// Close modal with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeModal();
+  // Update billing address when shipping address changes and checkbox is checked
+  shippingInput.addEventListener('input', function() {
+    if (checkbox.checked) {
+      billingInput.value = shippingInput.value;
     }
-});
-document.getElementById('quoteForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  
+  });
+
+  // Run once on page load
+  toggleBillingAddress();
+
+  // Bind the checkbox change event
+  checkbox.addEventListener("change", toggleBillingAddress);
+
+  // Form submission with JSONP
+  const form = document.getElementById('loanerForm');
+  const submitBtn = document.getElementById('submitBtn');
   const successMessage = document.getElementById('successMessage');
   const errorMessage = document.getElementById('errorMessage');
-  
-  // Hide any previous messages
-  successMessage.style.display = 'none';
-  errorMessage.style.display = 'none';
-  
-  // Basic validation
-  if (!name || !email || !phone) {
-    errorMessage.style.display = 'block';
-    return;
-  }
-  
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    errorMessage.textContent = 'Please enter a valid email address.';
-    errorMessage.style.display = 'block';
-    return;
-  }
-  
-  // Simulate form submission
-  const submitBtn = document.querySelector('.submit-btn');
-  submitBtn.textContent = 'Sending...';
-  submitBtn.disabled = true;
-  
-  setTimeout(() => {
-    successMessage.style.display = 'block';
-    submitBtn.textContent = 'Send Request';
-    submitBtn.disabled = false;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
     
-    // Reset form
-    document.getElementById('quoteForm').reset();
+    // Hide previous messages
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
     
-    // Log form data (in real application, this would be sent to a server)
-    console.log('Form submitted:', {
-      name: name,
-      email: email,
-      phone: phone,
-      timestamp: new Date().toISOString()
+    // Disable submit button and show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    
+    // Collect form data
+    const formData = new FormData(form);
+    const data = {};
+    
+    // Convert FormData to object
+    for (let [key, value] of formData.entries()) {
+      data[key] = value;
+    }
+    
+    // Add timestamp
+    data.timestamp = new Date().toISOString();
+    
+    // Submit using JSONP
+    submitWithJSONP(data, function(error, result) {
+      if (error) {
+        console.error('JSONP Error:', error);
+        errorMessage.textContent = 'There was an error submitting your request. Please try again or contact us directly.';
+        errorMessage.style.display = 'block';
+        errorMessage.scrollIntoView({ behavior: 'smooth' });
+      } else if (result && result.success) {
+        // Show success message
+        successMessage.style.display = 'block';
+        form.reset();
+        toggleBillingAddress(); // Reset the billing address state
+        
+        // Scroll to success message
+        successMessage.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.error('Submission failed:', result);
+        errorMessage.textContent = 'There was an error submitting your request. Please try again or contact us directly.';
+        errorMessage.style.display = 'block';
+        errorMessage.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Info';
     });
-  }, 1500);
+  });
 });
 
 // Phone number formatting
