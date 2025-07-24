@@ -36,7 +36,10 @@ server_files_list = [
     'passenger.html',
     'privacy.html',
     'bombardier.html',
-    'smoke-event-in-commercial-airliner.html'
+    'smoke-event-in-commercial-airliner.html',
+    'loaner-program.html',
+    'g500-video.html',
+    'g600-video.html'
 ]
 local_directory = './dist/'  # Replace with the path to your local Gulp build directory
 
@@ -50,6 +53,12 @@ def download_file(file_name):
     url = os.path.join(server_url, file_name)
     if file_name == 'warranty-RENAME-index.html':
         url = os.path.join(server_url, 'warranty', 'index.html')
+    if file_name == 'loaner-program.html':
+        url = os.path.join(server_url, 'loaner-program', 'index.html')
+    if file_name == 'g500-video.html':
+        url = os.path.join(server_url, 'g500-video', 'index.html')
+    if file_name == 'g600-video.html':
+        url = os.path.join(server_url, 'g600-video', 'index.html')
     local_path = os.path.join(temp_directory, file_name)
     response = requests.get(url)
     if response.status_code == 200:

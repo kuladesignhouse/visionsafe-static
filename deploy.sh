@@ -10,6 +10,8 @@ DEFAULT_REMOTE_DIR="/home/brgr/visionsafe.com/"
 SPECIAL_FILES=(
   "loaner-program.html:/home/brgr/visionsafe.com/loaner-program/index.html"
   "warranty-RENAME-index.html:/home/brgr/visionsafe.com/warranty/index.html"
+  "g500-video.html:/home/brgr/visionsafe.com/g500-video/index.html"
+  "g600-video.html:/home/brgr/visionsafe.com/g600-video/index.html"
 )
 
 # --- BUILD ---
