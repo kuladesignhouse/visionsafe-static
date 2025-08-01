@@ -156,11 +156,9 @@ c.parentNode.insertBefore(t,c)}();
   justify-content: center;
   align-items: center;
   gap: 15px;
+  flex-direction: column;
 }
-.vidninfo > img {
-  width: 50%;
-  height: auto;
-}
+
 .iconinfo {
   display: flex;
   align-items: center;
@@ -186,6 +184,15 @@ c.parentNode.insertBefore(t,c)}();
   margin-left: 10%;
   margin-bottom: -10%;
 }
+.vaninfo a img {
+  width: 100%;
+  height: auto;
+}
+.vidninfo a#show-vimeo img {
+  width: 100%;
+  height: auto;
+  max-width: 448px;
+}
 @media (min-width: 60rem) {
   .vaninfo {
     flex-direction: row;
@@ -197,6 +204,12 @@ c.parentNode.insertBefore(t,c)}();
     max-width: 730px;
     height: auto;
     margin: 0;
+  }
+  .vidninfo {
+    flex-direction: row;
+  }
+  .vidninfo > div {
+    max-width: calc(100% - 463px);
   }
 }
 
@@ -783,7 +796,9 @@ fires due to lithium batteries</h3>
   <div class="vantainer">
     <h1>Experience EVAS in Action: The 2025 Van Tour</h1>
     <div class="vidninfo">
-      <img src="imgs/van-placeholder.png">
+      <a id="show-vimeo">
+        <img src="imgs/van-placeholder.png">
+      </a>
       <div>
         <h2>See Through the Smoke</h2>
         <p>VisionSafe’s EVAS Demonstration Van is on the road, bringing the power of the Emergency Vision Assurance System directly to aviation professionals across the country.</p>
@@ -1910,6 +1925,10 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.key === 'Escape') {
       demoModal.style.display = 'none';
     }
+  });
+
+  document.getElementById("show-vimeo").addEventListener('click', (e) => {
+    console.log("show vimeo");
   });
 
 });
