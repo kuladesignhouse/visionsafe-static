@@ -385,6 +385,7 @@ a.request-demo {
 
 form#demo {
   height: 100%;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -564,6 +565,23 @@ div#demoModal.modal.successful .modal-content {
     width: 520px;
     max-height: 650px;
   }
+}
+
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
+.error-message {
+  background-color: #f44336;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
 }
 </style>
 
@@ -942,7 +960,9 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
             <input type="text" id="address" name="address">
           </div>
         </div>
-        <input type="submit" value="Send Request">
+        <div id="successMessage" class="success-message">Thank you! Your request has been submitted successfully.</div>
+        <div id="errorMessage" class="error-message">Oops! Something went wrong. Please try again or contact support.</div>
+        <input type="submit" value="Send Request" id="submitBtn">
       </div>
     </form>
   </div>
@@ -1827,37 +1847,57 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  demoForm.addEventListener('submit', async (e) => {
+  const submitBtn = document.getElementById('submitBtn');
+  const successMessage = document.getElementById('successMessage');
+  const errorMessage = document.getElementById('errorMessage');
+
+  demoForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    if (checkValidation()) {
-      const formData = {
-        fullName: e.target.fullName.value,
-        businessEmail: e.target.businessEmail.value,
-        phone: e.target.phone.value
-      };
+  
+    // Hide previous messages
+    successMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
+    
+    // Disable submit button and show loading state
+    submitBtn.disabled = true;
+    submitBtn.value = 'Submitting...';
 
-      const formURL = "https://script.google.com/macros/s/AKfycbxJlj6hMV0mgDz0byFaHLSQgJTGYqCpP1P2YnAWlWOiUfTAES0qnMlaVbWCgjYGJmgtTA/exec";
+    const form = e.target;
+    const data = new URLSearchParams();
 
-      const response = await fetch(formURL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const statusCode = response.status;
-      if (!response.ok) {
-        if (response.status == 0) {
-          demoModal.classList.add("successful");
-        } else {
-          console.error(`Error occurred: ${statusCode}`);
-          alert('Error submitting data.');
-        }
-        return;
+    [...form.elements].forEach(el => {
+      if (el.name) {
+        data.append(el.name, el.value);
       }
-    }
+    });
+
+    data.append('timestamp', new Date().toISOString());
+
+    // Add a callback name (required for JSONP)
+    const callbackName = 'jsonpCallback_' + Math.floor(Math.random() * 100000);
+    data.append('callback', callbackName);
+
+    // Define the callback
+    window[callbackName] = function(response) {
+      // Form submitted successfully 
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.value = 'Send Request';
+
+      successMessage.style.display = 'block';
+      demoForm.reset();
+      
+      // Scroll to success message
+      successMessage.scrollIntoView({ behavior: 'smooth' });
+
+      delete window[callbackName];
+    };
+
+    // JSONP: create a script tag
+    const script = document.createElement('script');
+    script.src = 'https://script.google.com/macros/s/AKfycbwzGjFMvjLVDLYUiTramN6NM4mOlBlSHimwI-0Fvt26zJBvoQM_OTZdsJxJeAFJCLeW/exec?' + data.toString(); // Replace with your script URL
+    document.body.appendChild(script);
+
   });
 
   demoModal.addEventListener('click', (e) => {
@@ -1872,30 +1912,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  const fullNameInput = demoForm.querySelector('#fullName');
-  const businessEmailInput = demoForm.querySelector('#businessEmail');
-  const submitButton = demoForm.querySelector('input[type="submit"]');
-
-  function isValidEmail(email) {
-    const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return pattern.test(email);
-  }
-
-  function checkValidation() {
-    if (fullNameInput.value.trim() !== '' && isValidEmail(businessEmailInput.value.trim())) {
-      submitButton.classList.add('validated');
-      return true;
-    } else {
-      submitButton.classList.remove('validated');
-      return false;
-    }
-  }
-
-  fullNameInput.addEventListener('input', checkValidation);
-  businessEmailInput.addEventListener('input', checkValidation);
-
-  // Initial check (in case the browser auto-fills the form)
-  checkValidation();
 });
 </script>
 
