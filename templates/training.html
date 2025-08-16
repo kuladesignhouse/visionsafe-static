@@ -464,6 +464,29 @@ flex-grow: 0;
       padding: 30px 20px;
   }
 }
+
+
+
+.video-container {
+  display: flex;               /* optional: center the video */
+  justify-content: center;     /* horizontal center */
+  align-items: center;         /* vertical center */
+  
+  max-width: 100%;
+  
+  position: relative;
+  padding-top: 56.25%;         /* 16:9 aspect ratio (9/16 = 0.5625) */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 </style>
 {% endblock %}
 
@@ -587,15 +610,15 @@ flex-grow: 0;
       <div class="section">
           <h1>Training Partners</h1>
           <h2>Simulator Training</h2>
-          <p>Simulator training is available at more than 75 locations worldwide through <a href="https://www.flightsafety.com/">Flight Safety International</a>, <a href="https://www.cae.com/">CAE</a>, and <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/">Airventure</a>.</p>
+          <p>Simulator training is available at more than 75 locations worldwide through <a href="https://www.flightsafety.com/">Flight Safety International</a>, <a href="https://www.cae.com/civil-aviation/aviation-training/">CAE</a>, and <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/">Airventure</a>.</p>
           <div class="logos">
-              <img src="imgs/flight-safety-international.svg" alt="Flight Safety">
-              <img src="imgs/cae.svg" alt="CAE">
-              <img src="imgs/airventure.svg" alt="Airventure">
+            <a href="https://www.flightsafety.com/"><img src="imgs/flight-safety-international.svg" alt="Flight Safety"></a>
+            <a href="https://www.cae.com/civil-aviation/aviation-training/"><img src="imgs/cae.svg" alt="CAE"></a>
+            <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/"><img src="imgs/airventure.svg" alt="Airventure"></a>
           </div>
           <h2>Computer-Based Training</h2>
-          <p>EVAS CBT is available through <a href="https://kingschools.com/visionsafe-evas-video-training-course">King Schools</a>.</p>
-          <img src="imgs/king-schools.png" alt="King Schools">
+          <p>EVAS CBT is available through <a href="https://kingschools.com/visionsafe-evas-video-training-course?srsltid=AfmBOoqOe2xRXZqu27AHoyJBd8Ixj5atIWhfYnxan3QY295zKZYLumxU">King Schools</a>.</p>
+          <a href="https://kingschools.com/visionsafe-evas-video-training-course?srsltid=AfmBOoqOe2xRXZqu27AHoyJBd8Ixj5atIWhfYnxan3QY295zKZYLumxU"><img src="imgs/king-schools.png" alt="King Schools"></a>
       </div>
 
       <div class="section">
@@ -603,6 +626,24 @@ flex-grow: 0;
         <p>VisionSafe can develop custom training programs to meet specific operational requirements. Contact our training team to discuss specialized needs for your organization.</p>
         <a href="tel:+18084419230" class="contact-info">+1 (808) 441-9230</a>
       </div>
+
+      <div class="section">
+        <h1>Additional Training Materials</h1>
+
+        <div class="video-container">
+          <iframe 
+            src="https://player.vimeo.com/video/361216233?color=ffd971&title=0&byline=0" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+
+        <p>This video provides a complete comprehensive description of what the EVAS product is and options for arming and deploying the unit in a continuous smoke environment. Please view the video in conjunction with <a href="https://www.visionsafe.com/docs/training/8015_RevO_107STCTC_Training_Outline_20220701.pdf">Training Document (8015)</a></p>
+        <a href="https://www.visionsafe.com/docs/training/8015_RevO_107STCTC_Training_Outline_20220701.pdf" class="contact-info">Training Doc 8015</a>
+      </div>
+
   </div>
   
   <div id="modalOverlay" class="modal-overlay">
