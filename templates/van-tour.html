@@ -822,11 +822,12 @@ div#demoModal.modal.successful .modal-content {
   <div class="modal-content">
     <span class="close-video">&times;</span>
     <div class="video-wrapper">
-      <iframe src="https://player.vimeo.com/video/1086602949?h=99cc9f01a2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      <iframe id="vimeoPlayer"
+              src="" 
               frameborder="0" 
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
               referrerpolicy="strict-origin-when-cross-origin" 
-              title="Van Demo Commercial - Rough Draft">
+              title="Van Demo Commercial">
       </iframe>
     </div>
   </div>
@@ -940,9 +941,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const requestButtons = document.querySelectorAll('.request-demo');
   const closeDemos = document.querySelectorAll('.close-demo');
   const closeVideo = document.querySelector('#videoModal .close-video');
+  const showVimeoButton = document.getElementById("show-vimeo");
 
+  // Video player variables
   const iframe = videoModal.querySelector("iframe");
-  const player = new Vimeo.Player(iframe);
+  let player = null;
+  let isPlayerReady = false;
 
   // Demo modal functionality
   requestButtons.forEach(button => {
@@ -955,41 +959,94 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  closeDemos.forEach(button => {
-    button.addEventListener('click', () => {
-      demoModal.style.display = "none";
-      document.body.style.overflow = '';
-    });
-  });
-
-  // Video modal functionality
-  function closeVideoModal() {
-    videoModal.classList.remove('show');
-    videoModal.style.display = "none";
-    // Always pause when closing
-    player.pause().catch(() => {});
-    document.body.style.overflow = '';
-  }
-
   function closeDemoModal() {
     demoModal.style.display = "none";
     document.body.style.overflow = '';
   }
 
-  // Show video
-  document.getElementById("show-vimeo").addEventListener('click', (e) => {
+  closeDemos.forEach(button => {
+    button.addEventListener('click', closeDemoModal);
+  });
+
+  // Video modal functionality - FIXED VERSION
+  function initializePlayer() {
+    // Set iframe src when opening modal to avoid autoplay issues
+    iframe.src = "https://player.vimeo.com/video/1086602949?h=99cc9f01a2&badge=0&autopause=0&player_id=0&app_id=58479";
+    
+    // Small delay to ensure iframe loads
+    setTimeout(() => {
+      player = new Vimeo.Player(iframe);
+      
+      player.ready().then(function() {
+        console.log("Player is ready");
+        isPlayerReady = true;
+        
+        // Auto-play when ready
+        return player.play();
+      }).then(function() {
+        console.log("Video started playing successfully");
+      }).catch(function(error) {
+        console.error("Error with video playback:", error);
+        switch (error.name) {
+          case 'PasswordError':
+            console.error('Error: The video is password-protected.');
+            break;
+          case 'PrivacyError':
+            console.error('Error: The video is private.');
+            break;
+          default:
+            console.error('An unknown error occurred while playing the video.', error);
+            break;
+        }
+      });
+
+      // Optional: Add event listeners for debugging
+      player.on('play', function() {
+        console.log('Video played');
+      });
+
+      player.on('pause', function() {
+        console.log('Video paused');
+      });
+
+      player.on('ended', function() {
+        console.log('Video ended');
+      });
+
+    }, 500); // Small delay to ensure iframe is properly loaded
+  }
+
+  function closeVideoModal() {
+    videoModal.classList.remove('show');
+    document.body.style.overflow = '';
+    
+    // Properly pause and cleanup
+    if (player && isPlayerReady) {
+      player.pause().then(function() {
+        console.log("Video paused successfully.");
+      }).catch(function(error) {
+        console.error("Error pausing the video:", error);
+      });
+    }
+    
+    // Clear iframe src and reset player after a short delay
+    setTimeout(() => {
+      iframe.src = "";
+      player = null;
+      isPlayerReady = false;
+    }, 100);
+  }
+
+  // Video modal event listeners
+  showVimeoButton.addEventListener('click', (e) => {
     e.preventDefault();
-    videoModal.style.display = "flex";
     videoModal.classList.add('show');
     document.body.style.overflow = 'hidden';
     
-    // Always play when opening
-    setTimeout(() => {
-      player.play().catch(() => {});
-    }, 100);
+    // Initialize player fresh each time modal opens
+    initializePlayer();
   });
 
-  // Close video button
   if (closeVideo) {
     closeVideo.addEventListener('click', (e) => {
       e.preventDefault();
@@ -998,7 +1055,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Click outside modal to close
   videoModal.addEventListener('click', (e) => {
     if (e.target === videoModal) {
       closeVideoModal();
@@ -1011,19 +1067,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // ESC key to close modals
+  // Global keyboard event handlers
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (demoModal.style.display === "flex") {
         closeDemoModal();
       }
-      if (videoModal.style.display === "flex") {
+      if (videoModal.classList.contains('show')) {
         closeVideoModal();
       }
     }
   });
 
-  // Form submission
+  // Form submission functionality
   const submitBtn = document.getElementById('submitBtn');
   const successMessage = document.getElementById('successMessage');
   const errorMessage = document.getElementById('errorMessage');
