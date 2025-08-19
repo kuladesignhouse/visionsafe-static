@@ -102,6 +102,7 @@ c.parentNode.insertBefore(t,c)}();
 <script src="/extras/sub-current.js"></script>
 <script defer data-domain="visionsafe.com" src="https://plausible.io/js/script.js"></script>
 
+  <link rel="stylesheet" href="https://use.typekit.net/hsf5yko.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -398,7 +399,7 @@ a.request-demo {
 
 form#demo {
   height: 100%;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -436,7 +437,7 @@ form#demo h1 {
   text-align: center;
   color: #000000;
   width: 100%;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 form#demo label {
@@ -473,7 +474,7 @@ form#demo input[type="submit"] {
   font-size: 24px;
   text-align: center;
   height: 42px;
-  margin-top: 35px;
+  /*margin-top: 35px;*/
 }
 
 form#demo input[type="submit"].validated {
@@ -553,13 +554,13 @@ div#demoModal.modal.successful .modal-content {
   form#demo h1 {
     font-size: 26px;
     line-height: 31px;
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
   }
   form#demo input[type="submit"] {
     font-size: 32px;
     line-height: 38px;
     height: 62px;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
   }
   form#demo input[type="text"],
   form#demo input[type="email"],
@@ -575,7 +576,7 @@ div#demoModal.modal.successful .modal-content {
 @media (min-height: 660px) {
   .modal-content {
     padding: 67px;
-    width: 520px;
+    max-width: 520px;
     max-height: 650px;
   }
 }
@@ -595,6 +596,123 @@ div#demoModal.modal.successful .modal-content {
   border-radius: 5px;
   margin-bottom: 15px;
   display: none;
+}
+
+
+
+
+/* Video Modal CSS - Add this to your existing styles */
+#videoModal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  /* Center the modal content when shown */
+  align-items: center;
+  justify-content: center;
+}
+
+#videoModal.show {
+  display: flex;
+}
+
+#videoModal .modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Close button for video modal */
+#videoModal .close-video {
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  background: rgba(0,0,0,0.7);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  border: 2px solid rgba(255,255,255,0.3);
+  line-height: 1;
+  font-family: Arial, sans-serif;
+}
+
+#videoModal .close-video:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* Video wrapper for responsive 16:9 aspect ratio */
+#videoModal .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 8px;
+}
+
+#videoModal .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #videoModal .modal-content {
+    width: 95%;
+    margin: 0 10px;
+  }
+  
+  #videoModal .close-video {
+    top: -45px;
+    right: -5px;
+    font-size: 28px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  #videoModal .modal-content {
+    width: 98%;
+    margin: 0 5px;
+  }
+  
+  #videoModal .close-video {
+    top: -40px;
+    right: 0;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #videoModal .modal-content {
+    width: 70%;
+    max-width: 1000px;
+  }
 }
 </style>
 
@@ -797,7 +915,7 @@ fires due to lithium batteries</h3>
     <h1>Experience EVAS in Action: The 2025 Van Tour</h1>
     <div class="vidninfo">
       <a id="show-vimeo">
-        <img src="imgs/van-placeholder.png">
+        <img src="imgs/van-video-thumb.png">
       </a>
       <div>
         <h2>See Through the Smoke</h2>
@@ -828,29 +946,78 @@ fires due to lithium batteries</h3>
             <td data-label="Event/Airport Code">KSEA</td>
           </tr>
           <tr>
-            <td data-label="Date">July 17</td>
-            <td data-label="Location">Portland, OR</td>
-            <td data-label="Event/Airport Code">KHIO</td>
+            <td data-label="Date">August 25</td>
+            <td data-label="Location">Albuquerque, NM</td>
+            <td data-label="Event/Airport Code">USAF Aviation Safey Council</td>
           </tr>
           <tr>
-            <td data-label="Date">July 23</td>
-            <td data-label="Location">Napa, CA</td>
-            <td data-label="Event/Airport Code">KAPC</td>
+            <td data-label="Date">September 2</td>
+            <td data-label="Location">Chicago, IL</td>
+            <td data-label="Event/Airport Code">FAA Dangerous Goods Summit</td>
           </tr>
           <tr>
-            <td data-label="Date">July 24</td>
-            <td data-label="Location">San Jose, CA</td>
-            <td data-label="Event/Airport Code">KSJC</td>
+            <td data-label="Date">September 8</td>
+            <td data-label="Location">Chicago, IL</td>
+            <td data-label="Event/Airport Code">ALPA Air Safety Forum</td>
           </tr>
           <tr>
-            <td data-label="Date">July 28</td>
-            <td data-label="Location">Omaha, NE</td>
-            <td data-label="Event/Airport Code">KOMA</td>
+            <td data-label="Date">September 24</td>
+            <td data-label="Location">Ohio</td>
+            <td data-label="Event/Airport Code">EJM Pilot Roundtable</td>
+          </tr>
+          <tr>
+            <td data-label="Date">August 25</td>
+            <td data-label="Location">Albuquerque, NM</td>
+            <td data-label="Event/Airport Code">USAF Aviation Safey Council</td>
+          </tr>
+          <tr>
+            <td data-label="Date">September 2</td>
+            <td data-label="Location">Chicago, IL</td>
+            <td data-label="Event/Airport Code">FAA Dangerous Goods Summit</td>
+          </tr>
+          <tr>
+            <td data-label="Date">September 8</td>
+            <td data-label="Location">Chicago, IL</td>
+            <td data-label="Event/Airport Code">ALPA Air Safety Forum</td>
+          </tr>
+          <tr>
+            <td data-label="Date">September 24</td>
+            <td data-label="Location">Ohio</td>
+            <td data-label="Event/Airport Code">EJM Pilot Roundtable</td>
+          </tr>
+          <tr>
+            <td data-label="Date">September 30</td>
+            <td data-label="Location">Van Nuys, CA</td>
+            <td data-label="Event/Airport Code">Clay Lacy Safety Showdown</td>
+          </tr>
+          <tr>
+            <td data-label="Date">October 14</td>
+            <td data-label="Location">Las Vegas, NV</td>
+            <td data-label="Event/Airport Code">NBAA-BACE</td>
+          </tr>
+          <tr>
+            <td data-label="Date">October 20</td>
+            <td data-label="Location">Houston, TX</td>
+            <td data-label="Event/Airport Code">Exxon Mobil Safety Day</td>
+          </tr>
+          <tr>
+            <td data-label="Date">Nashville, TN</td>
+            <td data-label="Location">October 22</td>
+            <td data-label="Event/Airport Code">Cargo Facts</td>
+          </tr>
+          <tr>
+            <td data-label="Date">November 6</td>
+            <td data-label="Location">Nashville, TN</td>
+            <td data-label="Event/Airport Code">A/TA</td>
+          </tr>
+          <tr>
+            <td data-label="Date">November 18</td>
+            <td data-label="Location">Bellvue, WA</td>
+            <td data-label="Event/Airport Code">Infoshare</td>
           </tr>
         </tbody>
       </table>
     </div>
-
 
     <div class="iconinfo">
       <img src="imgs/schedule.svg" width="23.02" height="31.38">
@@ -980,6 +1147,20 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
         <input type="submit" value="Send Request" id="submitBtn">
       </div>
     </form>
+  </div>
+</div>
+
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close-video">&times;</span>
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/1086602949?h=99cc9f01a2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              title="Van Demo Commercial - Rough Draft">
+      </iframe>
+    </div>
   </div>
 </div>
 
@@ -1834,34 +2015,99 @@ twq('track','PageView');
 <script id="io.birdseed.script-tag" type="text/javascript" src="https://app.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
  end birdseed -->
 
+<script src="https://player.vimeo.com/api/player.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const demoModal = document.getElementById('demoModal');
+  const videoModal = document.getElementById('videoModal');
   const demoForm = document.getElementById('demo');
   const requestButtons = document.querySelectorAll('.request-demo');
   const closeDemos = document.querySelectorAll('.close-demo');
+  const closeVideo = document.querySelector('#videoModal .close-video');
 
+  const iframe = videoModal.querySelector("iframe");
+  const player = new Vimeo.Player(iframe);
+
+  // Demo modal functionality
   requestButtons.forEach(button => {
     button.addEventListener('click', () => {
       if (demoModal.classList.contains("successful")) {
         demoModal.classList.remove("successful");
       }
       demoModal.style.display = "flex";
+      document.body.style.overflow = 'hidden';
     });
   });
 
   closeDemos.forEach(button => {
     button.addEventListener('click', () => {
       demoModal.style.display = "none";
+      document.body.style.overflow = '';
     });
   });
 
-  window.onclick = function(event) {
-    if (event.target == demoModal) {
-      demoModal.style.display = "none";
-    }
+  // Video modal functionality
+  function closeVideoModal() {
+    videoModal.classList.remove('show');
+    videoModal.style.display = "none";
+    // Always pause when closing
+    player.pause().catch(() => {});
+    document.body.style.overflow = '';
   }
 
+  function closeDemoModal() {
+    demoModal.style.display = "none";
+    document.body.style.overflow = '';
+  }
+
+  // Show video
+  document.getElementById("show-vimeo").addEventListener('click', (e) => {
+    e.preventDefault();
+    videoModal.style.display = "flex";
+    videoModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    
+    // Always play when opening
+    setTimeout(() => {
+      player.play().catch(() => {});
+    }, 100);
+  });
+
+  // Close video button
+  if (closeVideo) {
+    closeVideo.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeVideoModal();
+    });
+  }
+
+  // Click outside modal to close
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      closeVideoModal();
+    }
+  });
+
+  demoModal.addEventListener('click', (e) => {
+    if (e.target === demoModal) {
+      closeDemoModal();
+    }
+  });
+
+  // ESC key to close modals
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (demoModal.style.display === "flex") {
+        closeDemoModal();
+      }
+      if (videoModal.style.display === "flex") {
+        closeVideoModal();
+      }
+    }
+  });
+
+  // Form submission
   const submitBtn = document.getElementById('submitBtn');
   const successMessage = document.getElementById('successMessage');
   const errorMessage = document.getElementById('errorMessage');
@@ -1869,11 +2115,9 @@ document.addEventListener("DOMContentLoaded", function() {
   demoForm.addEventListener('submit', function(e) {
     e.preventDefault();
   
-    // Hide previous messages
     successMessage.style.display = 'none';
     errorMessage.style.display = 'none';
     
-    // Disable submit button and show loading state
     submitBtn.disabled = true;
     submitBtn.value = 'Submitting...';
 
@@ -1888,49 +2132,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     data.append('timestamp', new Date().toISOString());
 
-    // Add a callback name (required for JSONP)
     const callbackName = 'jsonpCallback_' + Math.floor(Math.random() * 100000);
     data.append('callback', callbackName);
 
-    // Define the callback
     window[callbackName] = function(response) {
-      // Form submitted successfully 
-      // Re-enable submit button
       submitBtn.disabled = false;
       submitBtn.value = 'Send Request';
-
       successMessage.style.display = 'block';
       demoForm.reset();
-      
-      // Scroll to success message
       successMessage.scrollIntoView({ behavior: 'smooth' });
-
       delete window[callbackName];
     };
 
-    // JSONP: create a script tag
     const script = document.createElement('script');
-    script.src = 'https://script.google.com/macros/s/AKfycbwzGjFMvjLVDLYUiTramN6NM4mOlBlSHimwI-0Fvt26zJBvoQM_OTZdsJxJeAFJCLeW/exec?' + data.toString(); // Replace with your script URL
+    script.src = 'https://script.google.com/macros/s/AKfycbwzGjFMvjLVDLYUiTramN6NM4mOlBlSHimwI-0Fvt26zJBvoQM_OTZdsJxJeAFJCLeW/exec?' + data.toString();
     document.body.appendChild(script);
-
   });
-
-  demoModal.addEventListener('click', (e) => {
-    if (e.target === demoModal) {
-      demoModal.style.display = 'none';
-    }
-  });
-
-  document.addEventListener('keyup', (e) => {
-    if (e.key === 'Escape') {
-      demoModal.style.display = 'none';
-    }
-  });
-
-  document.getElementById("show-vimeo").addEventListener('click', (e) => {
-    console.log("show vimeo");
-  });
-
 });
 </script>
 
