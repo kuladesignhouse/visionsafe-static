@@ -2138,6 +2138,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window[callbackName] = function(response) {
       submitBtn.disabled = false;
       submitBtn.value = 'Send Request';
+      submitBtn.style.display = 'none';
       successMessage.style.display = 'block';
       demoForm.reset();
       successMessage.scrollIntoView({ behavior: 'smooth' });
