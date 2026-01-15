@@ -531,7 +531,11 @@ flex-grow: 0;
                     <li>On-site simulation and instructor training is included.</li>
                     <li>Ideal for flight schools, airlines, and large corporate flight departments.</li>
                   </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
+                  <button
+                    class="requestaquote"
+                    onclick="openModal('Full Cockpit Trainer')">
+                    Request a Quote
+                  </button>
                 </div>
                 <img src="imgs/full-cockpit-trainer.png" alt="Full Cockpit Trainer">    
               </div>
@@ -546,7 +550,11 @@ flex-grow: 0;
                     <li>Simulator includes two EVAS units to simplify training process and eliminate need to refold the Inflatable Vision Unit after each use.</li>
                     <li>Portable design requires minimal space.</li>
                   </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
+                  <button
+                    class="requestaquote"
+                    onclick="openModal('Table Top System')">
+                    Request a Quote
+                  </button>
                 </div>
                 <img src="imgs/table-top-training-system.png" alt="Table Top System">    
               </div>
@@ -562,7 +570,11 @@ flex-grow: 0;
                     <li>Integration guidance for existing simulator environments.</li>
                     <li>Ideal for organizations with existing simulator facilities.</li>
                   </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
+                  <button
+                    class="requestaquote"
+                    onclick="openModal('Training Units with Smoke Machine')">
+                    Request a Quote
+                  </button>
                 </div>
                 <img src="imgs/training-units-with-smoke-machine.png" alt="Training Units with Smoke Machine">    
               </div>
@@ -580,7 +592,11 @@ flex-grow: 0;
                     <li>Certification of completion for all participants.</li>
                     <li>Travel expenses may apply depending on location.</li>
                   </ul>
-                  <button class="requestaquote" onclick="openModal()">Request a Quote</button>
+                  <button
+                    class="requestaquote"
+                    onclick="openModal('On-Site Training')">
+                    Request a Quote
+                  </button>
                 </div>
                 <img src="imgs/on-site-training.png" alt="On-Site Training">    
               </div>
@@ -649,9 +665,12 @@ flex-grow: 0;
   <div id="modalOverlay" class="modal-overlay">
     <div class="form-container">
       <button class="close-btn" onclick="closeModal()">&times;</button>
-      <h1 class="form-title">Full Cockpit Trainer Quote Request</h1>
+      <h1 class="form-title" id="modalTitle" >Quote Request</h1>
       
-      <form id="quoteForm" method="POST" action="https://www.visionsafe.com/warranty/gmailertoo.php" >
+      <form id="quoteForm" >
+        
+        <input type="hidden" id="quoteSubject" name="subject" value="">
+
         <div class="form-group">
           <label for="name" class="form-label">Name</label>
           <input type="text" id="name" name="name" class="form-input" required>
@@ -1525,48 +1544,58 @@ twq('track','PageView');
  end birdseed -->
 
 <script>
-function openModal() {
-    document.getElementById('modalOverlay').classList.add('active');
+function openModal(subject) {
+  const modal = document.getElementById('modalOverlay');
+  const title = document.getElementById('modalTitle');
+  const subjectInput = document.getElementById('quoteSubject');
+
+  const fullTitle = subject
+    ? `${subject} Quote Request`
+    : 'Quote Request';
+
+  title.textContent = fullTitle;
+  subjectInput.value = fullTitle;
+
+  modal.classList.add('active');
 }
 
 function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('active');
+  document.getElementById('modalOverlay').classList.remove('active');
 }
 
 // Close modal when clicking outside the form
 document.getElementById('modalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
-    }
+  if (e.target === this) {
+    closeModal();
+  }
 });
 
 // Close modal with Escape key
 document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        closeModal();
-    }
+  if (e.key === 'Escape') {
+    closeModal();
+  }
 });
+
 document.getElementById('quoteForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
+  const subject = document.getElementById('quoteSubject').value;
   
   const successMessage = document.getElementById('successMessage');
   const errorMessage = document.getElementById('errorMessage');
   
-  // Hide any previous messages
   successMessage.style.display = 'none';
   errorMessage.style.display = 'none';
   
-  // Basic validation
   if (!name || !email || !phone) {
     errorMessage.style.display = 'block';
     return;
   }
   
-  // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     errorMessage.textContent = 'Please enter a valid email address.';
@@ -1574,27 +1603,42 @@ document.getElementById('quoteForm').addEventListener('submit', function(e) {
     return;
   }
   
-  // Simulate form submission
   const submitBtn = document.querySelector('.submit-btn');
   submitBtn.textContent = 'Sending...';
   submitBtn.disabled = true;
   
-  setTimeout(() => {
-    successMessage.style.display = 'block';
+  // Create form data
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('phone', phone);
+  formData.append('subject', subject);
+  
+  // Send to PHP
+  fetch('https://www.visionsafe.com/warranty/gmailertraining.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
     submitBtn.textContent = 'Send Request';
     submitBtn.disabled = false;
     
-    // Reset form
-    document.getElementById('quoteForm').reset();
-    
-    // Log form data (in real application, this would be sent to a server)
-    console.log('Form submitted:', {
-      name: name,
-      email: email,
-      phone: phone,
-      timestamp: new Date().toISOString()
-    });
-  }, 1500);
+    if (data.status === 'success') {
+      successMessage.style.display = 'block';
+      document.getElementById('quoteForm').reset();
+    } else {
+      errorMessage.textContent = data.message || 'An error occurred. Please try again.';
+      errorMessage.style.display = 'block';
+    }
+  })
+  .catch(error => {
+    submitBtn.textContent = 'Send Request';
+    submitBtn.disabled = false;
+    errorMessage.textContent = 'An error occurred. Please try again.';
+    errorMessage.style.display = 'block';
+    console.error('Error:', error);
+  });
 });
 
 // Phone number formatting
