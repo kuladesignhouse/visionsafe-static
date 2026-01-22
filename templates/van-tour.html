@@ -164,6 +164,8 @@
 
 .responsive-table {
   overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .responsive-table table {
@@ -198,12 +200,24 @@
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+  word-break: break-word;
 }
 
 /* Responsive: stack cells on narrow screens */
-@media (max-width: 37.5rem) {
+@media (max-width: 48rem) {
   .responsive-table table, .responsive-table thead, .responsive-table tbody, .responsive-table th, .responsive-table td, .responsive-table tr {
     display: block;
+  }
+
+  .responsive-table thead {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
 
   .responsive-table thead tr {
@@ -211,28 +225,45 @@
   }
 
   .responsive-table tbody tr {
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #828282;
+    margin: 0 0 1rem;
+    padding: 0.75rem 0.75rem 0.5rem;
+    border: 1px solid #E2E2E2;
+    border-radius: 14px;
+    background: #FFFFFF;
   }
 
   .responsive-table td {
     position: relative;
-    padding-left: 50%;
+    padding: 0.5rem 0.25rem 0.75rem;
+    white-space: normal;
   }
 
   .responsive-table td::before {
     content: attr(data-label);
-    position: absolute;
-    left: 16px;
-    top: 12px;
-    white-space: nowrap;
+    display: block;
+    margin: 0 0 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 12px;
+    line-height: 16px;
+    color: #666666;
 
     font-family: basic-sans, sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
+  }
+
+  .responsive-table td.table-section {
+    padding: 0.5rem 0.25rem;
+    font-size: 20px;
+    font-weight: 700;
     color: #000000;
+    background: #F5F5F5;
+    border-radius: 10px;
+  }
+
+  .responsive-table td.table-section::before {
+    content: "";
   }
 }
 
@@ -684,9 +715,7 @@ div#demoModal.modal.successful .modal-content {
 				<td data-label="Location">Savannah, GA</td>
 			</tr>
 			<tr>
-				<th style="font-size:22px">2026</th>
-				<th></th>
-				<th></th>
+				<td class="table-section" colspan="3">2026</td>
 			</tr>
 			<tr>
 				<td data-label="Date">January 12–16</td>
