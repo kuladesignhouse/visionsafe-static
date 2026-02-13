@@ -1855,20 +1855,20 @@ function faqSearch(search_term) {
             if (faq_elms[i].children[e].children[x].textContent.toLowerCase().indexOf(search_term) > -1) {
               found_h2 = true;
               found_term = true;
-              faq_elms[i].children[e].children[x].innerHTML = highlight(faq_elms[i].children[e].children[x].textContent, search_term);
+              applyHighlightPreserveMarkup(faq_elms[i].children[e].children[x], search_term);
             }
           } else if (faq_elms[i].children[e].children[x].tagName == "P") {
             if (faq_elms[i].children[e].children[x].textContent.toLowerCase().indexOf(search_term) > -1) {
               found_p = true;
               found_term = true;
-              faq_elms[i].children[e].children[x].innerHTML = highlight(faq_elms[i].children[e].children[x].textContent, search_term);
+              applyHighlightPreserveMarkup(faq_elms[i].children[e].children[x], search_term);
             }
           } else if (faq_elms[i].children[e].children[x].tagName == "UL") {
             for (var l = 0; l < faq_elms[i].children[e].children[x].children.length; l++) {
               if (faq_elms[i].children[e].children[x].children[l].textContent.toLowerCase().indexOf(search_term) > -1) {
                 found_ul = true;
                 found_term = true;
-                faq_elms[i].children[e].children[x].children[l].innerHTML = highlight(faq_elms[i].children[e].children[x].children[l].textContent, search_term);
+                applyHighlightPreserveMarkup(faq_elms[i].children[e].children[x].children[l], search_term);
               }
             }
           }
@@ -1902,6 +1902,20 @@ function faqSearch(search_term) {
       //document.getElementById("faq-body-wrap").scrollTop = 0;
     }
   }
+}
+function applyHighlightPreserveMarkup(element, text) {
+  if (!element.hasAttribute("data-original-html")) {
+    element.setAttribute("data-original-html", element.innerHTML);
+  }
+  element.innerHTML = highlightPreserveMarkup(element.getAttribute("data-original-html"), text);
+}
+function highlightPreserveMarkup(input, text) {
+  if (!text) {
+    return input;
+  }
+  var escaped = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  var regex = new RegExp("(" + escaped + ")", "ig");
+  return input.replace(regex, "<mark>$1</mark>");
 }
 var closestH1 = function(elem) {
   if (elem.previousElementSibling) {
@@ -1948,12 +1962,10 @@ function unhide() {
   document.getElementById("faq-results1").innerHTML = "";
   document.getElementById("faq-results2").innerHTML = "";
   document.getElementById("faq-results3").innerHTML = "";
-  var marks = document.querySelectorAll("mark");
-  if (marks) {
-    for (var m = 0; m < marks.length; m++) {
-      if (marks[m].parentElement) {
-        marks[m].parentElement.innerHTML = marks[m].parentElement.textContent;
-      }
+  var highlighted = document.querySelectorAll("[data-original-html]");
+  if (highlighted) {
+    for (var m = 0; m < highlighted.length; m++) {
+      highlighted[m].innerHTML = highlighted[m].getAttribute("data-original-html");
     }
   }
   var hidden = document.getElementsByClassName("hiding");
