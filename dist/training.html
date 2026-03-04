@@ -1065,7 +1065,7 @@ id="fb_iframe" src="email-signup-validemail/email-signup-validemail.html">
       </select>
     </div>
     <label class="notshown" id="countrylabel">What country is your plane or fleet registered in?</label>
-    <div id="countrywrap" class="form-input notshown">
+        <div id="countrywrap" class="form-input notshown">
       <select name="country">
         <option selected="selected" value="0">
           Select country
@@ -1945,17 +1945,19 @@ document.getElementById('quoteForm').addEventListener('submit', function(e) {
   submitBtn.textContent = 'Sending...';
   submitBtn.disabled = true;
   
-  // Create form data
-  const formData = new FormData();
-  formData.append('name', name);
-  formData.append('email', email);
-  formData.append('phone', phone);
-  formData.append('subject', subject);
-  
-  // Send to PHP
-  fetch('https://www.visionsafe.com/warranty/gmailertraining.php', {
+  // URL-encoded body for Lambda endpoint compatibility
+  const body = new URLSearchParams({
+    name: name,
+    email: email,
+    phone: phone,
+    subject: subject
+  }).toString();
+
+  // Send to Lambda legacy-compatible route
+  fetch('https://xbvro4xdfbrgvf5ohpcuzjwvgm0olsyn.lambda-url.us-west-1.on.aws/warranty/gmailertraining.php', {
     method: 'POST',
-    body: formData
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body
   })
   .then(response => response.json())
   .then(data => {
