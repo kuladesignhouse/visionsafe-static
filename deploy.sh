@@ -5,6 +5,7 @@ DIST_DIR="$(pwd)/dist"
 REMOTE_USER="brgr"
 REMOTE_HOST="visionsafe.com"
 DEFAULT_REMOTE_DIR="/home/brgr/visionsafe.com/"
+DEPLOY_ALL=false
 
 # List of special files and their remote paths (space-separated pairs)
 SPECIAL_FILES=(
@@ -25,10 +26,64 @@ if [[ $? -ne 0 ]]; then
     exit 1
 fi
 
+# --- HELPERS ---
+
+find_remote_path() {
+  local selected_name="$1"
+
+  for pair in "${SPECIAL_FILES[@]}"; do
+    local file="${pair%%:*}"
+    local remote_path="${pair#*:}"
+    if [[ "$selected_name" == "$file" ]]; then
+      echo "$remote_path"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+deploy_file() {
+  local selected_name="$1"
+  local source_file="$DIST_DIR/$selected_name"
+  local remote_path
+
+  if [[ ! -f "$source_file" ]]; then
+    echo "❌ File not found in dist: $source_file"
+    return 1
+  fi
+
+  remote_path="$(find_remote_path "$selected_name")"
+
+  if [[ -n "$remote_path" ]]; then
+    echo "🚀 Deploying special file: $selected_name → index.html at $remote_path"
+    /usr/bin/scp "$source_file" "$REMOTE_USER@$REMOTE_HOST:$remote_path"
+  else
+    echo "🚀 Deploying standard file: $selected_name → $DEFAULT_REMOTE_DIR"
+    /usr/bin/scp "$source_file" "$REMOTE_USER@$REMOTE_HOST:$DEFAULT_REMOTE_DIR"
+  fi
+}
+
 # --- FILE SELECTION ---
 
 INPUT_NAME="$1"
-if [[ -n "$INPUT_NAME" && "$INPUT_NAME" == *.html && -f "$TEMPLATES_DIR/$INPUT_NAME" ]]; then
+
+if [[ "$INPUT_NAME" == "all" || "$INPUT_NAME" == "--all" ]]; then
+    DEPLOY_ALL=true
+fi
+
+if [[ "$DEPLOY_ALL" == true ]]; then
+    FILES=($(find "$TEMPLATES_DIR" -maxdepth 1 -type f -name "*.html" \
+        ! -name ".DS_Store" ! -name "*.njk" ! -name "*.py" \
+        -exec basename {} \; | sort))
+
+    if [[ ${#FILES[@]} -eq 0 ]]; then
+        echo "❌ No HTML files found in $TEMPLATES_DIR"
+        exit 1
+    fi
+
+    echo "Selected mode: deploy all HTML pages (${#FILES[@]} files)"
+elif [[ -n "$INPUT_NAME" && "$INPUT_NAME" == *.html && -f "$TEMPLATES_DIR/$INPUT_NAME" ]]; then
     SELECTED_NAME="$INPUT_NAME"
 else
     FILES=($(find "$TEMPLATES_DIR" -maxdepth 1 -type f -name "*.html" \
@@ -50,40 +105,35 @@ else
     fi
 fi
 
-echo "Selected file: $SELECTED_NAME"
-SOURCE_FILE="$DIST_DIR/$SELECTED_NAME"
-
-if [[ ! -f "$SOURCE_FILE" ]]; then
-    echo "❌ File not found in dist: $SOURCE_FILE"
-    exit 1
+if [[ "$DEPLOY_ALL" != true ]]; then
+    echo "Selected file: $SELECTED_NAME"
 fi
 
 # --- DEPLOY ---
 
-# Find if selected file is special, get remote path, else empty
-REMOTE_PATH=""
+if [[ "$DEPLOY_ALL" == true ]]; then
+  FAILED_FILES=()
 
-for pair in "${SPECIAL_FILES[@]}"; do
-  file="${pair%%:*}"
-  path="${pair#*:}"
-  if [[ "$SELECTED_NAME" == "$file" ]]; then
-    REMOTE_PATH="$path"
-    break
+  for file in "${FILES[@]}"; do
+    if ! deploy_file "$file"; then
+      FAILED_FILES+=("$file")
+    fi
+  done
+
+  if [[ ${#FAILED_FILES[@]} -eq 0 ]]; then
+    echo "✅ All files transferred successfully!"
+    /usr/bin/afplay /System/Library/Sounds/Purr.aiff
+  else
+    echo "❌ Failed to transfer ${#FAILED_FILES[@]} file(s):"
+    printf ' - %s\n' "${FAILED_FILES[@]}"
+    exit 1
   fi
-done
-
-if [[ -n "$REMOTE_PATH" ]]; then
-  echo "🚀 Deploying special file: $SELECTED_NAME → index.html at $REMOTE_PATH"
-  /usr/bin/scp "$SOURCE_FILE" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH"
 else
-  echo "🚀 Deploying standard file to $DEFAULT_REMOTE_DIR"
-  /usr/bin/scp "$SOURCE_FILE" "$REMOTE_USER@$REMOTE_HOST:$DEFAULT_REMOTE_DIR"
-fi
-
-if [[ $? -eq 0 ]]; then
-  echo "✅ File transferred successfully!"
-  /usr/bin/afplay /System/Library/Sounds/Purr.aiff
-else
-  echo "❌ File transfer failed."
-  exit 1
+  if deploy_file "$SELECTED_NAME"; then
+    echo "✅ File transferred successfully!"
+    /usr/bin/afplay /System/Library/Sounds/Purr.aiff
+  else
+    echo "❌ File transfer failed."
+    exit 1
+  fi
 fi
