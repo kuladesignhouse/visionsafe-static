@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends "webflow-layout.njk" %}
 
 {% block meta %}
   <meta name="description" content="Training on the Emergency Vision Assurance System (EVAS) is available via onsight training directly thourgh VisionSafe or a number other of options through other training facilities.">
@@ -21,10 +21,12 @@
 #img-header {
   width: 100%;
   display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 #img-header > img {
   width: 100%;
   height: auto;
+  opacity: 0.6;
 }
 
 .traintainer {
@@ -492,7 +494,7 @@ flex-grow: 0;
 
 {% block content %} 
   <div id="img-header">
-    <img src="imgs/training-header.png">
+    <img src="https://cdn.visionsafe.com/nav/training-header.png">
   </div>
 
   <div class="traintainer">
@@ -537,7 +539,7 @@ flex-grow: 0;
                     Request a Quote
                   </button>
                 </div>
-                <img src="imgs/full-cockpit-trainer.png" alt="Full Cockpit Trainer">    
+                <img src="https://cdn.visionsafe.com/imgs/full-cockpit-trainer.png" alt="Full Cockpit Trainer">    
               </div>
 
               <div class="training-option">
@@ -556,7 +558,7 @@ flex-grow: 0;
                     Request a Quote
                   </button>
                 </div>
-                <img src="imgs/table-top-training-system.png" alt="Table Top System">    
+                <img src="https://cdn.visionsafe.com/imgs/table-top-training-system.png" alt="Table Top System">    
               </div>
 
               <div class="training-option">
@@ -576,7 +578,7 @@ flex-grow: 0;
                     Request a Quote
                   </button>
                 </div>
-                <img src="imgs/training-units-with-smoke-machine.png" alt="Training Units with Smoke Machine">    
+                <img src="https://cdn.visionsafe.com/imgs/training-units-with-smoke-machine.png" alt="Training Units with Smoke Machine">    
               </div>
 
               <div class="training-option">
@@ -598,7 +600,7 @@ flex-grow: 0;
                     Request a Quote
                   </button>
                 </div>
-                <img src="imgs/on-site-training.png" alt="On-Site Training">    
+                <img src="https://cdn.visionsafe.com/imgs/on-site-training.png" alt="On-Site Training">    
               </div>
 
               <div class="training-option">
@@ -621,7 +623,7 @@ flex-grow: 0;
                     Request CBT Info
                   </button>
                 </div>
-                <img src="imgs/computer-based-training-program.png" alt="Computer-Based Training Program">    
+                <img src="https://cdn.visionsafe.com/imgs/computer-based-training-program.png" alt="Computer-Based Training Program">    
               </div>
 
           </div>
@@ -632,13 +634,13 @@ flex-grow: 0;
           <h2>Simulator Training</h2>
           <p>Simulator training is available at more than 75 locations worldwide through <a href="https://www.flightsafety.com/">Flight Safety International</a>, <a href="https://www.cae.com/civil-aviation/aviation-training/">CAE</a>, and <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/">Airventure</a>.</p>
           <div class="logos">
-            <a href="https://www.flightsafety.com/"><img src="imgs/flight-safety-international.svg" alt="Flight Safety"></a>
-            <a href="https://www.cae.com/civil-aviation/aviation-training/"><img src="imgs/cae.svg" alt="CAE"></a>
-            <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/"><img src="imgs/airventure.svg" alt="Airventure"></a>
+            <a href="https://www.flightsafety.com/"><img src="https://cdn.visionsafe.com/imgs/flight-safety-international.svg" alt="Flight Safety"></a>
+            <a href="https://www.cae.com/civil-aviation/aviation-training/"><img src="https://cdn.visionsafe.com/imgs/cae.svg" alt="CAE"></a>
+            <a href="https://airventure.aero/training/emergency-vision-assurance-systems-training/"><img src="https://cdn.visionsafe.com/imgs/airventure.svg" alt="Airventure"></a>
           </div>
           <h2>Computer-Based Training</h2>
           <p>EVAS CBT is available through <a href="https://kingschools.com/visionsafe-evas-video-training-course?srsltid=AfmBOoqOe2xRXZqu27AHoyJBd8Ixj5atIWhfYnxan3QY295zKZYLumxU">King Schools</a>.</p>
-          <a href="https://kingschools.com/visionsafe-evas-video-training-course?srsltid=AfmBOoqOe2xRXZqu27AHoyJBd8Ixj5atIWhfYnxan3QY295zKZYLumxU"><img src="imgs/king-schools.png" alt="King Schools"></a>
+          <a href="https://kingschools.com/visionsafe-evas-video-training-course?srsltid=AfmBOoqOe2xRXZqu27AHoyJBd8Ixj5atIWhfYnxan3QY295zKZYLumxU"><img src="https://cdn.visionsafe.com/imgs/king-schools.png" alt="King Schools"></a>
       </div>
 
       <div class="section">
@@ -697,7 +699,7 @@ flex-grow: 0;
     </div>
   </div>
 
-{% include "partials/footer.njk" %}
+{% include "partials/webflow-footer.njk" %}
 <div class="reveal" id="checkoutModal" >
   <button class="close-button" data-close aria-label="Close reveal" type="button">
     <span aria-hidden="true">&times;</span>

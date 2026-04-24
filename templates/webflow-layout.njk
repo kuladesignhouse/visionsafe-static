@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block meta %}{% endblock %}
+  <title>{% block title %}{% endblock %}</title>
+
+  <!-- Cookie Consent Banner -->
+  <script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"applyGdprForCH":false,"askConsentAtCookiePolicyUpdate":true,"countryDetection":true,"enableFadp":true,"enableLgpd":true,"enableUspr":true,"gdprAppliesGlobally":false,"lang":"en","lgpdAppliesGlobally":false,"perPurposeConsent":true,"siteId":3317692,"cookiePolicyId":63671032, "banner":{ "acceptButtonCaptionColor":"#000000","acceptButtonColor":"#FFEC90","acceptButtonDisplay":true,"closeButtonDisplay":false,"customizeButtonDisplay":true,"explicitWithdrawal":true,"listPurposes":true,"logo":null,"position":"float-bottom-left","rejectButtonCaptionColor":"#000000","rejectButtonColor":"#FFEC90","rejectButtonDisplay":true,"showPurposesToggles":true }};
+  </script>
+  <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3317692.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+  <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+  <!-- End Cookie Consent Banner -->
+  
+  <link rel="stylesheet" href="https://use.typekit.net/hsf5yko.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.visionsafe.com/nav/nav.css">
+  {% block head %}{% endblock %}
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP63652"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- START HOLIDAY ALERT Code Close this comment to re-enable an alert
+    
+  <div class="row alertrow" data-outofview="true">
+    <div class="columns small-12 alert-col medium-10 large-7">
+      <p class="paragraph alert-p">2018 Year-end Inventory and Vacation/Holiday Closure Notice</p>
+    </div>
+    <div class="columns small-12 alert-col medium-2 large-5">
+      <div class="container btn-container"><a class="link-button button" href="./holiday-closure.html">View Details<br></a>
+      </div>
+    </div>
+  </div>
+  
+  <-- END HOLIDAY ALERT Code -->
+  {% include "partials/webflow-nav.njk" %}
+  <!--<div id="alg"></div>-->
+  {% block content %}{% endblock %}
+  <!--<div id="algend"></div>-->
+  <div id="hits"></div>
+  <script src="https://cdn.visionsafe.com/nav/nav.js" defer></script>
+  {% block javascript %}{% endblock %}
+  <script defer id="io.birdseed.script-tag" type="text/javascript" src="https://cdn.birdseed.io/widget.js"></script><div id="birdseed-widget-container" data-token="100d60c95c9b87ccc8463ae09bb6dd61"></div>
+  <script type='text/javascript'>
+  piAId = '1125371';
+  piCId = '132448';
+  piHostname = 'go.visionsafe.com';
+
+  (function() {
+  function async_load(){
+  var s = document.createElement('script'); s.type = 'text/javascript';
+  s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+  var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+  }
+  if(window.attachEvent) { window.attachEvent('onload', async_load); }
+  else { window.addEventListener('load', async_load, false); }
+  })();
+  </script>
+</body>
+</html>
